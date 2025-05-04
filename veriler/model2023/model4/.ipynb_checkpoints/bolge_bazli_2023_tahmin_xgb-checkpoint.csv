@@ -1,0 +1,57 @@
+bolge,hedef,gercek_2023,tahmin_2023_xgb
+Akdeniz,asistan,4308.0,3291.1213
+Akdeniz,diger,33539.0,27605.926
+Akdeniz,ebe,8494.0,8059.0654
+Akdeniz,hastane,179.0,179.68329
+Akdeniz,hemsire,30347.0,29651.818
+Akdeniz,pratisyen,7082.0,6555.44
+Akdeniz,uzman,12036.0,14973.169
+Akdeniz,yatak,24987.0,31584.045
+Doğu Anadolu,asistan,1615.0,1342.5178
+Doğu Anadolu,diger,19014.0,14918.473
+Doğu Anadolu,ebe,5102.0,4990.6875
+Doğu Anadolu,hastane,133.0,131.11789
+Doğu Anadolu,hemsire,18595.0,20422.129
+Doğu Anadolu,pratisyen,4335.0,4153.757
+Doğu Anadolu,uzman,5133.0,6606.2617
+Doğu Anadolu,yatak,17713.0,18561.592
+Ege,asistan,6234.0,4844.113
+Ege,diger,34853.0,28215.008
+Ege,ebe,8434.0,8420.519
+Ege,hastane,209.0,201.9183
+Ege,hemsire,30582.0,32191.773
+Ege,pratisyen,6864.0,6264.911
+Ege,uzman,13985.0,16550.904
+Ege,yatak,27602.0,31475.059
+Güneydoğu Anadolu,asistan,1798.0,1291.3616
+Güneydoğu Anadolu,diger,23410.0,17927.914
+Güneydoğu Anadolu,ebe,5962.0,5462.5146
+Güneydoğu Anadolu,hastane,135.0,131.96585
+Güneydoğu Anadolu,hemsire,23376.0,22464.455
+Güneydoğu Anadolu,pratisyen,5936.0,5639.3613
+Güneydoğu Anadolu,uzman,6867.0,9366.366
+Güneydoğu Anadolu,yatak,19053.0,22196.383
+Karadeniz,asistan,3171.0,2293.6138
+Karadeniz,diger,30567.0,23847.045
+Karadeniz,ebe,7158.0,6815.6787
+Karadeniz,hastane,216.0,210.8071
+Karadeniz,hemsire,26539.0,27805.785
+Karadeniz,pratisyen,6170.0,5536.739
+Karadeniz,uzman,8071.0,10166.665
+Karadeniz,yatak,23636.0,27358.904
+Marmara,asistan,16958.0,11975.141
+Marmara,diger,76198.0,63419.44
+Marmara,ebe,14328.0,13759.251
+Marmara,hastane,420.0,406.4013
+Marmara,hemsire,70365.0,63331.438
+Marmara,pratisyen,15834.0,14981.521
+Marmara,uzman,35663.0,42175.96
+Marmara,yatak,53288.0,74922.484
+İç Anadolu,asistan,14007.0,10129.19
+İç Anadolu,diger,48636.0,39763.68
+İç Anadolu,ebe,10272.0,9743.297
+İç Anadolu,hastane,267.0,262.12598
+İç Anadolu,hemsire,48483.0,47929.484
+İç Anadolu,pratisyen,8678.0,7885.516
+İç Anadolu,uzman,19478.0,22182.693
+İç Anadolu,yatak,45248.0,46195.59
