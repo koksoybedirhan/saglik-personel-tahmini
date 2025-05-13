@@ -1,0 +1,113 @@
+bolge,target,model,accuracy_%
+Marmara,uzman,prophet,63.21
+Ege,uzman,prophet,71.36
+Akdeniz,uzman,prophet,54.26
+İç Anadolu,uzman,prophet,61.59
+Karadeniz,uzman,prophet,51.15
+Doğu Anadolu,uzman,prophet,32.17
+Güneydoğu Anadolu,uzman,prophet,32.89
+Marmara,uzman,lstm,67.1
+Ege,uzman,lstm,73.15
+Akdeniz,uzman,lstm,60.32
+İç Anadolu,uzman,lstm,66.47
+Karadeniz,uzman,lstm,54.36
+Doğu Anadolu,uzman,lstm,48.66
+Güneydoğu Anadolu,uzman,lstm,41.47
+Marmara,pratisyen,prophet,91.55
+Ege,pratisyen,prophet,93.21
+Akdeniz,pratisyen,prophet,91.37
+İç Anadolu,pratisyen,prophet,86.36
+Karadeniz,pratisyen,prophet,89.62
+Doğu Anadolu,pratisyen,prophet,88.09
+Güneydoğu Anadolu,pratisyen,prophet,91.38
+Marmara,pratisyen,lstm,88.84
+Ege,pratisyen,lstm,92.79
+Akdeniz,pratisyen,lstm,90.42
+İç Anadolu,pratisyen,lstm,89.38
+Karadeniz,pratisyen,lstm,90.16
+Doğu Anadolu,pratisyen,lstm,90.33
+Güneydoğu Anadolu,pratisyen,lstm,91.43
+Marmara,asistan,prophet,-8.799161069474416e+16
+Ege,asistan,prophet,68.81
+Akdeniz,asistan,prophet,-4.399916664267422e+16
+İç Anadolu,asistan,prophet,-7.383862988084323e+16
+Karadeniz,asistan,prophet,-1.212336103094056e+17
+Doğu Anadolu,asistan,prophet,-2.855138277390176e+17
+Güneydoğu Anadolu,asistan,prophet,-2.1122524640603046e+17
+Marmara,asistan,lstm,-1.920061450890891e+17
+Ege,asistan,lstm,74.54
+Akdeniz,asistan,lstm,-6.784013251379192e+16
+İç Anadolu,asistan,lstm,-1.5313211972648957e+17
+Karadeniz,asistan,lstm,-1.9892387675140544e+17
+Doğu Anadolu,asistan,lstm,-4.080387259404871e+17
+Güneydoğu Anadolu,asistan,lstm,-2.8521310597065376e+17
+Marmara,ebe,prophet,94.4
+Ege,ebe,prophet,97.53
+Akdeniz,ebe,prophet,95.48
+İç Anadolu,ebe,prophet,95.68
+Karadeniz,ebe,prophet,95.0
+Doğu Anadolu,ebe,prophet,87.52
+Güneydoğu Anadolu,ebe,prophet,93.16
+Marmara,ebe,lstm,93.91
+Ege,ebe,lstm,96.13
+Akdeniz,ebe,lstm,92.24
+İç Anadolu,ebe,lstm,95.56
+Karadeniz,ebe,lstm,94.78
+Doğu Anadolu,ebe,lstm,92.17
+Güneydoğu Anadolu,ebe,lstm,91.03
+Marmara,diger,prophet,84.56
+Ege,diger,prophet,85.28
+Akdeniz,diger,prophet,90.77
+İç Anadolu,diger,prophet,87.24
+Karadeniz,diger,prophet,88.18
+Doğu Anadolu,diger,prophet,87.38
+Güneydoğu Anadolu,diger,prophet,83.81
+Marmara,diger,lstm,79.37
+Ege,diger,lstm,81.28
+Akdeniz,diger,lstm,83.94
+İç Anadolu,diger,lstm,84.07
+Karadeniz,diger,lstm,82.9
+Doğu Anadolu,diger,lstm,76.18
+Güneydoğu Anadolu,diger,lstm,73.04
+Marmara,hemsire,prophet,88.12
+Ege,hemsire,prophet,83.46
+Akdeniz,hemsire,prophet,88.38
+İç Anadolu,hemsire,prophet,85.22
+Karadeniz,hemsire,prophet,81.97
+Doğu Anadolu,hemsire,prophet,73.13
+Güneydoğu Anadolu,hemsire,prophet,89.36
+Marmara,hemsire,lstm,91.61
+Ege,hemsire,lstm,89.91
+Akdeniz,hemsire,lstm,90.92
+İç Anadolu,hemsire,lstm,89.44
+Karadeniz,hemsire,lstm,88.43
+Doğu Anadolu,hemsire,lstm,83.45
+Güneydoğu Anadolu,hemsire,lstm,91.03
+Marmara,yatak,prophet,70.09
+Ege,yatak,prophet,77.27
+Akdeniz,yatak,prophet,71.68
+İç Anadolu,yatak,prophet,87.54
+Karadeniz,yatak,prophet,83.96
+Doğu Anadolu,yatak,prophet,84.55
+Güneydoğu Anadolu,yatak,prophet,68.17
+Marmara,yatak,lstm,70.86
+Ege,yatak,lstm,77.77
+Akdeniz,yatak,lstm,75.58
+İç Anadolu,yatak,lstm,88.09
+Karadeniz,yatak,lstm,85.24
+Doğu Anadolu,yatak,lstm,87.47
+Güneydoğu Anadolu,yatak,lstm,74.29
+Marmara,hastane,prophet,94.19
+Ege,hastane,prophet,95.34
+Akdeniz,hastane,prophet,89.82
+İç Anadolu,hastane,prophet,91.98
+Karadeniz,hastane,prophet,89.74
+Doğu Anadolu,hastane,prophet,88.68
+Güneydoğu Anadolu,hastane,prophet,88.39
+Marmara,hastane,lstm,91.01
+Ege,hastane,lstm,95.37
+Akdeniz,hastane,lstm,88.15
+İç Anadolu,hastane,lstm,90.71
+Karadeniz,hastane,lstm,90.22
+Doğu Anadolu,hastane,lstm,88.68
+Güneydoğu Anadolu,hastane,lstm,87.64
