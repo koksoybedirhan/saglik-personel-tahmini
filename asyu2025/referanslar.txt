@@ -1,0 +1,40 @@
+1 -> [1] Yaşar, G. Y. (2011). ‘Health transformation programme’ in Turkey: an assessment. The International Journal of Health Planning and Management, 26(2), 110–133.
+2 -> Alkan, B. B., Atakan, C., & Şahin, A. (2011). Measuring inequalities in the distribution of health workers by bi-plot approach: The case of Turkey.
+3 -> Agartan, T. I. (2015). Health workforce policy and Turkey's health care reform. Health Policy, 119(12), 1621–1626. https://doi.org/10.1016/j.healthpol.2015.09.009
+4 -> Ugur, Z., & Tirgil, A. (2021). Regional health disparities in the aftermath of health system reforms in Turkey. Journal of Health Systems and Policies, 3(3), 137–169.
+5 -> Ak, M. (2023). Artificial intelligence practices in healthcare management in Turkey. International Journal of Health Systems and Rehabilitation Research, 3(3), 162–170. https://doi.org/10.5281/zenodo.10013237
+6 -> Devaraju, S. (2024). AI-Powered HRM and Finance Information Systems for Workforce Optimization and Employee Engagement. Turkish Journal of Computer and Mathematics Education (TURCOMAT), 15(1), 269–281. https://doi.org/10.61841/turcomat.v15i1.14940
+7 -> Babaoglu, A. B., & Tekindal, M. A. (2021). Modelling the Number of People per Physician, Nurse, and Midwives in Turkey in Terms of Reproductive Health Indicators. Inquiry : a journal of medical care organization, provision and financing, 58, 469580211020873. https://doi.org/10.1177/00469580211020873
+8 -> Atalan, A., & Şahin, H. (2024). Forecasting of the dental workforce with machine learning models. Mühendislik Bilimleri ve Araştırmaları Dergisi (MBAD), 6(1), 125–132.
+
+Arbia, G. (2024). The Classical Linear Regression Model. In A Primer for Spatial Econometrics: With Applications in R, STATA and Python (pp. 1-29). Cham: Springer International Publishing.
+
+Tiruneh, S. A., Vu, T. T. T., Rolnik, D. L., Teede, H. J., & Enticott, J. (2024). Machine learning algorithms versus classical regression models in pre-eclampsia prediction: a systematic review. Current Hypertension Reports, 26(7), 309-323.
+
+Song, Z., Cao, S., & Yang, H. (2024). An interpretable framework for modeling global solar radiation using tree-based ensemble machine learning and Shapley additive explanations methods. Applied Energy, 364, 123238.
+
+Soegianto, L. M., Hinandra, A. T., Suri, P. A., & Fajar, M. (2024). Comparison of model performance on housing business using linear regression, random forest regressor, svr, and neural network. Procedia Computer Science, 245, 1139-1145.
+
+Jafari, S., & Byun, Y. C. (2024). Efficient state of charge estimation in electric vehicles batteries based on the extra tree regressor: A data-driven approach. Heliyon, 10(4).
+
+Sharma, K., Tiwari, P. K., & Sinha, S. K. (2025). Estimation of Hematocrit Volume Using Blood Glucose Concentration through Extreme Gradient Boosting Regressor Machine Learning Model. Journal of Chemical Information and Modeling.
+
+Prabowo, Y. D., & Gatc, J. (2024, May). Optimizing CO2 Emission Predictions through an Ensemble Approach: Utilizing XGBRegressor, RandomForestRegressor, and DecisionTreeRegressor Models. In 2024 9th International Conference on Business and Industrial Research (ICBIR) (pp. 1024-1029). IEEE.
+
+Song, J., Cheng, Q., Bai, X., Jiang, W., & Su, G. (2024). LSTM-Based Deep Learning Model for Financial Market Stock Price Prediction. Journal of Economic Theory and Business Management, 1(2), 43-50.
+
+Cheng, J., Tiwari, S., Khaled, D., Mahendru, M., & Shahzad, U. (2024). Forecasting Bitcoin prices using artificial intelligence: Combination of ML, SARIMA, and Facebook Prophet models. Technological Forecasting and Social Change, 198, 122938.
+
+Sharma, B., & Goel, N. K. (2024). Streamflow prediction using support vector regression machine learning model for Tehri Dam. Applied Water Science, 14(5), 99.
+
+Liao, Z., Dai, S., & Kuosmanen, T. (2024). Convex support vector regression. European Journal of Operational Research, 313(3), 858-870.
+
+Zhao, F., Zhang, M., Zhou, S., & Lou, Q. (2024). Detection of network security traffic anomalies based on machine learning KNN method. Journal of Artificial Intelligence General science (JAIGS) ISSN: 3006-4023, 1(1), 209-218.
+
+Samad, A., Taze, S., & Uçar, M. K. (2024). Enhancing milk quality detection with machine learning: A comparative analysis of knn and distance-weighted knn algorithms. Int. J. Innov. Sci. Res. Technol, 9(3), 2021-2029.
+
+Chicco, D., Warrens, M. J., & Jurman, G. (2021). The coefficient of determination R-squared is more informative than SMAPE, MAE, MAPE, MSE and RMSE in regression analysis evaluation. Peerj computer science, 7, e623.
+
+Shanmugavalli, M., & Ignatia, K. M. J. (2025). Comparative Study among MAPE, RMSE and R Square over the Treatment Techniques Undergone for PCOS Influenced Women. Recent Patents on Engineering, 19(1), E041223224190.
+
+Zhu, Z., & Xu, X. (2023). EasyMergeR: an interactive Shiny application to manipulate multiple XLSX files of multiple sheets. arXiv preprint arXiv:2308.04478.

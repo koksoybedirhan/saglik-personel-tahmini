@@ -1,0 +1,34 @@
+Şehir Bazlı Doğruluk Ortalamaları (2023):
+ - RandomForestRegressor: 78.87%
+ - ExtraTreesRegressor: 78.92%
+ - GradientBoostingRegressor: 78.41%
+ - LinearRegression: 67.85%
+ - XGBRegressor: 79.89%
+ - SVR: 70.43%
+ - KNeighborsRegressor: 79.18%
+ - LSTM: 77.84
+ - PROPHET: 78.65
+
+Bölge Doğruluk Ortalamaları (2023):
+ - RF: 84.88%
+ - ET: 85.28%
+ - GB: 84.61%
+ - LR: 83.93%
+ - XGB: 87.42%
+ - SVR: 73.97%
+ - KNN: 84.89%
+ - LSTM: 85.418853%
+ - PROPHET: 84.94868%
+
+📉 Model Performans Metrikleri (2023):
+Model  |        MAE |       RMSE |         R²
+--------------------------------------------
+RF     |     297.69 |    1052.59 |      0.915
+ET     |     297.21 |    1095.41 |      0.908
+GB     |     301.13 |    1154.20 |      0.898
+LR     |     385.10 |    1676.15 |      0.784
+XGB    |     252.83 |     893.36 |      0.939
+SVR    |     524.30 |    1938.14 |      0.711
+KNN    |     296.30 |     982.87 |      0.926
+LSTM   |     264.34 |     669.62 |      0.939
+PROPHET|     281.40 |     794.67 |      0.921

@@ -1,0 +1,26 @@
+model testlerinde:
+
+Şehir Bazlı Doğruluk Ortalamaları (2023):
+ - LR: 67.81%
+ - RF: 78.76%
+ - XGB: 79.81%
+ - SVR: 69.81%
+ - KNN: 78.4%
+
+Bölge Doğruluk Ortalamaları (2023):
+ - LR: 83.93%
+ - RF: 84.77%
+ - XGB: 87.4%
+ - SVR: 73.15%
+ - KNN: 83.72%
+
+Model Performans Metrikleri (2023):
+Model  |        MAE |       RMSE |
+----------------------------------
+LR     |     383.91 |    1673.56 |  
+RF     |     299.14 |    1081.58 |  
+XGB    |     247.74 |     879.10 |
+SVR    |     524.76 |    1936.37 |
+KNN    |     317.82 |    1107.94 | 
+
+bu sonuçlar ile en iyi performansı veren tekil model xgb olmuştur.
