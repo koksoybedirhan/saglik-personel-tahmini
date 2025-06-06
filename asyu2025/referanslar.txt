@@ -38,3 +38,7 @@ Chicco, D., Warrens, M. J., & Jurman, G. (2021). The coefficient of determinatio
 Shanmugavalli, M., & Ignatia, K. M. J. (2025). Comparative Study among MAPE, RMSE and R Square over the Treatment Techniques Undergone for PCOS Influenced Women. Recent Patents on Engineering, 19(1), E041223224190.
 
 Zhu, Z., & Xu, X. (2023). EasyMergeR: an interactive Shiny application to manipulate multiple XLSX files of multiple sheets. arXiv preprint arXiv:2308.04478.
+
+Bischl, B., Binder, M., Lang, M., Pielok, T., Richter, J., Coors, S., ... & Lindauer, M. (2023). Hyperparameter optimization: Foundations, algorithms, best practices, and open challenges. Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 13(2), e1484.
+
+T.C. Sağlık Bakanlığı & Yükseköğretim Kurulu. (2014, Nisan 26). Tıpta ve Diş Hekimliğinde Uzmanlık Eğitimi Yönetmeliği. Resmî Gazete (Sayı: 28983). https://www.resmigazete.gov.tr/eskiler/2014/04/20140426-10.htm
