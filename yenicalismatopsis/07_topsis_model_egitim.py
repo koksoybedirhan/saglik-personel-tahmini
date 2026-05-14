@@ -53,63 +53,98 @@ except ImportError:
 INNER_CV = 2
 SCORING  = "neg_mean_absolute_error"
 
-# %% [2] VERİYİ YÜKLE + FEATURE ENGINEERING =========================
+# %% [2] VERİYİ YÜKLE + GENİŞ FEATURE ENGINEERING ====================
+import os
 df = pd.read_csv("topsis_veri.csv").sort_values(["il_adı", "yıl"]).reset_index(drop=True)
 hedefler_meta = pd.read_csv("topsis_hedef_yillar.csv")
 HEDEFLER = ["yas_0_14", "yas_65_plus", "hekim_oran", "yatak_oran"]
 
-# (a) Toplam il nüfusunu ekle (önceki çalışmadaki model_giris.csv'den)
-import os
-nufus_kaynak = None
-for yol in ["../yenicalisma/model_giris.csv", "model_giris.csv",
-            "../model_giris.csv"]:
+# (a) Toplam il nüfusu
+for yol in ["../yenicalisma/model_giris.csv", "model_giris.csv", "../model_giris.csv"]:
     if os.path.exists(yol):
-        nufus_kaynak = yol; break
-if nufus_kaynak:
-    nf = pd.read_csv(nufus_kaynak)[["il_adı", "yıl", "nufus"]]
-    df = df.merge(nf, on=["il_adı", "yıl"], how="left")
-    print(f"Nüfus eklendi ({nufus_kaynak})")
+        nf = pd.read_csv(yol)[["il_adı", "yıl", "nufus"]]
+        df = df.merge(nf, on=["il_adı", "yıl"], how="left")
+        print(f"Nüfus eklendi ({yol})")
+        break
 else:
-    print("[UYARI] model_giris.csv bulunamadı — nufus feature'ı eklenmeyecek.")
     df["nufus"] = np.nan
+    print("[UYARI] model_giris.csv bulunamadı")
 
-# (b) İl kimliği (sayısal) — tree modellerin il-bazlı patern öğrenmesi için
+# (b) İl kimliği (sayısal — tree modeller için)
 il_id_map = {il: i for i, il in enumerate(sorted(df["il_adı"].unique()))}
 df["il_id"] = df["il_adı"].map(il_id_map)
 
-# (c) Lag özellikleri (geçmiş 1 ve 2 yıl) — en güçlü tahmin sinyali
-df = df.sort_values(["il_adı", "yıl"]).reset_index(drop=True)
-for h in HEDEFLER:
-    df[f"{h}_lag1"] = df.groupby("il_adı")[h].shift(1)
-    df[f"{h}_lag2"] = df.groupby("il_adı")[h].shift(2)
+# (c) Bölge bilgisi — coğrafi gruplama
+bolge_map = {
+    'İstanbul':'Marmara','Edirne':'Marmara','Kırklareli':'Marmara','Tekirdağ':'Marmara',
+    'Kocaeli':'Marmara','Sakarya':'Marmara','Yalova':'Marmara','Bilecik':'Marmara',
+    'Balıkesir':'Marmara','Çanakkale':'Marmara','Bursa':'Marmara',
+    'İzmir':'Ege','Aydın':'Ege','Muğla':'Ege','Manisa':'Ege',
+    'Afyonkarahisar':'Ege','Uşak':'Ege','Kütahya':'Ege','Denizli':'Ege',
+    'Antalya':'Akdeniz','Mersin':'Akdeniz','Adana':'Akdeniz','Hatay':'Akdeniz',
+    'Kahramanmaraş':'Akdeniz','Osmaniye':'Akdeniz','Isparta':'Akdeniz','Burdur':'Akdeniz',
+    'Ankara':'İç Anadolu','Konya':'İç Anadolu','Kayseri':'İç Anadolu','Eskişehir':'İç Anadolu',
+    'Nevşehir':'İç Anadolu','Aksaray':'İç Anadolu','Kırıkkale':'İç Anadolu','Niğde':'İç Anadolu',
+    'Karaman':'İç Anadolu','Sivas':'İç Anadolu','Yozgat':'İç Anadolu','Kırşehir':'İç Anadolu',
+    'Çankırı':'İç Anadolu',
+    'Samsun':'Karadeniz','Trabzon':'Karadeniz','Ordu':'Karadeniz','Giresun':'Karadeniz',
+    'Rize':'Karadeniz','Artvin':'Karadeniz','Tokat':'Karadeniz','Amasya':'Karadeniz',
+    'Bartın':'Karadeniz','Zonguldak':'Karadeniz','Karabük':'Karadeniz','Sinop':'Karadeniz',
+    'Çorum':'Karadeniz','Bayburt':'Karadeniz','Gümüşhane':'Karadeniz','Kastamonu':'Karadeniz',
+    'Bolu':'Karadeniz','Düzce':'Karadeniz',
+    'Erzurum':'Doğu Anadolu','Van':'Doğu Anadolu','Malatya':'Doğu Anadolu','Elazığ':'Doğu Anadolu',
+    'Kars':'Doğu Anadolu','Ağrı':'Doğu Anadolu','Bitlis':'Doğu Anadolu','Iğdır':'Doğu Anadolu',
+    'Tunceli':'Doğu Anadolu','Ardahan':'Doğu Anadolu','Erzincan':'Doğu Anadolu','Bingöl':'Doğu Anadolu',
+    'Muş':'Doğu Anadolu','Hakkari':'Doğu Anadolu',
+    'Diyarbakır':'Güneydoğu Anadolu','Gaziantep':'Güneydoğu Anadolu','Şanlıurfa':'Güneydoğu Anadolu',
+    'Mardin':'Güneydoğu Anadolu','Batman':'Güneydoğu Anadolu','Siirt':'Güneydoğu Anadolu',
+    'Şırnak':'Güneydoğu Anadolu','Adıyaman':'Güneydoğu Anadolu','Kilis':'Güneydoğu Anadolu'
+}
+df["bolge"] = df["il_adı"].map(bolge_map)
+df["bolge_id"] = df["bolge"].astype("category").cat.codes
+print(f"Bölge ataması bilinmeyen: {df['bolge'].isna().sum()} satır")
 
-print("\nVeri (lag özellikleri eklendi):", df.shape)
+# (d) Nüfus büyüme oranı
+df = df.sort_values(["il_adı", "yıl"]).reset_index(drop=True)
+df["nufus_growth"] = df.groupby("il_adı")["nufus"].pct_change()
+df["nufus_growth_5y"] = df.groupby("il_adı")["nufus"].transform(lambda x: x.pct_change(periods=5))
+
+# (e) Her hedef için lag, rolling, yoy, delta, il_mean
+for h in HEDEFLER:
+    g = df.groupby("il_adı")[h]
+    df[f"{h}_lag1"]   = g.shift(1)
+    df[f"{h}_lag2"]   = g.shift(2)
+    df[f"{h}_rmean3"] = g.transform(lambda x: x.shift(1).rolling(3, min_periods=1).mean())
+    df[f"{h}_rmean5"] = g.transform(lambda x: x.shift(1).rolling(5, min_periods=2).mean())
+    df[f"{h}_yoy"]    = g.pct_change().shift(1)         # önceki yılın değişim oranı
+    df[f"{h}_delta"]  = g.diff().shift(1)               # önceki yılın mutlak değişimi
+    # İl-ortalama (target encoding) — leak'i azaltmak için lag-tabanlı genişleyen ortalama:
+    df[f"{h}_il_mean"] = g.transform(lambda x: x.shift(1).expanding().mean())
+
+print(f"\nVeri (genişletilmiş): {df.shape}")
+print(f"Toplam {df.shape[1]} sütun var. İlk 8 örnek:")
 print(df.head(8).to_string(index=False))
 print("\nHedef yıl aralıkları:")
 print(hedefler_meta.to_string(index=False))
 
-# %% [3] FEATURE MAP — lag + il_id + nüfus + cross-target ==========
+# %% [3] FEATURE MAP — genişletilmiş set =============================
 # Her hedef için:
-#   - yıl, il_id, nufus            (zaman + şehir kimliği + ölçek)
-#   - kendi lag-1 ve lag-2          (autoregressive sinyal — EN GÜÇLÜ)
-#   - diğer 3 hedefin lag-1'i       (cross-target sinyal, leak yok)
-FEATURE_MAP = {
-    "yas_0_14":    ["yıl", "il_id", "nufus",
-                    "yas_0_14_lag1", "yas_0_14_lag2",
-                    "yas_65_plus_lag1", "hekim_oran_lag1", "yatak_oran_lag1"],
-    "yas_65_plus": ["yıl", "il_id", "nufus",
-                    "yas_65_plus_lag1", "yas_65_plus_lag2",
-                    "yas_0_14_lag1", "hekim_oran_lag1", "yatak_oran_lag1"],
-    "hekim_oran":  ["yıl", "il_id", "nufus",
-                    "hekim_oran_lag1", "hekim_oran_lag2",
-                    "yas_0_14_lag1", "yas_65_plus_lag1", "yatak_oran_lag1"],
-    "yatak_oran":  ["yıl", "il_id", "nufus",
-                    "yatak_oran_lag1", "yatak_oran_lag2",
-                    "yas_0_14_lag1", "yas_65_plus_lag1", "hekim_oran_lag1"],
-}
-print("\nYeni feature map (her hedef için 8 özellik):")
+#   - bolge_id, il_id, nufus, nufus_growth          → şehir bilgisi
+#   - yıl                                           → zaman
+#   - kendi: lag1, lag2, rmean3, rmean5, yoy, delta, il_mean (7 özellik)
+#   - diğer 3 hedefin lag1'i                       → cross-target sinyali
+def feats_for(hedef):
+    digerleri = [h for h in HEDEFLER if h != hedef]
+    base = ["yıl", "il_id", "bolge_id", "nufus", "nufus_growth"]
+    kendi = [f"{hedef}_lag1", f"{hedef}_lag2", f"{hedef}_rmean3", f"{hedef}_rmean5",
+             f"{hedef}_yoy", f"{hedef}_delta", f"{hedef}_il_mean"]
+    cross = [f"{h}_lag1" for h in digerleri]
+    return base + kendi + cross
+
+FEATURE_MAP = {h: feats_for(h) for h in HEDEFLER}
+print(f"\nGenişletilmiş feature map (her hedef için {len(FEATURE_MAP['yas_0_14'])} özellik):")
 for h, f in FEATURE_MAP.items():
-    print(f"  {h:<15} → {f}")
+    print(f"  {h:<15} → {len(f)} özellik")
 
 # %% [4] K-FOLD: hedef bazında dinamik =============================
 def make_folds(yil_baslangic, yil_son, test_size=3, n_folds=5):

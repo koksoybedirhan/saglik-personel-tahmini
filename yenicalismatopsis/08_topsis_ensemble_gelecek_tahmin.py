@@ -44,7 +44,7 @@ except ImportError:
 
 TOP_K = 3
 
-# %% [2] VERİ + ÖNCEKİ ÇIKTILAR + FEATURE ENGINEERING ===============
+# %% [2] VERİ + ÖNCEKİ ÇIKTILAR + GENİŞ FEATURE ENGINEERING ==========
 import os
 df = pd.read_csv("topsis_veri.csv").sort_values(["il_adı", "yıl"]).reset_index(drop=True)
 hedefler_meta = pd.read_csv("topsis_hedef_yillar.csv")
@@ -52,7 +52,7 @@ metr = pd.read_csv("topsis_metrikleri_detay.csv")
 
 HEDEFLER = ["yas_0_14", "yas_65_plus", "hekim_oran", "yatak_oran"]
 
-# Aynı feature engineering — 07 ile birebir aynı olmalı
+# 07 ile birebir aynı feature engineering
 for yol in ["../yenicalisma/model_giris.csv", "model_giris.csv", "../model_giris.csv"]:
     if os.path.exists(yol):
         nf = pd.read_csv(yol)[["il_adı", "yıl", "nufus"]]
@@ -64,25 +64,57 @@ else:
 il_id_map = {il: i for i, il in enumerate(sorted(df["il_adı"].unique()))}
 df["il_id"] = df["il_adı"].map(il_id_map)
 
-df = df.sort_values(["il_adı", "yıl"]).reset_index(drop=True)
-for h in HEDEFLER:
-    df[f"{h}_lag1"] = df.groupby("il_adı")[h].shift(1)
-    df[f"{h}_lag2"] = df.groupby("il_adı")[h].shift(2)
-
-FEATURE_MAP = {
-    "yas_0_14":    ["yıl", "il_id", "nufus",
-                    "yas_0_14_lag1", "yas_0_14_lag2",
-                    "yas_65_plus_lag1", "hekim_oran_lag1", "yatak_oran_lag1"],
-    "yas_65_plus": ["yıl", "il_id", "nufus",
-                    "yas_65_plus_lag1", "yas_65_plus_lag2",
-                    "yas_0_14_lag1", "hekim_oran_lag1", "yatak_oran_lag1"],
-    "hekim_oran":  ["yıl", "il_id", "nufus",
-                    "hekim_oran_lag1", "hekim_oran_lag2",
-                    "yas_0_14_lag1", "yas_65_plus_lag1", "yatak_oran_lag1"],
-    "yatak_oran":  ["yıl", "il_id", "nufus",
-                    "yatak_oran_lag1", "yatak_oran_lag2",
-                    "yas_0_14_lag1", "yas_65_plus_lag1", "hekim_oran_lag1"],
+bolge_map = {
+    'İstanbul':'Marmara','Edirne':'Marmara','Kırklareli':'Marmara','Tekirdağ':'Marmara',
+    'Kocaeli':'Marmara','Sakarya':'Marmara','Yalova':'Marmara','Bilecik':'Marmara',
+    'Balıkesir':'Marmara','Çanakkale':'Marmara','Bursa':'Marmara',
+    'İzmir':'Ege','Aydın':'Ege','Muğla':'Ege','Manisa':'Ege',
+    'Afyonkarahisar':'Ege','Uşak':'Ege','Kütahya':'Ege','Denizli':'Ege',
+    'Antalya':'Akdeniz','Mersin':'Akdeniz','Adana':'Akdeniz','Hatay':'Akdeniz',
+    'Kahramanmaraş':'Akdeniz','Osmaniye':'Akdeniz','Isparta':'Akdeniz','Burdur':'Akdeniz',
+    'Ankara':'İç Anadolu','Konya':'İç Anadolu','Kayseri':'İç Anadolu','Eskişehir':'İç Anadolu',
+    'Nevşehir':'İç Anadolu','Aksaray':'İç Anadolu','Kırıkkale':'İç Anadolu','Niğde':'İç Anadolu',
+    'Karaman':'İç Anadolu','Sivas':'İç Anadolu','Yozgat':'İç Anadolu','Kırşehir':'İç Anadolu',
+    'Çankırı':'İç Anadolu',
+    'Samsun':'Karadeniz','Trabzon':'Karadeniz','Ordu':'Karadeniz','Giresun':'Karadeniz',
+    'Rize':'Karadeniz','Artvin':'Karadeniz','Tokat':'Karadeniz','Amasya':'Karadeniz',
+    'Bartın':'Karadeniz','Zonguldak':'Karadeniz','Karabük':'Karadeniz','Sinop':'Karadeniz',
+    'Çorum':'Karadeniz','Bayburt':'Karadeniz','Gümüşhane':'Karadeniz','Kastamonu':'Karadeniz',
+    'Bolu':'Karadeniz','Düzce':'Karadeniz',
+    'Erzurum':'Doğu Anadolu','Van':'Doğu Anadolu','Malatya':'Doğu Anadolu','Elazığ':'Doğu Anadolu',
+    'Kars':'Doğu Anadolu','Ağrı':'Doğu Anadolu','Bitlis':'Doğu Anadolu','Iğdır':'Doğu Anadolu',
+    'Tunceli':'Doğu Anadolu','Ardahan':'Doğu Anadolu','Erzincan':'Doğu Anadolu','Bingöl':'Doğu Anadolu',
+    'Muş':'Doğu Anadolu','Hakkari':'Doğu Anadolu',
+    'Diyarbakır':'Güneydoğu Anadolu','Gaziantep':'Güneydoğu Anadolu','Şanlıurfa':'Güneydoğu Anadolu',
+    'Mardin':'Güneydoğu Anadolu','Batman':'Güneydoğu Anadolu','Siirt':'Güneydoğu Anadolu',
+    'Şırnak':'Güneydoğu Anadolu','Adıyaman':'Güneydoğu Anadolu','Kilis':'Güneydoğu Anadolu'
 }
+df["bolge"] = df["il_adı"].map(bolge_map)
+df["bolge_id"] = df["bolge"].astype("category").cat.codes
+
+df = df.sort_values(["il_adı", "yıl"]).reset_index(drop=True)
+df["nufus_growth"]    = df.groupby("il_adı")["nufus"].pct_change()
+df["nufus_growth_5y"] = df.groupby("il_adı")["nufus"].transform(lambda x: x.pct_change(periods=5))
+
+for h in HEDEFLER:
+    g = df.groupby("il_adı")[h]
+    df[f"{h}_lag1"]    = g.shift(1)
+    df[f"{h}_lag2"]    = g.shift(2)
+    df[f"{h}_rmean3"]  = g.transform(lambda x: x.shift(1).rolling(3, min_periods=1).mean())
+    df[f"{h}_rmean5"]  = g.transform(lambda x: x.shift(1).rolling(5, min_periods=2).mean())
+    df[f"{h}_yoy"]     = g.pct_change().shift(1)
+    df[f"{h}_delta"]   = g.diff().shift(1)
+    df[f"{h}_il_mean"] = g.transform(lambda x: x.shift(1).expanding().mean())
+
+def feats_for(hedef):
+    digerleri = [h for h in HEDEFLER if h != hedef]
+    base = ["yıl", "il_id", "bolge_id", "nufus", "nufus_growth"]
+    kendi = [f"{hedef}_lag1", f"{hedef}_lag2", f"{hedef}_rmean3", f"{hedef}_rmean5",
+             f"{hedef}_yoy", f"{hedef}_delta", f"{hedef}_il_mean"]
+    cross = [f"{h}_lag1" for h in digerleri]
+    return base + kendi + cross
+
+FEATURE_MAP = {h: feats_for(h) for h in HEDEFLER}
 
 # %% [3] TOP-K SEÇİMİ VE AĞIRLIKLAR ================================
 ana = metr[metr["Fold"] == 5]
@@ -238,10 +270,19 @@ for il in tum_iller:
     yillar_eksik = df_genis.loc[mask_g, "yıl"].values
     df_genis.loc[mask_g, "nufus"] = np.polyval(coef, yillar_eksik)
 
-# Lag özelliklerini yeniden hesapla — geçmiş + univariate-doldurulmuş gelecek üzerinden
+# Tüm türetilmiş özellikleri yeniden hesapla — geçmiş + univariate-doldurulmuş gelecek
+df_genis["nufus_growth"]    = df_genis.groupby("il_adı")["nufus"].pct_change()
+df_genis["nufus_growth_5y"] = df_genis.groupby("il_adı")["nufus"].transform(lambda x: x.pct_change(periods=5))
+
 for h in HEDEFLER:
-    df_genis[f"{h}_lag1"] = df_genis.groupby("il_adı")[h].shift(1)
-    df_genis[f"{h}_lag2"] = df_genis.groupby("il_adı")[h].shift(2)
+    g = df_genis.groupby("il_adı")[h]
+    df_genis[f"{h}_lag1"]    = g.shift(1)
+    df_genis[f"{h}_lag2"]    = g.shift(2)
+    df_genis[f"{h}_rmean3"]  = g.transform(lambda x: x.shift(1).rolling(3, min_periods=1).mean())
+    df_genis[f"{h}_rmean5"]  = g.transform(lambda x: x.shift(1).rolling(5, min_periods=2).mean())
+    df_genis[f"{h}_yoy"]     = g.pct_change().shift(1)
+    df_genis[f"{h}_delta"]   = g.diff().shift(1)
+    df_genis[f"{h}_il_mean"] = g.transform(lambda x: x.shift(1).expanding().mean())
 
 # %% [8] MULTIVARIATE MODELLERİ EĞİT VE TAHMİN ÜRET ================
 print("\n========== Multivariate tahminler ==========")
