@@ -1,0 +1,487 @@
+﻿il_adı,il_key,yıl,nufus,nufus_veri_turu,nufus_kaynak,yas_0_14,yas_65_plus,hekim_oran,yatak_oran,yas_0_14_tip,yas_65_plus_tip,hekim_oran_tip,yatak_oran_tip
+Adana,adana,2025,2283609,Gerçek,TÜİK ADNKS 2025,21.993213374093376,10.586751059397645,2.602271800802555,323.98543231345343,actual,actual,predicted,predicted
+Adana,adana,2026,2293499,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.286629382655114,11.01623442984421,2.631854669598397,329.2209073382338,predicted,predicted,predicted,predicted
+Adana,adana,2027,2299727,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.825060656226984,11.457670445361732,2.657828367780894,334.55069131008054,predicted,predicted,predicted,predicted
+Adana,adana,2028,2305551,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.374964399747803,11.919365613154019,2.6944664599723183,339.72992971632686,predicted,predicted,predicted,predicted
+Adana,adana,2029,2310973,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.750900313218935,12.39673940138164,2.736625443387311,344.7152966325825,predicted,predicted,predicted,predicted
+Adana,adana,2030,2315809,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.924918941902448,12.88924597434346,2.78350422042422,349.5565988150055,predicted,predicted,predicted,predicted
+Adıyaman,adiyaman,2025,617821,Gerçek,TÜİK ADNKS 2025,26.07486634478271,9.208168709059745,1.6943547187838703,188.84475439892012,actual,actual,predicted,predicted
+Adıyaman,adiyaman,2026,623112,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,25.34447873172273,9.578499174271952,1.7589686693972908,195.16301950127834,predicted,predicted,predicted,predicted
+Adıyaman,adiyaman,2027,629218,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,24.622162285256998,9.968357155185581,1.8305616413708776,201.209824821698,predicted,predicted,predicted,predicted
+Adıyaman,adiyaman,2028,634858,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,24.025956721620503,10.371186507393126,1.8941488306736574,207.21344889969345,predicted,predicted,predicted,predicted
+Adıyaman,adiyaman,2029,640085,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.42026828854076,10.789744146855094,1.9545945886638947,212.89545318131673,predicted,predicted,predicted,predicted
+Adıyaman,adiyaman,2030,645096,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.707455249657094,11.224075873947761,2.012110110197682,218.34916101882263,predicted,predicted,predicted,predicted
+Afyonkarahisar,afyonkarahisar,2025,751808,Gerçek,TÜİK ADNKS 2025,19.32381671916234,13.235959181067505,2.229887312219944,323.133196617777,actual,actual,predicted,predicted
+Afyonkarahisar,afyonkarahisar,2026,750744,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.772152214954044,13.64202037011358,2.260107740177773,327.9346126842047,predicted,predicted,predicted,predicted
+Afyonkarahisar,afyonkarahisar,2027,750570,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.319355193002423,14.059999746506792,2.294722513644956,332.5693712346307,predicted,predicted,predicted,predicted
+Afyonkarahisar,afyonkarahisar,2028,750213,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.77596523613336,14.50085638831575,2.3365633750800043,337.15577750804505,predicted,predicted,predicted,predicted
+Afyonkarahisar,afyonkarahisar,2029,749692,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.2706344036679,14.957876510501851,2.383261724258773,341.6355791863177,predicted,predicted,predicted,predicted
+Afyonkarahisar,afyonkarahisar,2030,749016,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.81355851670853,15.430398714134586,2.4341031454969198,346.0319639894898,predicted,predicted,predicted,predicted
+Ağrı,agri,2025,491489,Gerçek,TÜİK ADNKS 2025,30.348186836327972,6.111225276659295,1.3509431930142455,198.88001771435233,actual,actual,predicted,predicted
+Ağrı,agri,2026,479455,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,29.56883505841931,6.456666032095834,1.4772249500383623,203.0653306346493,predicted,predicted,predicted,predicted
+Ağrı,agri,2027,468946,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.644764425441426,6.820459868706495,1.598959456430748,207.24938779953874,predicted,predicted,predicted,predicted
+Ağrı,agri,2028,458424,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.925116070752892,7.2022757083350974,1.7076304255169816,211.2266481817278,predicted,predicted,predicted,predicted
+Ağrı,agri,2029,447904,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.00694703203308,7.602536373535462,1.8085135617293417,215.1566526748639,predicted,predicted,predicted,predicted
+Ağrı,agri,2030,437440,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.309211523212277,8.021021914530815,1.9033460397622548,219.02665770757426,predicted,predicted,predicted,predicted
+Aksaray,aksaray,2025,441136,Gerçek,TÜİK ADNKS 2025,21.951960393166733,10.99434188096188,1.7287388098193333,261.1102275386718,actual,actual,predicted,predicted
+Aksaray,aksaray,2026,442914,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.258020870183444,11.40650080455279,1.7620914332801476,265.15646754364684,predicted,predicted,predicted,predicted
+Aksaray,aksaray,2027,444520,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.709063581688575,11.837406719175648,1.7976355404243805,269.2099993615619,predicted,predicted,predicted,predicted
+Aksaray,aksaray,2028,446058,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.115585840062835,12.285502663585275,1.8392293523065746,273.28614247584204,predicted,predicted,predicted,predicted
+Aksaray,aksaray,2029,447531,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.37157032384043,12.749072054073222,1.88478903088253,277.3360510968694,predicted,predicted,predicted,predicted
+Aksaray,aksaray,2030,448920,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.828288955259737,13.227934519553191,1.9337122383294627,281.37149181116706,predicted,predicted,predicted,predicted
+Amasya,amasya,2025,342242,Gerçek,TÜİK ADNKS 2025,16.092414139702317,17.17790335493598,1.7760620565968566,280.97724998068884,actual,actual,predicted,predicted
+Amasya,amasya,2026,344739,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.782787054783226,17.695182053422275,1.8458758646156639,286.77523013366044,predicted,predicted,predicted,predicted
+Amasya,amasya,2027,346139,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.207521033760324,18.2124574559936,1.9101608352502808,292.52974000630314,predicted,predicted,predicted,predicted
+Amasya,amasya,2028,347497,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.918203146610564,18.752109865697392,1.9713161374093033,297.9119244935446,predicted,predicted,predicted,predicted
+Amasya,amasya,2029,348797,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.515363226421806,19.306528584179357,2.0305371052818373,303.1148974738404,predicted,predicted,predicted,predicted
+Amasya,amasya,2030,350044,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.328460729650033,19.87468253547643,2.0885213798610494,308.14847183312037,predicted,predicted,predicted,predicted
+Ankara,ankara,2025,5910320,Gerçek,TÜİK ADNKS 2025,17.836834553797427,10.97121644851717,4.506464110629167,426.0311242907618,actual,actual,predicted,predicted
+Ankara,ankara,2026,5962917,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.24941699577273,11.382421753768678,4.470143336511683,427.2847961246239,predicted,predicted,predicted,predicted
+Ankara,ankara,2027,6011603,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.87122872928012,11.806430581315615,4.438654807279818,428.685927570132,predicted,predicted,predicted,predicted
+Ankara,ankara,2028,6060057,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.45083389407756,12.25212169599598,4.436521016876213,430.4878515558571,predicted,predicted,predicted,predicted
+Ankara,ankara,2029,6107526,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.010572396282587,12.713990350721971,4.451647379260976,432.5804852209244,predicted,predicted,predicted,predicted
+Ankara,ankara,2030,6154484,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.5381101563668,13.191445947853211,4.480656191415619,434.9227002432708,predicted,predicted,predicted,predicted
+Antalya,antalya,2025,2777677,Gerçek,TÜİK ADNKS 2025,18.702390522728166,10.557491025774416,2.8257265741121955,327.6460543945159,actual,actual,predicted,predicted
+Antalya,antalya,2026,2799873,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.117423768703617,10.956177656153509,2.806590464664623,328.70050086918013,predicted,predicted,predicted,predicted
+Antalya,antalya,2027,2834900,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.554146800103293,11.367468632278575,2.785864776291419,330.87306039304406,predicted,predicted,predicted,predicted
+Antalya,antalya,2028,2870063,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.98561757677072,11.797475652788723,2.7897648016223684,332.6884775310644,predicted,predicted,predicted,predicted
+Antalya,antalya,2029,2905350,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.558849136983294,12.24329154292834,2.806593509216327,334.90364864079527,predicted,predicted,predicted,predicted
+Antalya,antalya,2030,2940064,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.2642397542195,12.704467032386475,2.8349640805390663,337.3758568221907,predicted,predicted,predicted,predicted
+Ardahan,ardahan,2025,90392,Gerçek,TÜİK ADNKS 2025,17.959553942826798,15.225904947340474,1.826416895375587,234.77687441663494,actual,actual,predicted,predicted
+Ardahan,ardahan,2026,88961,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.57468139773795,15.741108718948276,1.9341522848117165,238.82754438201002,predicted,predicted,predicted,predicted
+Ardahan,ardahan,2027,87752,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.990257831681642,16.27771635604823,2.038797418063041,242.9038111110347,predicted,predicted,predicted,predicted
+Ardahan,ardahan,2028,86552,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.49528295011308,16.824744924312924,2.133487536048051,246.92984922399893,predicted,predicted,predicted,predicted
+Ardahan,ardahan,2029,85342,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.274849229624724,17.38701030448113,2.22199107328197,250.89706869317158,predicted,predicted,predicted,predicted
+Ardahan,ardahan,2030,84142,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.207359163950407,17.96471279471163,2.3059022519155405,254.8197710541184,predicted,predicted,predicted,predicted
+Artvin,artvin,2025,167531,Gerçek,TÜİK ADNKS 2025,14.686237174015554,19.248974816601105,1.8189504404435866,226.7613461487728,actual,actual,predicted,predicted
+Artvin,artvin,2026,164918,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.201278911086334,19.77220891901923,1.9126463976572268,233.64907113198313,predicted,predicted,predicted,predicted
+Artvin,artvin,2027,162609,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.212758318780867,20.30764372937141,2.0130466429982334,240.21686499627296,predicted,predicted,predicted,predicted
+Artvin,artvin,2028,160302,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.185277361448607,20.86212971879131,2.1040509386803024,246.37019310490632,predicted,predicted,predicted,predicted
+Artvin,artvin,2029,158026,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.150837281713365,21.432143651286932,2.1905202629277483,252.17498939231993,predicted,predicted,predicted,predicted
+Artvin,artvin,2030,155750,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.154222020997373,22.017207824293997,2.2730580246425234,257.68285048498063,predicted,predicted,predicted,predicted
+Aydın,aydin,2025,1172107,Gerçek,TÜİK ADNKS 2025,17.198429836183898,16.29151604759634,2.316845640540123,314.3904521741164,actual,actual,predicted,predicted
+Aydın,aydin,2026,1176465,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.829652781437613,16.78810050439157,2.370145640161354,317.96309081424334,predicted,predicted,predicted,predicted
+Aydın,aydin,2027,1181285,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.492794163507412,17.29485089239049,2.4074696564348415,321.6103065601924,predicted,predicted,predicted,predicted
+Aydın,aydin,2028,1186020,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.105977588591493,17.82402460134075,2.4527382610249333,325.32926331197996,predicted,predicted,predicted,predicted
+Aydın,aydin,2029,1190694,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.71026109943191,18.36782402617927,2.4995213683578186,329.0730685907538,predicted,predicted,predicted,predicted
+Aydın,aydin,2030,1195272,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.204227625805318,18.925547142547185,2.5494596605421975,332.845398388916,predicted,predicted,predicted,predicted
+Balıkesir,balikesir,2025,1284517,Gerçek,TÜİK ADNKS 2025,15.223465318092325,18.166984166032833,2.080553615873214,275.08534895628367,actual,actual,predicted,predicted
+Balıkesir,balikesir,2026,1284782,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.018102617899673,18.69006823068395,2.1049389332765713,281.06983256236055,predicted,predicted,predicted,predicted
+Balıkesir,balikesir,2027,1287894,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.661572018467437,19.22240065747184,2.120049950433895,286.7868676914315,predicted,predicted,predicted,predicted
+Balıkesir,balikesir,2028,1290778,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.318956848627055,19.77530508233652,2.1500339905614965,292.3240956536605,predicted,predicted,predicted,predicted
+Balıkesir,balikesir,2029,1293408,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.323995046783706,20.342616664658888,2.1869428300997242,297.62515195016056,predicted,predicted,predicted,predicted
+Balıkesir,balikesir,2030,1295758,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.33494804472538,20.92369277462651,2.2304015299887396,302.7363858187828,predicted,predicted,predicted,predicted
+Bartın,bartin,2025,206663,Gerçek,TÜİK ADNKS 2025,14.282672757097304,17.40176035381273,1.6733989567728713,251.48705717850297,actual,actual,predicted,predicted
+Bartın,bartin,2026,206526,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.27977115249828,17.910407622633127,1.7436726610176265,256.32703563402015,predicted,predicted,predicted,predicted
+Bartın,bartin,2027,206399,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.266515724149096,18.41772476448817,1.8092692317441106,261.03315594617237,predicted,predicted,predicted,predicted
+Bartın,bartin,2028,206263,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.266515724149096,18.954716928256445,1.8730659201391973,265.68464758059866,predicted,predicted,predicted,predicted
+Bartın,bartin,2029,206118,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.266515724149096,19.506979716205493,1.9353169756941497,270.2179758121876,predicted,predicted,predicted,predicted
+Bartın,bartin,2030,205941,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.26017947252338,20.073112778990264,1.9968813235173002,274.6608689639623,predicted,predicted,predicted,predicted
+Batman,batman,2025,662626,Gerçek,TÜİK ADNKS 2025,29.897860935127813,5.167470035887514,1.5065867755329236,281.74227338290154,actual,actual,predicted,predicted
+Batman,batman,2026,670787,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,29.236873320656574,5.435143730023461,1.5925588324898854,284.84054451291104,predicted,predicted,predicted,predicted
+Batman,batman,2027,678606,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.71685606636814,5.7237499309283075,1.6735114583862014,288.0899090924182,predicted,predicted,predicted,predicted
+Batman,batman,2028,686298,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.02906352130051,6.025888121766412,1.7440717880963348,291.52000428426004,predicted,predicted,predicted,predicted
+Batman,batman,2029,693858,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.074899489670322,6.345009636384288,1.8082238134229556,295.02357583037576,predicted,predicted,predicted,predicted
+Batman,batman,2030,701254,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.266213325635558,6.681174390557182,1.8675089212483726,298.6043216040171,predicted,predicted,predicted,predicted
+Bayburt,bayburt,2025,82836,Gerçek,TÜİK ADNKS 2025,17.701241006325752,13.320295523685354,1.9772776027675718,258.8205178711662,actual,actual,predicted,predicted
+Bayburt,bayburt,2026,81025,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.411205586652255,13.718704671071944,2.0287403664551675,263.86694064046105,predicted,predicted,predicted,predicted
+Bayburt,bayburt,2027,79579,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.016026175525006,14.133103862201228,2.098086001467891,269.90846085607893,predicted,predicted,predicted,predicted
+Bayburt,bayburt,2028,78156,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.71553484290123,14.573569688618107,2.1678943037986755,275.69545298205406,predicted,predicted,predicted,predicted
+Bayburt,bayburt,2029,76776,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.514376659779217,15.031498314056186,2.2409599549719132,281.10664036935344,predicted,predicted,predicted,predicted
+Bayburt,bayburt,2030,75412,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.251127500453723,15.506212457207145,2.315301179944072,286.2760633631623,predicted,predicted,predicted,predicted
+Bilecik,bilecik,2025,228995,Gerçek,TÜİK ADNKS 2025,17.46239000851547,13.59986025895762,1.8200493705808185,262.46201997505693,actual,actual,predicted,predicted
+Bilecik,bilecik,2026,225621,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.025965396319076,13.972854216996973,1.8530973287997767,260.3079876361016,predicted,predicted,predicted,predicted
+Bilecik,bilecik,2027,223749,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.588117169118085,14.355998999251428,1.891256681701634,258.93388085967996,predicted,predicted,predicted,predicted
+Bilecik,bilecik,2028,221885,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.218214609454147,14.763874996783617,1.9384093439439312,258.21215636332937,predicted,predicted,predicted,predicted
+Bilecik,bilecik,2029,220022,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.956242823233929,15.189092162162842,1.9914739474770613,258.1151025407328,predicted,predicted,predicted,predicted
+Bilecik,bilecik,2030,218165,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.673232477313551,15.63083356688497,2.0491075350437313,258.54492028431594,predicted,predicted,predicted,predicted
+Bingöl,bingol,2025,282299,Gerçek,TÜİK ADNKS 2025,23.84457614090025,8.77544730941307,1.587317253521178,245.19910051377025,actual,actual,predicted,predicted
+Bingöl,bingol,2026,279550,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.21670178136697,9.15911796608946,1.6609877066221088,253.02873963545403,predicted,predicted,predicted,predicted
+Bingöl,bingol,2027,277479,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.56387067258195,9.559719708113986,1.7375971438013949,260.29118004064895,predicted,predicted,predicted,predicted
+Bingöl,bingol,2028,275394,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.0474543356097,9.97711036689374,1.810327796265483,267.33706174562013,predicted,predicted,predicted,predicted
+Bingöl,bingol,2029,273264,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.490632219437906,10.411329626893242,1.8815260332194157,273.87667341777694,predicted,predicted,predicted,predicted
+Bingöl,bingol,2030,271113,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.922493977137613,10.86214599081358,1.9513817786355503,280.0330070383208,predicted,predicted,predicted,predicted
+Bitlis,bitlis,2025,360423,Gerçek,TÜİK ADNKS 2025,28.936555103309168,6.322570979099558,1.5739917209139094,300.9083903890603,actual,actual,predicted,predicted
+Bitlis,bitlis,2026,360363,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.159147192277544,6.658180553263399,1.649899841111619,304.5982240850186,predicted,predicted,predicted,predicted
+Bitlis,bitlis,2027,360431,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.417123640493333,7.009302047239462,1.71899081626907,308.34206813045705,predicted,predicted,predicted,predicted
+Bitlis,bitlis,2028,360404,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.771032548902102,7.375944972130936,1.7855228724656627,312.1493576620957,predicted,predicted,predicted,predicted
+Bitlis,bitlis,2029,360291,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.102615037546084,7.759618280856971,1.8494903551181778,315.9571322308597,predicted,predicted,predicted,predicted
+Bitlis,bitlis,2030,360097,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,25.314666198694724,8.160104926814169,1.9121401281445287,319.7751459043356,predicted,predicted,predicted,predicted
+Bolu,bolu,2025,327173,Gerçek,TÜİK ADNKS 2025,15.661439055178757,15.707286359204458,3.3624600021285005,441.5963102036171,actual,actual,predicted,predicted
+Bolu,bolu,2026,330142,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.202055821189628,16.115337818383047,3.3194460756494664,453.1058625285709,predicted,predicted,predicted,predicted
+Bolu,bolu,2027,332089,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.989872596284846,16.530076677558817,3.2615160968271084,463.93172892790926,predicted,predicted,predicted,predicted
+Bolu,bolu,2028,334010,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.689619429622253,16.96699960181627,3.2415432059788145,474.05533196308363,predicted,predicted,predicted,predicted
+Bolu,bolu,2029,335960,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.33155385499725,17.419816289256342,3.2407450052560307,483.27256615009185,predicted,predicted,predicted,predicted
+Bolu,bolu,2030,337972,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.313139075929188,17.887697988431402,3.2570955666014925,491.775730682583,predicted,predicted,predicted,predicted
+Burdur,burdur,2025,277226,Gerçek,TÜİK ADNKS 2025,15.213219539292853,17.42585471781146,1.868369048461318,286.912624652964,actual,actual,predicted,predicted
+Burdur,burdur,2026,275252,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.008756387560005,17.882129418770237,1.923012726882007,292.761886462451,predicted,predicted,predicted,predicted
+Burdur,burdur,2027,274537,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.733230986121933,18.359250958748095,1.983569207484834,298.35304416592226,predicted,predicted,predicted,predicted
+Burdur,burdur,2028,273866,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.362638574277598,18.853171329726976,2.0435239573707804,303.76972830761,predicted,predicted,predicted,predicted
+Burdur,burdur,2029,273276,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.34147429119186,19.362229760628203,2.103936550207436,308.9578539970736,predicted,predicted,predicted,predicted
+Burdur,burdur,2030,272752,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.32034541104136,19.886300791101476,2.1644722941564396,313.96351742908325,predicted,predicted,predicted,predicted
+Bursa,bursa,2025,3263011,Gerçek,TÜİK ADNKS 2025,19.427455193991072,11.368303692509771,2.2950149231473915,272.30300878561656,actual,actual,predicted,predicted
+Bursa,bursa,2026,3283275,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.969061409073444,11.761435094667197,2.3198481992585585,278.4637592918304,predicted,predicted,predicted,predicted
+Bursa,bursa,2027,3304225,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.459041794560274,12.166768796374933,2.341587164788507,284.2918574456607,predicted,predicted,predicted,predicted
+Bursa,bursa,2028,3324764,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.905468753201497,12.59311433488561,2.3750189158599824,289.9395796393468,predicted,predicted,predicted,predicted
+Bursa,bursa,2029,3344868,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.541197922937705,13.035609111424094,2.4144705811631866,295.3405958377853,predicted,predicted,predicted,predicted
+Bursa,bursa,2030,3364213,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.141138544744393,13.493677836893479,2.459169889043551,300.54231548117934,predicted,predicted,predicted,predicted
+Çanakkale,canakkale,2025,573976,Gerçek,TÜİK ADNKS 2025,14.735633545653476,17.75736267718511,2.613504236622248,321.68461346137525,actual,actual,predicted,predicted
+Çanakkale,canakkale,2026,572765,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.312463699679464,18.217861532726744,2.5848084978060797,325.9330267928395,predicted,predicted,predicted,predicted
+Çanakkale,canakkale,2027,573955,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.305730121799344,18.695606458528015,2.563463869795669,330.1911738886953,predicted,predicted,predicted,predicted
+Çanakkale,canakkale,2028,575067,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.303513083778341,19.19316651769706,2.5678927387925796,334.44629590780954,predicted,predicted,predicted,predicted
+Çanakkale,canakkale,2029,576180,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.303513083778341,19.705656947793194,2.5871566038695164,338.64462921693837,predicted,predicted,predicted,predicted
+Çanakkale,canakkale,2030,577370,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.303513083778341,20.23270920756965,2.618271303421352,342.8061000349092,predicted,predicted,predicted,predicted
+Çankırı,cankiri,2025,200549,Gerçek,TÜİK ADNKS 2025,16.05492921929304,18.176605218674737,1.753825391177088,238.95927814871118,actual,actual,predicted,predicted
+Çankırı,cankiri,2026,197185,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.624884628171493,18.619504447321432,1.8297303906292655,240.6727462156657,predicted,predicted,predicted,predicted
+Çankırı,cankiri,2027,195394,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.191246039717047,19.08310173875729,1.8945696879527532,242.8387500045164,predicted,predicted,predicted,predicted
+Çankırı,cankiri,2028,193601,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.96704855812755,19.56482145381767,1.962063469865825,245.16585556690472,predicted,predicted,predicted,predicted
+Çankırı,cankiri,2029,191784,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.53481554073434,20.062455384234745,2.0290741666103713,247.68783544606816,predicted,predicted,predicted,predicted
+Çankırı,cankiri,2030,189926,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.30060251185464,20.57585456376311,2.0967587055638433,250.37579035881194,predicted,predicted,predicted,predicted
+Çorum,corum,2025,519590,Gerçek,TÜİK ADNKS 2025,16.572104928886237,17.868704170596047,2.024094964202959,327.15491392110357,actual,actual,predicted,predicted
+Çorum,corum,2026,513624,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.24392850010732,18.41657110910473,2.0779745630570687,328.2704489359854,predicted,predicted,predicted,predicted
+Çorum,corum,2027,509236,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.895556777914845,18.978235035331956,2.1250907477806322,329.8226009519137,predicted,predicted,predicted,predicted
+Çorum,corum,2028,504852,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.57272841165761,19.558463000659522,2.1797473013866693,331.63886985811496,predicted,predicted,predicted,predicted
+Çorum,corum,2029,500457,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.195458181997822,20.15328833648858,2.2376951836631633,333.7238013227435,predicted,predicted,predicted,predicted
+Çorum,corum,2030,496025,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.012855238071559,20.76230593601683,2.2984237608034164,336.0366866195867,predicted,predicted,predicted,predicted
+Denizli,denizli,2025,1060975,Gerçek,TÜİK ADNKS 2025,17.737929734442375,13.485897405688164,2.502274379308801,314.7295704866264,actual,actual,predicted,predicted
+Denizli,denizli,2026,1061992,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.250288029114348,13.922801972324176,2.5464434275054373,319.1750986377447,predicted,predicted,predicted,predicted
+Denizli,denizli,2027,1062071,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.85923762916948,14.366994330585584,2.577357259928249,323.50705934965106,predicted,predicted,predicted,predicted
+Denizli,denizli,2028,1061933,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.477261609111896,14.835584204455916,2.619210980425123,327.7936376389159,predicted,predicted,predicted,predicted
+Denizli,denizli,2029,1061592,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.028100052190688,15.32007219370562,2.664855439506937,332.02368234587397,predicted,predicted,predicted,predicted
+Denizli,denizli,2030,1061015,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.550148421148412,15.819576927063167,2.7149720329907723,336.2055753284484,predicted,predicted,predicted,predicted
+Diyarbakır,diyarbakir,2025,1852356,Gerçek,TÜİK ADNKS 2025,29.74827732897996,5.65620215552518,2.0392515514977276,280.3819862469596,actual,actual,predicted,predicted
+Diyarbakır,diyarbakir,2026,1862751,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.99931861890823,5.940346141753638,2.0849696934456006,286.3455044253656,predicted,predicted,predicted,predicted
+Diyarbakır,diyarbakir,2027,1875472,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.423623493443166,6.24285691735898,2.129408927867189,292.0203521311026,predicted,predicted,predicted,predicted
+Diyarbakır,diyarbakir,2028,1887596,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.946504410857553,6.560859558930225,2.177271245571319,297.5483211857533,predicted,predicted,predicted,predicted
+Diyarbakır,diyarbakir,2029,1899132,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.11707188930168,6.896187252788092,2.226586901000701,302.8461139932673,predicted,predicted,predicted,predicted
+Diyarbakır,diyarbakir,2030,1910048,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.334089858098356,7.248719762217151,2.2778482479043305,307.9612748170915,predicted,predicted,predicted,predicted
+Düzce,duzce,2025,415622,Gerçek,TÜİK ADNKS 2025,18.73721795285139,12.583549475244332,2.332714483840391,229.24932468610257,actual,actual,predicted,predicted
+Düzce,duzce,2026,418179,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.28090027939858,12.992698589334465,2.3734135702834465,234.59244964787231,predicted,predicted,predicted,predicted
+Düzce,duzce,2027,420984,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.80869312736385,13.407234475577809,2.4135425285203382,239.7127248415067,predicted,predicted,predicted,predicted
+Düzce,duzce,2028,423705,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.350805568665542,13.84815410431987,2.457826945465058,244.7536658201161,predicted,predicted,predicted,predicted
+Düzce,duzce,2029,426332,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.90046771486507,14.304980579675725,2.5041981305694208,249.63759103811591,predicted,predicted,predicted,predicted
+Düzce,duzce,2030,428895,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.39608292532149,14.776681620450887,2.5526582607417367,254.39875769531994,predicted,predicted,predicted,predicted
+Edirne,edirne,2025,422438,Gerçek,TÜİK ADNKS 2025,13.934352496697741,18.012110652924214,3.5066479517845437,473.7307984336247,actual,actual,predicted,predicted
+Edirne,edirne,2026,423474,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.29858465971104,18.55368898774112,3.5134342582314275,479.19632892057126,predicted,predicted,predicted,predicted
+Edirne,edirne,2027,424377,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.595594727888464,19.10020492991419,3.5404331837198697,484.50935013800756,predicted,predicted,predicted,predicted
+Edirne,edirne,2028,425202,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.595594727888464,19.669664505217284,3.5754092716961168,489.6594112473252,predicted,predicted,predicted,predicted
+Edirne,edirne,2029,426020,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.297296805940476,20.253434991006046,3.617615891387686,494.6328158240042,predicted,predicted,predicted,predicted
+Edirne,edirne,2030,426908,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.29756232700113,20.850600973946534,3.664415802282747,499.4631911593401,predicted,predicted,predicted,predicted
+Elazığ,elazig,2025,605678,Gerçek,TÜİK ADNKS 2025,19.675140916460563,12.018102027810157,2.9987047356553376,534.9334729754637,actual,actual,predicted,predicted
+Elazığ,elazig,2026,606020,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.93304037530754,12.424796486300163,3.007412170583848,538.2383942720829,predicted,predicted,predicted,predicted
+Elazığ,elazig,2027,606848,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.346367268333992,12.84689432745743,2.9834236470633186,541.8600047283713,predicted,predicted,predicted,predicted
+Elazığ,elazig,2028,607614,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.775074549387178,13.28828337948606,2.990360416355543,545.4624576270596,predicted,predicted,predicted,predicted
+Elazığ,elazig,2029,608269,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.258150131931494,13.745547197622002,3.009338401374407,549.1086698561373,predicted,predicted,predicted,predicted
+Elazığ,elazig,2030,608692,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.798963335126878,14.218312736257161,3.040936912642792,552.7922644502555,predicted,predicted,predicted,predicted
+Erzincan,erzincan,2025,239625,Gerçek,TÜİK ADNKS 2025,17.498591549295774,14.484715701617109,2.15294071653625,281.72294717452723,actual,actual,predicted,predicted
+Erzincan,erzincan,2026,239986,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.107992571486626,14.93279410075058,2.180723496247083,286.74324653936566,predicted,predicted,predicted,predicted
+Erzincan,erzincan,2027,239536,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.673081271999223,15.388218045895076,2.227066586900037,291.57876473626357,predicted,predicted,predicted,predicted
+Erzincan,erzincan,2028,238993,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.38243621124057,15.864529302304241,2.275759304407984,296.30444750881213,predicted,predicted,predicted,predicted
+Erzincan,erzincan,2029,238452,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.14492174886731,16.356740591190025,2.328903909306973,300.9060180915966,predicted,predicted,predicted,predicted
+Erzincan,erzincan,2030,237941,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.799190067876337,16.864104177636555,2.384361263597384,305.40472452135504,predicted,predicted,predicted,predicted
+Erzurum,erzurum,2025,736877,Gerçek,TÜİK ADNKS 2025,22.516512253741126,10.405535794983422,2.9691412897664122,499.27538242215206,actual,actual,predicted,predicted
+Erzurum,erzurum,2026,734547,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.925731110658848,10.80261851529509,2.9954127943492495,502.79549194212177,predicted,predicted,predicted,predicted
+Erzurum,erzurum,2027,729812,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.33163519213411,11.212622826705207,3.007632785127498,506.3081068350931,predicted,predicted,predicted,predicted
+Erzurum,erzurum,2028,724990,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.734112796858803,11.64051000302009,3.0388212917605415,509.858810620887,predicted,predicted,predicted,predicted
+Erzurum,erzurum,2029,720093,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.107013498707474,12.085087552035143,3.078484013036359,513.4425976268972,predicted,predicted,predicted,predicted
+Erzurum,erzurum,2030,715133,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.408736419019057,12.545942109539052,3.1264008810394444,517.0524681000472,predicted,predicted,predicted,predicted
+Eskişehir,eskisehir,2025,927956,Gerçek,TÜİK ADNKS 2025,16.108630150567485,13.721555763419818,2.8733958659577183,400.09126973607783,actual,actual,predicted,predicted
+Eskişehir,eskisehir,2026,933717,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.789667126599845,14.132057779310692,2.882754328660667,405.9884559805197,predicted,predicted,predicted,predicted
+Eskişehir,eskisehir,2027,939432,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.222748587393767,14.553256817969228,2.8914738174062222,411.55886227244974,predicted,predicted,predicted,predicted
+Eskişehir,eskisehir,2028,945027,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.93149562835414,14.996596082401009,2.9152357688872144,417.03812598018635,predicted,predicted,predicted,predicted
+Eskişehir,eskisehir,2029,950518,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.520248739265977,15.455664558196933,2.9470293351914734,422.2888041763364,predicted,predicted,predicted,predicted
+Eskişehir,eskisehir,2030,955926,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.313304772594048,15.929788627771375,2.9857790879323147,427.36440271833686,predicted,predicted,predicted,predicted
+Gaziantep,gaziantep,2025,2222415,Gerçek,TÜİK ADNKS 2025,28.651354494997562,6.395565184720225,2.002650623617228,382.9603536440139,actual,actual,predicted,predicted
+Gaziantep,gaziantep,2026,2248174,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.97894381262613,6.686703521740448,2.031121532956604,381.44692244571394,predicted,predicted,predicted,predicted
+Gaziantep,gaziantep,2027,2274552,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.091157482501462,6.99425244521696,2.0548345101997256,379.76789405196837,predicted,predicted,predicted,predicted
+Gaziantep,gaziantep,2028,2300615,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.203675758072265,7.319588521610742,2.088202088838443,379.0414656894605,predicted,predicted,predicted,predicted
+Gaziantep,gaziantep,2029,2326402,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,25.357317864605825,7.662061992930671,2.126322393771261,378.9760770344763,predicted,predicted,predicted,predicted
+Gaziantep,gaziantep,2030,2351809,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,24.57103163457282,8.021384651428113,2.16888404666679,379.4639885219503,predicted,predicted,predicted,predicted
+Giresun,giresun,2025,455074,Gerçek,TÜİK ADNKS 2025,14.667504625621328,19.95609505267275,2.2646174483234063,401.9063905223311,actual,actual,predicted,predicted
+Giresun,giresun,2026,450954,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.303546510070992,20.486915773138225,2.2562202882836573,403.12659600124437,predicted,predicted,predicted,predicted
+Giresun,giresun,2027,448203,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.298138155802002,21.024688583795196,2.255469038966112,404.84442071383154,predicted,predicted,predicted,predicted
+Giresun,giresun,2028,445404,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.297296805940476,21.589256985295386,2.2751608465914614,406.7022265405796,predicted,predicted,predicted,predicted
+Giresun,giresun,2029,442546,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.297296805940476,22.168808459341676,2.3078083161381073,408.8472095046619,predicted,predicted,predicted,predicted
+Giresun,giresun,2030,439604,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.297296805940476,22.762351099075985,2.350758012733422,411.21783274889145,predicted,predicted,predicted,predicted
+Gümüşhane,gumushane,2025,138807,Gerçek,TÜİK ADNKS 2025,15.792431217445808,16.157686572002852,1.7763481987058185,236.3910784216094,actual,actual,predicted,predicted
+Gümüşhane,gumushane,2026,136598,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.207410777354596,16.62786163650994,1.8640542749781162,241.75976677489294,predicted,predicted,predicted,predicted
+Gümüşhane,gumushane,2027,133876,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.972699965958808,17.111562523130424,1.9476220005890355,247.35867136591898,predicted,predicted,predicted,predicted
+Gümüşhane,gumushane,2028,131248,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.491937868849375,17.622061292792505,2.0307506828103215,252.68152785320544,predicted,predicted,predicted,predicted
+Gümüşhane,gumushane,2029,128738,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.214808235505352,18.14918549508868,2.1123094779322855,257.7377698329208,predicted,predicted,predicted,predicted
+Gümüşhane,gumushane,2030,126374,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.241695980198504,18.692076131544567,2.193012706178706,262.5937542110419,predicted,predicted,predicted,predicted
+Hakkari,hakkari,2025,279681,Gerçek,TÜİK ADNKS 2025,25.836220551270912,4.666387777503656,1.4765574786579236,181.94138176738824,actual,actual,predicted,predicted
+Hakkari,hakkari,2026,268846,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,25.203563723878524,4.9748751527503705,1.5572382818209007,187.16792186970815,predicted,predicted,predicted,predicted
+Hakkari,hakkari,2027,261251,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,24.37810298273731,5.301688492679297,1.6437895025592297,192.2208092089411,predicted,predicted,predicted,predicted
+Hakkari,hakkari,2028,253618,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.59123273824793,5.650257678282999,1.7309699559700675,197.081543108155,predicted,predicted,predicted,predicted
+Hakkari,hakkari,2029,245937,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.79725162029698,6.018472189117988,1.819318488414865,201.72275311524163,predicted,predicted,predicted,predicted
+Hakkari,hakkari,2030,238184,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.242132831641854,6.406009625116614,1.908438548387494,206.18369162127354,predicted,predicted,predicted,predicted
+Hatay,hatay,2025,1577531,Gerçek,TÜİK ADNKS 2025,24.359204351610206,9.475249614746081,1.7213120919186622,273.1701077973247,actual,actual,predicted,predicted
+Hatay,hatay,2026,1589278,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.812850809788696,9.852973265835011,1.7959441670682281,276.83448387927217,predicted,predicted,predicted,predicted
+Hatay,hatay,2027,1604084,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.39214726570244,10.242431683249201,1.8826502790907398,279.3389544838159,predicted,predicted,predicted,predicted
+Hatay,hatay,2028,1617565,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.947174853650772,10.654225247515297,1.9564507394097745,282.75271951114394,predicted,predicted,predicted,predicted
+Hatay,hatay,2029,1629694,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.55746881961456,11.082156483654611,2.0250870735617355,286.1555525802833,predicted,predicted,predicted,predicted
+Hatay,hatay,2030,1641510,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.15539870160672,11.525582461737638,2.08894465258345,289.62681883370266,predicted,predicted,predicted,predicted
+Iğdır,igdir,2025,205071,Gerçek,TÜİK ADNKS 2025,25.67354721047832,8.47560113326604,1.3301512054749765,165.95168323582942,actual,actual,predicted,predicted
+Iğdır,igdir,2026,202365,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,24.99170011116627,8.851629770144614,1.444631197315175,172.5185513005543,predicted,predicted,predicted,predicted
+Iğdır,igdir,2027,199955,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,24.192740649056883,9.237315680664292,1.5537478615879081,178.729351987874,predicted,predicted,predicted,predicted
+Iğdır,igdir,2028,197498,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.432607708980203,9.646495451048443,1.651221698964946,184.65840253429346,predicted,predicted,predicted,predicted
+Iğdır,igdir,2029,195022,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.72507224584141,10.07333334098534,1.741133084287867,190.2612946299442,predicted,predicted,predicted,predicted
+Iğdır,igdir,2030,192494,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.37116869010961,10.517080534651043,1.8256627092487179,195.59756495567393,predicted,predicted,predicted,predicted
+Isparta,isparta,2025,445303,Gerçek,TÜİK ADNKS 2025,16.56490075297045,15.705710493753692,3.4522849586210214,489.9997582487564,actual,actual,predicted,predicted
+Isparta,isparta,2026,443028,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.245803729401157,16.19278873636051,3.4366914146230556,490.77823477856066,predicted,predicted,predicted,predicted
+Isparta,isparta,2027,440963,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.883166803644405,16.692770674597,3.434866208641324,492.268468563385,predicted,predicted,predicted,predicted
+Isparta,isparta,2028,438716,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.562253529828999,17.216343110943495,3.453514617518522,493.84700013978613,predicted,predicted,predicted,predicted
+Isparta,isparta,2029,436349,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.18396599132942,17.75519298007194,3.485474555171095,495.7643127295455,predicted,predicted,predicted,predicted
+Isparta,isparta,2030,433954,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.997595601876682,18.30865601535342,3.527653567784,497.94294749071537,predicted,predicted,predicted,predicted
+İstanbul,istanbul,2025,15754053,Gerçek,TÜİK ADNKS 2025,18.699372155216185,8.724707222960339,3.1839886765228584,301.7881782037833,actual,actual,predicted,predicted
+İstanbul,istanbul,2026,15762548,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.122810832022225,9.079081613816149,3.1969627799699083,303.64415058381144,predicted,predicted,predicted,predicted
+İstanbul,istanbul,2027,15786427,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.550913643139502,9.449012672797675,3.2114713607006706,305.8033756959492,predicted,predicted,predicted,predicted
+İstanbul,istanbul,2028,15808736,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.975983631590136,9.83910860438634,3.2411613968433812,308.20144530036714,predicted,predicted,predicted,predicted
+İstanbul,istanbul,2029,15829505,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.54530920302592,10.246165878360456,3.2796656176797114,310.7994854869722,predicted,predicted,predicted,predicted
+İstanbul,istanbul,2030,15848418,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.25110854546295,10.669724315860176,3.3252454207395203,313.5726689595707,predicted,predicted,predicted,predicted
+İzmir,izmir,2025,4504185,Gerçek,TÜİK ADNKS 2025,16.429165320696196,13.897608557374975,3.430861081229523,324.79815479889953,actual,actual,predicted,predicted
+İzmir,izmir,2026,4513464,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.974086218387617,14.363908750382343,3.4247478069737554,328.0999811067891,predicted,predicted,predicted,predicted
+İzmir,izmir,2027,4522490,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.71070201127623,14.841726958165676,3.409891732619144,331.09792044775867,predicted,predicted,predicted,predicted
+İzmir,izmir,2028,4530843,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.221143580972553,15.339432422126599,3.420278796227649,334.2458788598823,predicted,predicted,predicted,predicted
+İzmir,izmir,2029,4538534,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.962437742771304,15.852389612015658,3.443146834964864,337.51004168566664,predicted,predicted,predicted,predicted
+İzmir,izmir,2030,4545490,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.520897929917467,16.380045990181735,3.47742393478984,340.85830085664315,predicted,predicted,predicted,predicted
+Kahramanmaraş,kahramanmaras,2025,1146278,Gerçek,TÜİK ADNKS 2025,23.7509574466229,9.983267584303285,1.860394443734549,260.28451335210207,actual,actual,predicted,predicted
+Kahramanmaraş,kahramanmaras,2026,1159690,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.215733427688576,10.372643757203743,1.910231742542237,265.61736626194767,predicted,predicted,predicted,predicted
+Kahramanmaraş,kahramanmaras,2027,1173134,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.552751147482308,10.777469125909125,1.963100579334423,270.42200520328424,predicted,predicted,predicted,predicted
+Kahramanmaraş,kahramanmaras,2028,1185920,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.970756002632697,11.199179821285561,2.0143464555731043,275.42224692554936,predicted,predicted,predicted,predicted
+Kahramanmaraş,kahramanmaras,2029,1198180,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.33215240379256,11.63646931129205,2.065475329698529,280.24603998408213,predicted,predicted,predicted,predicted
+Kahramanmaraş,kahramanmaras,2030,1210308,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.769605839172737,12.089061504773603,2.1163053389755078,284.9591082219009,predicted,predicted,predicted,predicted
+Karabük,karabuk,2025,249614,Gerçek,TÜİK ADNKS 2025,14.493177466007515,16.001105707211934,2.286571905715391,312.55306442434437,actual,actual,predicted,predicted
+Karabük,karabuk,2026,244689,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.347497343980761,16.449529550681092,2.303625690052286,316.2961239953169,predicted,predicted,predicted,predicted
+Karabük,karabuk,2027,241322,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.35376071201586,16.912365447131275,2.3298824900994077,320.24795236544526,predicted,predicted,predicted,predicted
+Karabük,karabuk,2028,237967,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.343477970400642,17.40060568879569,2.3711089981370606,324.02549427271816,predicted,predicted,predicted,predicted
+Karabük,karabuk,2029,234664,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.341573221603856,17.905301920308933,2.42156401387183,327.80233403828095,predicted,predicted,predicted,predicted
+Karabük,karabuk,2030,231346,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.341573221603856,18.42576946271013,2.4791315951151773,331.56275753687146,predicted,predicted,predicted,predicted
+Karaman,karaman,2025,262355,Gerçek,TÜİK ADNKS 2025,19.451887709401383,12.684721084027368,1.765055562602356,258.10962127757057,actual,actual,predicted,predicted
+Karaman,karaman,2026,260787,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.862772841275753,13.077003665395111,1.8226634580059908,264.9143994243952,predicted,predicted,predicted,predicted
+Karaman,karaman,2027,259618,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.307541384748593,13.483029287105374,1.8855085975956172,271.0967557851474,predicted,predicted,predicted,predicted
+Karaman,karaman,2028,258452,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.697228251216817,13.910178506456738,1.9479498168220744,276.99100060701846,predicted,predicted,predicted,predicted
+Karaman,karaman,2029,257268,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.192885284519004,14.353921981274832,2.010980350081809,282.60106433339246,predicted,predicted,predicted,predicted
+Karaman,karaman,2030,256102,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.73892567473034,14.813716767430838,2.07413408823777,287.96222749562554,predicted,predicted,predicted,predicted
+Kars,kars,2025,268991,Gerçek,TÜİK ADNKS 2025,23.04129134432007,10.070597157525716,1.9712987191742286,292.95858507978426,actual,actual,predicted,predicted
+Kars,kars,2026,262616,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.50338787975137,10.468189088481756,2.080502437253017,296.14350793351053,predicted,predicted,predicted,predicted
+Kars,kars,2027,257508,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.967809723785994,10.88392251025045,2.167124330124352,299.44787963980366,predicted,predicted,predicted,predicted
+Kars,kars,2028,252413,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.418447981707367,11.319701600836549,2.254140576464124,302.80253958169146,predicted,predicted,predicted,predicted
+Kars,kars,2029,247366,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.945860811860733,11.773006984062162,2.3377259472035803,306.1752168443709,predicted,predicted,predicted,predicted
+Kars,kars,2030,242321,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.481555856153992,12.243523195042886,2.4204138980130665,309.5698178746952,predicted,predicted,predicted,predicted
+Kastamonu,kastamonu,2025,379934,Gerçek,TÜİK ADNKS 2025,14.383550827248943,21.084977917217202,1.868084873422049,318.52948178784436,actual,actual,predicted,predicted
+Kastamonu,kastamonu,2026,373711,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.317948002073019,21.587653008456236,1.9307131535606459,322.7376401529448,predicted,predicted,predicted,predicted
+Kastamonu,kastamonu,2027,369042,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.3210122344195,22.097334748452482,1.9996411096071824,327.0285585165537,predicted,predicted,predicted,predicted
+Kastamonu,kastamonu,2028,364314,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.317408454574837,22.635980675100562,2.068865270994138,331.1716381159396,predicted,predicted,predicted,predicted
+Kastamonu,kastamonu,2029,359512,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.317408454574837,23.190541753700025,2.1390912254573777,335.2542781310659,predicted,predicted,predicted,predicted
+Kastamonu,kastamonu,2030,354654,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.317408454574837,23.759937533864893,2.209958842722699,339.27975741040683,predicted,predicted,predicted,predicted
+Kayseri,kayseri,2025,1458991,Gerçek,TÜİK ADNKS 2025,20.706090716118194,10.988964291075133,2.6560048712417483,337.44823075195916,actual,actual,predicted,predicted
+Kayseri,kayseri,2026,1464265,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.126748552952026,11.395803631603517,2.6629432435147464,340.8914030413764,predicted,predicted,predicted,predicted
+Kayseri,kayseri,2027,1469654,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.435841439357137,11.81578346628397,2.663976813375484,344.3428119212643,predicted,predicted,predicted,predicted
+Kayseri,kayseri,2028,1474944,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.906692560467903,12.25672704669964,2.6839587684953585,347.9169320910429,predicted,predicted,predicted,predicted
+Kayseri,kayseri,2029,1480050,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.382844279682978,12.713526632528005,2.7133948250557296,351.5329469525171,predicted,predicted,predicted,predicted
+Kayseri,kayseri,2030,1484839,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.82260489749005,13.185645838457491,2.7513600129750557,355.1925586234479,predicted,predicted,predicted,predicted
+Kilis,kilis,2025,157363,Gerçek,TÜİK ADNKS 2025,26.085547428556904,8.346943055228992,2.007799412298482,282.20783572183643,actual,actual,predicted,predicted
+Kilis,kilis,2026,160111,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,25.399537580547342,8.60721078831901,2.0390790798701346,282.0871085346087,predicted,predicted,predicted,predicted
+Kilis,kilis,2027,161918,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,24.555862912587113,8.884277258887167,2.0689797264058143,283.69151647161937,predicted,predicted,predicted,predicted
+Kilis,kilis,2028,163721,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,23.690672837316995,9.178047927347782,2.1054899532464333,285.75037228926453,predicted,predicted,predicted,predicted
+Kilis,kilis,2029,165544,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.79219081644586,9.4889888506411,2.144695539434906,288.0122928706442,predicted,predicted,predicted,predicted
+Kilis,kilis,2030,167347,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.08795548214099,9.816875119280546,2.1866987337125465,290.5346737354828,predicted,predicted,predicted,predicted
+Kırıkkale,kirikkale,2025,282830,Gerçek,TÜİK ADNKS 2025,16.311565251210975,14.596400664710249,2.6667274875217117,444.48125754418504,actual,actual,predicted,predicted
+Kırıkkale,kirikkale,2026,281534,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.026434395142726,15.10791178774344,2.8035754417069256,446.0951884401852,predicted,predicted,predicted,predicted
+Kırıkkale,kirikkale,2027,280541,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.649295696669446,15.63064532559747,2.887526686419733,448.16565875141987,predicted,predicted,predicted,predicted
+Kırıkkale,kirikkale,2028,279465,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.239717415969418,16.172209352519793,2.9707734290277585,450.4537082764076,predicted,predicted,predicted,predicted
+Kırıkkale,kirikkale,2029,278319,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.02187443269548,16.728702882745235,3.0451796904671937,452.949743314103,predicted,predicted,predicted,predicted
+Kırıkkale,kirikkale,2030,277109,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.733932173158879,17.299629930100153,3.116500183416065,455.62823950921984,predicted,predicted,predicted,predicted
+Kırklareli,kirklareli,2025,379595,Gerçek,TÜİK ADNKS 2025,14.572900064542473,17.037895651944837,1.862347568734549,271.63279916519764,actual,actual,predicted,predicted
+Kırklareli,kirklareli,2026,381432,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.317948002073019,17.531332558580218,1.9149237756500952,274.3679080482504,predicted,predicted,predicted,predicted
+Kırklareli,kirklareli,2027,382637,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.3291541360113,18.026126762450833,1.9718251043814234,277.2853561573382,predicted,predicted,predicted,predicted
+Kırklareli,kirklareli,2028,383782,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.303018931023779,18.545866745545634,2.0277246672776528,280.38275898890686,predicted,predicted,predicted,predicted
+Kırklareli,kirklareli,2029,384872,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.31073503051106,19.080719775730145,2.0838024940458126,283.58694065755566,predicted,predicted,predicted,predicted
+Kırklareli,kirklareli,2030,385894,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.31073503051106,19.629586211201172,2.1399797871126793,286.8917236333541,predicted,predicted,predicted,predicted
+Kırşehir,kirsehir,2025,242777,Gerçek,TÜİK ADNKS 2025,17.04486009794997,15.143938676233745,2.104601170110982,249.60915996505204,actual,actual,predicted,predicted
+Kırşehir,kirsehir,2026,241077,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.63487133308334,15.63763223292256,2.124886917474214,253.46672107837247,predicted,predicted,predicted,predicted
+Kırşehir,kirsehir,2027,239245,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.342676589646086,16.141857563000958,2.1529345166054554,257.33498524870004,predicted,predicted,predicted,predicted
+Kırşehir,kirsehir,2028,237352,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.14553726465481,16.672181700889965,2.1928242961294018,261.2107507599538,predicted,predicted,predicted,predicted
+Kırşehir,kirsehir,2029,235408,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.81378366404766,17.218029139177084,2.2406372117693536,265.0626505404898,predicted,predicted,predicted,predicted
+Kırşehir,kirsehir,2030,233433,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.681284943997243,17.778553822941152,2.2947034867829643,268.89971845927437,predicted,predicted,predicted,predicted
+Kocaeli,kocaeli,2025,2161171,Gerçek,TÜİK ADNKS 2025,20.92462836119863,9.04278282468162,2.124092385696713,270.1951469000601,actual,actual,predicted,predicted
+Kocaeli,kocaeli,2026,2184060,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.32899272535965,9.406859864270338,2.1587471332168207,275.47172259810174,predicted,predicted,predicted,predicted
+Kocaeli,kocaeli,2027,2209769,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.65444133344904,9.784697837952335,2.1936400788254105,280.4595673989285,predicted,predicted,predicted,predicted
+Kocaeli,kocaeli,2028,2235212,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.099657207377643,10.181359151849142,2.2339431993314065,285.2925199812706,predicted,predicted,predicted,predicted
+Kocaeli,kocaeli,2029,2260427,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.640747961651297,10.594191850629016,2.2773281087283976,290.02698902762523,predicted,predicted,predicted,predicted
+Kocaeli,kocaeli,2030,2285340,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.16212803792575,11.022776557169555,2.3232043316820636,294.6642548140503,predicted,predicted,predicted,predicted
+Konya,konya,2025,2343409,Gerçek,TÜİK ADNKS 2025,21.37753162166741,11.269863690034475,2.6550283087417483,383.0736927684427,actual,actual,predicted,predicted
+Konya,konya,2026,2354256,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.863632688528632,11.673075656847798,2.661512754333671,385.22318118048213,predicted,predicted,predicted,predicted
+Konya,konya,2027,2365362,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.32372710409747,12.090230939612516,2.661901679413859,387.66673784735065,predicted,predicted,predicted,predicted
+Konya,konya,2028,2376098,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.673449136994403,12.525663529258757,2.6813867148011923,390.3155901687785,predicted,predicted,predicted,predicted
+Konya,konya,2029,2386473,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.045176412754437,12.976993393556032,2.71080337674357,393.1408427646992,predicted,predicted,predicted,predicted
+Konya,konya,2030,2396424,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.345508403530083,13.443825258873321,2.7486163507564925,396.1201688764166,predicted,predicted,predicted,predicted
+Kütahya,kutahya,2025,570478,Gerçek,TÜİK ADNKS 2025,15.529257920550837,15.855475583633375,2.336538995266892,390.83516656882443,actual,actual,predicted,predicted
+Kütahya,kutahya,2026,566798,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.114005025818468,16.342626763526532,2.3166983055416495,390.4752148018386,predicted,predicted,predicted,predicted
+Kütahya,kutahya,2027,564213,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.701740770248197,16.840022576080706,2.300093938712962,391.3846056040014,predicted,predicted,predicted,predicted
+Kütahya,kutahya,2028,561588,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.308891232817842,17.361942986931016,2.3090277321171016,392.0348159851154,predicted,predicted,predicted,predicted
+Kütahya,kutahya,2029,558966,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.309416514985845,17.89919923848207,2.332965813111514,393.2240679688578,predicted,predicted,predicted,predicted
+Kütahya,kutahya,2030,556308,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.311698799901249,18.450996636227167,2.3693134991335683,394.78122552075206,predicted,predicted,predicted,predicted
+Malatya,malatya,2025,755854,Gerçek,TÜİK ADNKS 2025,19.583411611237093,12.522788792544592,2.632098958536517,448.00313581260616,actual,actual,predicted,predicted
+Malatya,malatya,2026,762107,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.894128172484848,12.948688206606656,2.6913522531976923,446.3350172951193,predicted,predicted,predicted,predicted
+Malatya,malatya,2027,768949,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.336192790609232,13.387750865141925,2.7380809961468913,444.90472117041963,predicted,predicted,predicted,predicted
+Malatya,malatya,2028,775145,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.713277555592864,13.843713878912098,2.787965990079101,444.3974280201206,predicted,predicted,predicted,predicted
+Malatya,malatya,2029,780662,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.195497161440553,14.314973961363417,2.8378047756268643,444.497886745437,predicted,predicted,predicted,predicted
+Malatya,malatya,2030,786085,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.796438537815884,14.801176616860914,2.888438048074022,445.1287784704867,predicted,predicted,predicted,predicted
+Manisa,manisa,2025,1477756,Gerçek,TÜİK ADNKS 2025,18.57451433118864,13.741240096470595,2.0834208386950195,330.2493143310874,actual,actual,predicted,predicted
+Manisa,manisa,2026,1476874,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.146829949292492,14.171324797364,2.1517351999646053,334.7881554380781,predicted,predicted,predicted,predicted
+Manisa,manisa,2027,1476773,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.70296305314471,14.613630127259405,2.2219848616514355,339.384042515475,predicted,predicted,predicted,predicted
+Manisa,manisa,2028,1476358,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.25750621118925,15.077634012521937,2.288162115321029,343.9150401873438,predicted,predicted,predicted,predicted
+Manisa,manisa,2029,1475596,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.804055410438558,15.557418774840155,2.3523840077687055,348.34372703443444,predicted,predicted,predicted,predicted
+Manisa,manisa,2030,1474413,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.339021135262502,16.052388456281957,2.415260147477966,352.6981949727849,predicted,predicted,predicted,predicted
+Mardin,mardin,2025,903576,Gerçek,TÜİK ADNKS 2025,30.84333802579971,6.172806714653776,1.4589793536579236,206.58753836795086,actual,actual,predicted,predicted
+Mardin,mardin,2026,911473,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,30.2274734482593,6.442501096456553,1.513667210645508,209.65292866019848,predicted,predicted,predicted,predicted
+Mardin,mardin,2027,918902,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,29.558492681885983,6.730166617086675,1.5705650381278247,212.72788397846594,predicted,predicted,predicted,predicted
+Mardin,mardin,2028,926111,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.793671761563644,7.033802760973858,1.6256914821569808,215.82736481172216,predicted,predicted,predicted,predicted
+Mardin,mardin,2029,933156,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.125382847335747,7.354794309213422,1.6799824701156467,219.07937408177784,predicted,predicted,predicted,predicted
+Mardin,mardin,2030,939834,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.514742259661524,7.69299803623721,1.7338634670595638,222.43373106948428,predicted,predicted,predicted,predicted
+Mersin,mersin,2025,1956428,Gerçek,TÜİK ADNKS 2025,20.61409875548704,11.491606131173752,2.103829011146445,275.7012956304358,actual,actual,predicted,predicted
+Mersin,mersin,2026,1975140,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.167763724812126,11.929801040379846,2.147577157942578,279.4703979955395,predicted,predicted,predicted,predicted
+Mersin,mersin,2027,1986199,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.531172840322313,12.37574028119242,2.176998897397425,283.27370871984294,predicted,predicted,predicted,predicted
+Mersin,mersin,2028,1997122,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.840271970730345,12.843339246623593,2.216454700799659,287.0965748426079,predicted,predicted,predicted,predicted
+Mersin,mersin,2029,2007927,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.310868220626023,13.32652718505126,2.2594177460414357,290.93924546818016,predicted,predicted,predicted,predicted
+Mersin,mersin,2030,2018276,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.74194686322514,13.824559036924885,2.3063192720292136,294.7982231355537,predicted,predicted,predicted,predicted
+Muğla,mugla,2025,1099547,Gerçek,TÜİK ADNKS 2025,16.020779466453003,14.659491590627777,2.336418892024085,258.1983091297708,actual,actual,predicted,predicted
+Muğla,mugla,2026,1115345,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.61924054451631,15.11887968576217,2.327566788473632,262.29542842744223,predicted,predicted,predicted,predicted
+Muğla,mugla,2027,1131911,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.198245219070909,15.588717300956471,2.3131331485928968,266.49683494883186,predicted,predicted,predicted,predicted
+Muğla,mugla,2028,1148523,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.007518732159275,16.075148686277736,2.319625475036446,270.5137089062344,predicted,predicted,predicted,predicted
+Muğla,mugla,2029,1165174,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.672097093004362,16.576106635603225,2.3367705873097293,274.5753364587828,predicted,predicted,predicted,predicted
+Muğla,mugla,2030,1181763,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.324868432457714,17.091170768468764,2.363361569994595,278.6449204958264,predicted,predicted,predicted,predicted
+Muş,mus,2025,389127,Gerçek,TÜİK ADNKS 2025,30.155193548635793,6.533342584811643,1.4199350525159389,199.78986236843122,actual,actual,predicted,predicted
+Muş,mus,2026,381545,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,29.394387200438047,6.89499256522752,1.532557007507421,205.90633841219238,predicted,predicted,predicted,predicted
+Muş,mus,2027,375686,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.79950476230413,7.2765575488680945,1.6351917488500476,211.69618363716245,predicted,predicted,predicted,predicted
+Muş,mus,2028,369752,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.195163290054193,7.674226108180138,1.7295409499784,217.23404008701084,predicted,predicted,predicted,predicted
+Muş,mus,2029,363742,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.54142987072644,8.089549280551424,1.8178707377519459,222.4963196574722,predicted,predicted,predicted,predicted
+Muş,mus,2030,357673,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.787774916461803,8.52244583793791,1.90224238979863,227.53023291408385,predicted,predicted,predicted,predicted
+Nevşehir,nevsehir,2025,320150,Gerçek,TÜİK ADNKS 2025,18.43854443229736,13.635483367171638,1.6091877080034465,271.74990545506154,actual,actual,predicted,predicted
+Nevşehir,nevsehir,2026,322550,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.895885794293633,14.07539357359466,1.678610907343682,273.25919108453854,predicted,predicted,predicted,predicted
+Nevşehir,nevsehir,2027,324815,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.569300477234577,14.5273576280417,1.7553147235303186,275.13323780423576,predicted,predicted,predicted,predicted
+Nevşehir,nevsehir,2028,327117,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.155462957962932,14.99740042999957,1.8223863484454341,277.32174493165894,predicted,predicted,predicted,predicted
+Nevşehir,nevsehir,2029,329420,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.81782400127552,15.482533911457022,1.8854531488614157,279.7555292730394,predicted,predicted,predicted,predicted
+Nevşehir,nevsehir,2030,331715,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.39283729340529,15.982308925698932,1.9451726232655346,282.40610044819687,predicted,predicted,predicted,predicted
+Niğde,nigde,2025,374492,Gerçek,TÜİK ADNKS 2025,20.491225446738515,11.856862095852515,1.5711841037264094,256.6432176260524,actual,actual,predicted,predicted
+Niğde,nigde,2026,370526,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.924590119726112,12.266185731342532,1.648167555744294,259.68830222359605,predicted,predicted,predicted,predicted
+Niğde,nigde,2027,368743,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.400076072038363,12.696166361831532,1.7192734642885625,263.027014388535,predicted,predicted,predicted,predicted
+Niğde,nigde,2028,366889,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.84098362620746,13.143538928190685,1.7888188734650612,266.340328765684,predicted,predicted,predicted,predicted
+Niğde,nigde,2029,364952,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.299173524186408,13.60698221356337,1.8564549216534942,269.73025586505815,predicted,predicted,predicted,predicted
+Niğde,nigde,2030,362923,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.712356935691776,14.086374815351194,1.9230533906957135,273.1776188091334,predicted,predicted,predicted,predicted
+Ordu,ordu,2025,768087,Gerçek,TÜİK ADNKS 2025,16.594474323872166,17.200265074138738,1.9403726313030347,301.00662525979055,actual,actual,predicted,predicted
+Ordu,ordu,2026,764754,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.19127048149684,17.733137697063036,1.989225162891671,306.18019064215,predicted,predicted,predicted,predicted
+Ordu,ordu,2027,761393,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.88299106018038,18.279733757338498,2.0386167152319103,311.1412170481917,predicted,predicted,predicted,predicted
+Ordu,ordu,2028,758054,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.594114856537367,18.845612241209622,2.0924567125039175,316.0532778625401,predicted,predicted,predicted,predicted
+Ordu,ordu,2029,754673,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.211223540821672,19.42597572650076,2.1484342908952385,320.79395751596815,predicted,predicted,predicted,predicted
+Ordu,ordu,2030,751180,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.010103982770953,20.020385413247013,2.2067672804696485,325.407001801395,predicted,predicted,predicted,predicted
+Osmaniye,osmaniye,2025,564123,Gerçek,TÜİK ADNKS 2025,23.1144626260585,10.487783692563502,1.5115096224471927,309.06824671145154,actual,actual,predicted,predicted
+Osmaniye,osmaniye,2026,566800,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,22.497252008056144,10.905649360676032,1.5972684638691135,311.0001981788857,predicted,predicted,predicted,predicted
+Osmaniye,osmaniye,2027,569405,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.882529480089513,11.341388364058414,1.68055715598166,312.47867781233,predicted,predicted,predicted,predicted
+Osmaniye,osmaniye,2028,571864,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,21.292352580221888,11.79406833855183,1.754116183554288,314.27297384841137,predicted,predicted,predicted,predicted
+Osmaniye,osmaniye,2029,574220,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.71306615613198,12.262128708599018,1.8223095344146714,316.4030098270686,predicted,predicted,predicted,predicted
+Osmaniye,osmaniye,2030,576457,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,20.09524981999558,12.745372984509112,1.886386578262318,318.77690507448136,predicted,predicted,predicted,predicted
+Rize,rize,2025,346947,Gerçek,TÜİK ADNKS 2025,16.471680112524393,15.754279472080752,2.643451497599017,330.289827538683,actual,actual,predicted,predicted
+Rize,rize,2026,343930,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.027152261613193,16.257561238218578,2.6316065437276848,335.87660178170756,predicted,predicted,predicted,predicted
+Rize,rize,2027,342053,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.542661535610886,16.769142473773663,2.6264692420954816,341.2821271367988,predicted,predicted,predicted,predicted
+Rize,rize,2028,340137,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.077112529028263,17.304039487805234,2.6438903121161275,346.5083561661569,predicted,predicted,predicted,predicted
+Rize,rize,2029,338154,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.68936777769877,17.854239393767827,2.6746548565570265,351.5256512530501,predicted,predicted,predicted,predicted
+Rize,rize,2030,336098,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.325819729994121,18.418949574738008,2.716175425914116,356.3742319067843,predicted,predicted,predicted,predicted
+Sakarya,sakarya,2025,1123693,Gerçek,TÜİK ADNKS 2025,19.280622020427288,11.945077525623102,2.004359310667496,230.23913620988424,actual,actual,predicted,predicted
+Sakarya,sakarya,2026,1139023,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.95272151797479,12.340957920845497,2.0103514712536708,235.24497583326993,predicted,predicted,predicted,predicted
+Sakarya,sakarya,2027,1153279,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.58410550710266,12.745168246042974,2.0285535152070224,240.10089554159038,predicted,predicted,predicted,predicted
+Sakarya,sakarya,2028,1167434,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.192305682685927,13.172352380879643,2.0552346339682117,244.897655522428,predicted,predicted,predicted,predicted
+Sakarya,sakarya,2029,1181472,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.876860634246203,13.615231907111003,2.0888509835931472,249.5867113119591,predicted,predicted,predicted,predicted
+Sakarya,sakarya,2030,1195415,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.389654954821623,14.073026024750783,2.127031666401308,254.19077482800338,predicted,predicted,predicted,predicted
+Samsun,samsun,2025,1392403,Gerçek,TÜİK ADNKS 2025,17.564814209679238,14.318699399527294,2.693176116212271,385.5366964535355,actual,actual,predicted,predicted
+Samsun,samsun,2026,1396684,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.00520379888201,14.798169746487522,2.7223865751875564,388.59036344134967,predicted,predicted,predicted,predicted
+Samsun,samsun,2027,1402866,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.559570418547764,15.289017306606862,2.746684532612562,391.7613118888265,predicted,predicted,predicted,predicted
+Samsun,samsun,2028,1408871,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.182236398516775,15.800750113832908,2.7821896952809766,395.1048793652701,predicted,predicted,predicted,predicted
+Samsun,samsun,2029,1414664,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.87978258959506,16.32731332409696,2.8227123394608498,398.5188662161427,predicted,predicted,predicted,predicted
+Samsun,samsun,2030,1420148,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.589074278825612,16.868120142698228,2.8682339498773217,402.0060418254043,predicted,predicted,predicted,predicted
+Şanlıurfa,sanliurfa,2025,2265800,Gerçek,TÜİK ADNKS 2025,36.78983140612587,4.5099302674552035,1.3859995056409389,198.7967121244468,actual,actual,predicted,predicted
+Şanlıurfa,sanliurfa,2026,2287298,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,36.13498671959378,4.764167839654384,1.4681990703684278,203.2075966526887,predicted,predicted,predicted,predicted
+Şanlıurfa,sanliurfa,2027,2309524,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,35.232637954204336,5.038388868919067,1.5408605657867156,207.56381827735268,predicted,predicted,predicted,predicted
+Şanlıurfa,sanliurfa,2028,2330896,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,34.68744740175226,5.327456245560722,1.607932762883138,211.92429174808368,predicted,predicted,predicted,predicted
+Şanlıurfa,sanliurfa,2029,2351531,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,34.09997101031399,5.634146698414417,1.670529339229688,216.225152375455,predicted,predicted,predicted,predicted
+Şanlıurfa,sanliurfa,2030,2371306,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,33.53830451872023,5.958423374212297,1.7304766027373262,220.48433958031765,predicted,predicted,predicted,predicted
+Siirt,siirt,2025,332369,Gerçek,TÜİK ADNKS 2025,30.12465061422696,6.032151012880262,1.504979992925655,240.37373633943787,actual,actual,predicted,predicted
+Siirt,siirt,2026,320018,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,29.341336743444202,6.33557604388964,1.6181680873269215,246.40141795727527,predicted,predicted,predicted,predicted
+Siirt,siirt,2027,310903,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.566139353342596,6.664206707025103,1.7239194521680474,252.2322174734878,predicted,predicted,predicted,predicted
+Siirt,siirt,2028,301722,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.805942984374543,7.012272712250025,1.8255126379663125,257.72626991329145,predicted,predicted,predicted,predicted
+Siirt,siirt,2029,292499,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.722668835686505,7.379734983142852,1.923152021248825,262.91744450614465,predicted,predicted,predicted,predicted
+Siirt,siirt,2030,283208,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.250486300248596,7.766599272872581,2.018946928146761,267.8536239930098,predicted,predicted,predicted,predicted
+Sinop,sinop,2025,225848,Gerçek,TÜİK ADNKS 2025,14.66384470971627,21.655272572703765,1.5824963110499084,299.70586518231624,actual,actual,predicted,predicted
+Sinop,sinop,2026,223722,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.318427990390925,22.15508840268962,1.6497647293726914,303.8907209694054,predicted,predicted,predicted,predicted
+Sinop,sinop,2027,221992,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.32319848209151,22.6666682897271,1.7271237151580863,308.5987619073278,predicted,predicted,predicted,predicted
+Sinop,sinop,2028,220268,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.307413547680557,23.204761223571737,1.8000695848604664,313.2289929978299,predicted,predicted,predicted,predicted
+Sinop,sinop,2029,218546,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.307413547680557,23.758199827807907,1.8718570382916369,317.7014117515764,predicted,predicted,predicted,predicted
+Sinop,sinop,2030,216848,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.307413547680557,24.326141614811455,1.9420754481689073,322.08059603722006,predicted,predicted,predicted,predicted
+Şırnak,sirnak,2025,573666,Gerçek,TÜİK ADNKS 2025,32.89823695320971,3.804129929261975,1.263194804196246,140.4337678179607,actual,actual,predicted,predicted
+Şırnak,sirnak,2026,569772,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,32.15701735764567,4.0408838441564185,1.333501304499805,147.6078745225907,predicted,predicted,predicted,predicted
+Şırnak,sirnak,2027,568445,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,31.52478430326542,4.299006480761381,1.39869360224111,154.36621062747832,predicted,predicted,predicted,predicted
+Şırnak,sirnak,2028,567077,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,30.946994806387202,4.572645509628127,1.463155513862148,160.82369253495162,predicted,predicted,predicted,predicted
+Şırnak,sirnak,2029,565665,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,30.133112855375316,4.864646273099105,1.526583330531139,166.9008773129204,predicted,predicted,predicted,predicted
+Şırnak,sirnak,2030,564177,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,29.299965288506552,5.174974459069416,1.5891137887374498,172.67199106278355,predicted,predicted,predicted,predicted
+Sivas,sivas,2025,631401,Gerçek,TÜİK ADNKS 2025,18.006940122046053,15.110682434775999,2.642921214865055,459.87043428916115,actual,actual,predicted,predicted
+Sivas,sivas,2026,620595,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.624728600143648,15.616593777623958,2.705742044141516,461.3122318666375,predicted,predicted,predicted,predicted
+Sivas,sivas,2027,611683,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.1207321812958,16.131049258713812,2.7621796305757016,463.2579163742806,predicted,predicted,predicted,predicted
+Sivas,sivas,2028,602726,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.661687917989596,16.66556422809368,2.82469014642993,465.34728824411144,predicted,predicted,predicted,predicted
+Sivas,sivas,2029,593667,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.308946277012595,17.215986044187314,2.8897502496256493,467.65837182350333,predicted,predicted,predicted,predicted
+Sivas,sivas,2030,584498,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.016259112528846,17.781685480657277,2.9575447113020346,470.15236128050617,predicted,predicted,predicted,predicted
+Tekirdağ,tekirdag,2025,1208441,Gerçek,TÜİK ADNKS 2025,19.540052017434032,10.714465993788691,1.737345601664856,279.1596522164736,actual,actual,predicted,predicted
+Tekirdağ,tekirdag,2026,1227634,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,19.002538944787183,11.070888671722862,1.7704156121471897,283.69859911970593,predicted,predicted,predicted,predicted
+Tekirdağ,tekirdag,2027,1247781,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,18.351581516594244,11.437177359146684,1.8090161486179568,288.14697595163136,predicted,predicted,predicted,predicted
+Tekirdağ,tekirdag,2028,1268068,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.785471584643737,11.82534277285977,1.8492152178660035,292.6601339517065,predicted,predicted,predicted,predicted
+Tekirdağ,tekirdag,2029,1288463,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.251777408565484,12.229495016536628,1.8910727193579078,297.10068784906696,predicted,predicted,predicted,predicted
+Tekirdağ,tekirdag,2030,1308923,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.78290108359703,12.648952855927206,1.9343419696670026,301.4981374114654,predicted,predicted,predicted,predicted
+Tokat,tokat,2025,614141,Gerçek,TÜİK ADNKS 2025,17.00309863695796,16.602864814431864,2.128365143958945,375.2202173409366,actual,actual,predicted,predicted
+Tokat,tokat,2026,627026,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.638017885329237,17.15751696891346,2.184799937356729,378.7085866611769,predicted,predicted,predicted,predicted
+Tokat,tokat,2027,635226,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.276190780862862,17.714042359354618,2.222484492463991,382.3433249260751,predicted,predicted,predicted,predicted
+Tokat,tokat,2028,643324,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.04260323570588,18.290197511256515,2.265187960176263,386.0618972307508,predicted,predicted,predicted,predicted
+Tokat,tokat,2029,651309,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.60187082479308,18.879896821320536,2.3079550038673915,389.8253929254894,predicted,predicted,predicted,predicted
+Tokat,tokat,2030,659161,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.143265807944793,19.48231139983077,2.35229025647277,393.63420487434394,predicted,predicted,predicted,predicted
+Trabzon,trabzon,2025,823323,Gerçek,TÜİK ADNKS 2025,17.4894907587909,15.547361120726617,2.9826107283006422,408.4914987424785,actual,actual,predicted,predicted
+Trabzon,trabzon,2026,822157,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.027077336117518,16.02094417028731,3.0056010708212852,414.60124271848906,predicted,predicted,predicted,predicted
+Trabzon,trabzon,2027,821685,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.584721152236686,16.503304482092318,3.0260340253589675,420.4631811044038,predicted,predicted,predicted,predicted
+Trabzon,trabzon,2028,821216,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.185148430870548,17.01044803161873,3.0600482631125487,426.159561764087,predicted,predicted,predicted,predicted
+Trabzon,trabzon,2029,820528,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.883340080116463,17.532913786220078,3.1008620528737083,431.5814816116595,predicted,predicted,predicted,predicted
+Trabzon,trabzon,2030,819622,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.598484241483172,18.069858676617272,3.147852121037431,436.7909928941825,predicted,predicted,predicted,predicted
+Tunceli,tunceli,2025,85083,Gerçek,TÜİK ADNKS 2025,13.54912262144024,17.75677867494094,2.43871578091057,185.63221411993942,actual,actual,predicted,predicted
+Tunceli,tunceli,2026,81964,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.266128645862365,18.2883036565498,2.4462623671861365,194.7418545863589,predicted,predicted,predicted,predicted
+Tunceli,tunceli,2027,79474,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.497842125278936,18.837415824832227,2.4565165379317477,203.16938328683574,predicted,predicted,predicted,predicted
+Tunceli,tunceli,2028,76999,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.340135559946845,19.41194872682341,2.494253088894766,210.9747188492048,predicted,predicted,predicted,predicted
+Tunceli,tunceli,2029,74530,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.277336542680391,20.003107660316058,2.547225717571564,218.14058953698972,predicted,predicted,predicted,predicted
+Tunceli,tunceli,2030,72082,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.253434654152272,20.61035717796573,2.6131838375586085,224.7750921679742,predicted,predicted,predicted,predicted
+Uşak,usak,2025,374405,Gerçek,TÜİK ADNKS 2025,16.687811327305994,14.959736114635222,1.9303830315475352,313.1413337259776,actual,actual,predicted,predicted
+Uşak,usak,2026,372842,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.329565145934563,15.396737030351588,1.9809496299130842,319.76575308703946,predicted,predicted,predicted,predicted
+Uşak,usak,2027,371431,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.036288416087494,15.842472687050837,2.0252101000514813,326.0256676616112,predicted,predicted,predicted,predicted
+Uşak,usak,2028,369958,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.590686084899938,16.316309503457433,2.0761857050820254,332.0277466950383,predicted,predicted,predicted,predicted
+Uşak,usak,2029,368421,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.152235043184534,16.80625580427083,2.1299387274775654,337.71326217748367,predicted,predicted,predicted,predicted
+Uşak,usak,2030,366848,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.677969486295638,17.31130811177372,2.1866959154140204,343.14228735994874,predicted,predicted,predicted,predicted
+Van,van,2025,1112013,Gerçek,TÜİK ADNKS 2025,29.074929879416878,5.366484024916975,1.9313797599752434,280.5726704867928,actual,actual,predicted,predicted
+Van,van,2026,1100701,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.65985943209888,5.688276684475169,1.9926733503234573,285.32872006093385,predicted,predicted,predicted,predicted
+Van,van,2027,1091033,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,28.086077685484934,6.02879541947961,2.0398636188474484,289.91379529154534,predicted,predicted,predicted,predicted
+Van,van,2028,1081005,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,27.15188062902211,6.386830790369404,2.094958482775837,294.41608086594647,predicted,predicted,predicted,predicted
+Van,van,2029,1070676,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,26.43594574892626,6.762526654528505,2.1524668611818925,298.8083322691651,predicted,predicted,predicted,predicted
+Van,van,2030,1060059,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,25.634210460022697,7.155689833243022,2.21323406213196,303.10970791806466,predicted,predicted,predicted,predicted
+Yalova,yalova,2025,311635,Gerçek,TÜİK ADNKS 2025,18.297046223947888,14.044635551205737,1.7990952783147804,262.97505971365507,actual,actual,predicted,predicted
+Yalova,yalova,2026,315720,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.934645593922344,14.461201925994786,1.8203872084850445,267.052844632495,predicted,predicted,predicted,predicted
+Yalova,yalova,2027,319788,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.65600353071769,14.890954028149732,1.8427449389128014,270.924828796904,predicted,predicted,predicted,predicted
+Yalova,yalova,2028,323963,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,17.161725286341404,15.338488264067024,1.8729541305801831,274.87050744039874,predicted,predicted,predicted,predicted
+Yalova,yalova,2029,328222,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.798613484266014,15.800940167341587,1.9075172836892307,278.84122649217414,predicted,predicted,predicted,predicted
+Yalova,yalova,2030,332583,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.395660146996356,16.277896374653963,1.9455138777848333,282.8305585004791,predicted,predicted,predicted,predicted
+Yozgat,yozgat,2025,413208,Gerçek,TÜİK ADNKS 2025,17.261524462256297,15.989041838492962,1.914023345336318,305.98547645456057,actual,actual,predicted,predicted
+Yozgat,yozgat,2026,407596,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.81081463456783,16.56338092963876,2.001362706243526,307.6030931670477,predicted,predicted,predicted,predicted
+Yozgat,yozgat,2027,404300,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,16.337266044663338,17.154366906802682,2.0894859161926433,309.758627348714,predicted,predicted,predicted,predicted
+Yozgat,yozgat,2028,401000,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.972875324047633,17.7606633181405,2.169812627194915,311.992711956488,predicted,predicted,predicted,predicted
+Yozgat,yozgat,2029,397674,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.613330662442813,18.38102712089224,2.2466965861967765,314.45258957679255,predicted,predicted,predicted,predicted
+Yozgat,yozgat,2030,394317,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,15.177453286186132,19.015293447911773,2.320377082680352,317.0914877008246,predicted,predicted,predicted,predicted
+Zonguldak,zonguldak,2025,585203,Gerçek,TÜİK ADNKS 2025,14.558366925665112,16.799982228389123,2.372143194777891,397.3781937463195,actual,actual,predicted,predicted
+Zonguldak,zonguldak,2026,580378,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.273305260386183,17.399529677447244,2.4438038489897735,400.5600838877641,predicted,predicted,predicted,predicted
+Zonguldak,zonguldak,2027,576745,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.305835163578582,18.005390438179703,2.5117284025182016,403.86498001771497,predicted,predicted,predicted,predicted
+Zonguldak,zonguldak,2028,573015,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.30082158939547,18.63796845324219,2.5788002493209206,407.2383979007674,predicted,predicted,predicted,predicted
+Zonguldak,zonguldak,2029,569173,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.311698799901249,19.284555901168655,2.64509552140953,410.6647901741924,predicted,predicted,predicted,predicted
+Zonguldak,zonguldak,2030,565203,Güncel Tahmin,TÜİK Ana Senaryo + Bias-Correction,14.311698799901249,19.944149137654165,2.7112217260873877,414.1390621814809,predicted,predicted,predicted,predicted
