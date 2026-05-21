@@ -1,0 +1,14 @@
+Introduction
+[1] - Dutton, P. V. (2007). Differential diagnoses: A comparative history of health care problems and solutions in the United States and France. Cornell University Press.
+[2] - World Health Organization. (2022). Working for Health 2022–2030 Action Plan: Strengthening the health and care workforce to enable universal health coverage and security. World Health Organization. https://cdn.who.int/media/docs/default-source/health-workforce/working4health/w4h2-action-plan.pdf
+[3] - Isik, M., Isik, F., & Kiyak, M. (2015). Analyzing financial structure of Turkish healthcare system in comparison with US, German, British, French and Cuban healthcare systems. Journal of Economics Finance and Accounting, 2(4), 501-518.
+[4] - Alkan, B. B., Atakan, C., & Şahin, A. (2011). Measuring inequalities in the distribution of health workers by bi-plot approach: The case of Turkey.
+[5] - Abay, P., Yücel, A. S., Korkmaz, M., & Özdayı, N. (2026). Health Expenditure Dynamics in Türkiye for The Years 1999-2024 and Their Implications for The Health System. Balıkesir Sağlık Bilimleri Dergisi, 15(1), 23-36.
+[6] - Şimşek, A. B. (2022). Analysis Of The Change In The Distribution Of Health Human Resources At The Provincial Level In Turkey In 2014-2019. Uluslararası Sağlık Yönetimi ve Stratejileri Araştırma Dergisi, 8(2), 171-184.
+[7] - Söyler, S., & Çavmak, D. (2023). An Evaluation of Access to Healthcare Services in Türkiye. Aurum Journal of Health Sciences, 5(2), 69-76.
+[8] - Koç, D. T., & Eren, E. (2026). Workforce Forecasting with Machine Learning for Healthcare Management. Journal of Health Management, 28(1), 121-135.
+[9] - Aslan, M., & Toros, E. (2025). Machine learning in optimising nursing care delivery models: An empirical analysis of hospital wards. Journal of Evaluation in Clinical Practice, 31(1), e70001.
+[10] - Meydan, B. (2025). Sürdürülebilir kalkınma hedefleri kapsamında TR33 bölgesi illerinin performanslarının TOPSIS yöntemi ile değerlendirilmesi. Afyon Kocatepe Üniversitesi İktisadi ve İdari Bilimler Fakültesi Dergisi, 27(Özel Sayı), 227-249.
+[11] - Ceylan, Z., & Atalan, A. (2021). Estimation of healthcare expenditure per capita of Turkey using artificial intelligence techniques with genetic algorithm‐based feature selection. Journal of forecasting, 40(2), 279-290.
+[12] - Güleryüz, D. (2021). Predicting health spending in Turkey using the GPR, SVR, and DT models. Acta Infologica, 5(1), 155-166.
+[13] - Köksoy, B., Paşaoğlu, A., & Akbel, A. (2025, December). Forecasting Regional Healthcare Workforce Demand in Turkey using Machine Learning Algorithms. In 2025 International Conference on Information Science and Communications Technologies (ICISCT) (pp. 104-109). IEEE.
