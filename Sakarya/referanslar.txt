@@ -1,0 +1,31 @@
+Introduction
+
+[1] - Dutton, P. V. (2007). Differential diagnoses: A comparative history of health care problems and solutions in the United States and France. Cornell University Press.
+[2] - World Health Organization. (2022). Working for Health 2022–2030 Action Plan: Strengthening the health and care workforce to enable universal health coverage and security. World Health Organization. https://cdn.who.int/media/docs/default-source/health-workforce/working4health/w4h2-action-plan.pdf
+[3] - Isik, M., Isik, F., & Kiyak, M. (2015). Analyzing financial structure of Turkish healthcare system in comparison with US, German, British, French and Cuban healthcare systems. Journal of Economics Finance and Accounting, 2(4), 501-518.
+[4] - Alkan, B. B., Atakan, C., & Şahin, A. (2011). Measuring inequalities in the distribution of health workers by bi-plot approach: The case of Turkey.
+[5] - Abay, P., Yücel, A. S., Korkmaz, M., & Özdayı, N. (2026). Health Expenditure Dynamics in Türkiye for The Years 1999-2024 and Their Implications for The Health System. Balıkesir Sağlık Bilimleri Dergisi, 15(1), 23-36.
+[6] - Şimşek, A. B. (2022). Analysis Of The Change In The Distribution Of Health Human Resources At The Provincial Level In Turkey In 2014-2019. Uluslararası Sağlık Yönetimi ve Stratejileri Araştırma Dergisi, 8(2), 171-184.
+[7] - Söyler, S., & Çavmak, D. (2023). An Evaluation of Access to Healthcare Services in Türkiye. Aurum Journal of Health Sciences, 5(2), 69-76.
+[8] - Koç, D. T., & Eren, E. (2026). Workforce Forecasting with Machine Learning for Healthcare Management. Journal of Health Management, 28(1), 121-135.
+[9] - Aslan, M., & Toros, E. (2025). Machine learning in optimising nursing care delivery models: An empirical analysis of hospital wards. Journal of Evaluation in Clinical Practice, 31(1), e70001.
+[10] - Meydan, B. (2025). Sürdürülebilir kalkınma hedefleri kapsamında TR33 bölgesi illerinin performanslarının TOPSIS yöntemi ile değerlendirilmesi. Afyon Kocatepe Üniversitesi İktisadi ve İdari Bilimler Fakültesi Dergisi, 27(Özel Sayı), 227-249.
+[11] - Ceylan, Z., & Atalan, A. (2021). Estimation of healthcare expenditure per capita of Turkey using artificial intelligence techniques with genetic algorithm‐based feature selection. Journal of forecasting, 40(2), 279-290.
+[12] - Güleryüz, D. (2021). Predicting health spending in Turkey using the GPR, SVR, and DT models. Acta Infologica, 5(1), 155-166.
+[13] - Köksoy, B., Paşaoğlu, A., & Akbel, A. (2025, December). Forecasting Regional Healthcare Workforce Demand in Turkey using Machine Learning Algorithms. In 2025 International Conference on Information Science and Communications Technologies (ICISCT) (pp. 104-109). IEEE.
+
+Metot
+[1] - Terzi Coban, D., & Uslu, O. (2025). Institutional performance evaluation at TUIK: A model proposal based on the balanced scorecard. Administration & Society, 57(5), 567-608.
+[2] - García, S., Luengo, J., & Herrera, F. (2015). Data preprocessing in data mining (Vol. 72, pp. 59-139). Cham, Switzerland: Springer International Publishing.
+[3] - Turkish Statistical Institute. (n.d.). Central Dissemination System (MEDAS). Retrieved May 23, 2026, from https://biruni.tuik.gov.tr/medas
+[4] - Mustafy, T., & Rahman, M. T. U. (2024). Excel. In Statistics and Data Analysis for Engineers and Scientists (pp. 81-134). Singapore: Springer Nature Singapore.
+[5] - Mitchell, R. (2018). Web scraping with Python: Collecting more data from the modern web. " O'Reilly Media, Inc.".
+[6] - Zhou, Z. H. (2021). Machine learning. Springer nature.
+[7] - James, G., Witten, D., Hastie, T., Tibshirani, R., & Taylor, J. (2023). Linear regression. In An introduction to statistical learning: With applications in python (pp. 69-134). Cham: Springer international publishing.
+[8] - Herawati, N., Sutrisno, A., Nusyirwan, N., & Misgiyati, M. (2024). The performance of ridge regression, LASSO, and elastic-net in controlling multicollinearity: A simulation and application. Journal of Modern Applied Statistical Methods,, 23(2), 1-13.
+[9] - Zadorozhnyi, O., Benecke, G., Mandt, S., Scheffer, T., & Kloft, M. (2016, September). Huber-norm regularization for linear prediction models. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (pp. 714-730). Cham: Springer International Publishing.
+[10] - Grinsztajn, L., Oyallon, E., & Varoquaux, G. (2022). Why do tree-based models still outperform deep learning on typical tabular data?. Advances in neural information processing systems, 35, 507-520.
+[11] - Nzenwata, U. J., Edwin, E., Chukwu, E. A., Osilaja, D., Hinmikaiye, J. O., & Enyinnah, C. (2025). Extra trees model for heart disease prediction. Journal of Data Analysis and Information Processing, 13(02), 125-139.
+[12] - Hancock, J. T., & Khoshgoftaar, T. M. (2020). CatBoost for big data: an interdisciplinary review: JT Hancock, TM Khoshgoftaar. Journal of big data, 7(1), 94.
+[13] - Sivaramakrishnan, S., Fernandez, T. F., Babukarthik, R. G., & Premalatha, S. (2022). Forecasting time series data using arima and facebook prophet models. In Big data management in Sensing (pp. 47-59). River Publishers.
+[14] - Montiel, A. J. U., Morales, Á. A. Z., Cari, L. W. C., & Vergara, J. R. M. (2025). Evolution of the SMEs loan portfolio in Ecuador: a Holt-Winters approach and the Extreme Learning Machine network. Encuentros: Revista de Ciencias Humanas, Teoría Social y Pensamiento Crítico, (24), 417-436.
