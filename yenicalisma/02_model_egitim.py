@@ -43,6 +43,8 @@ feature_map = {
     "yatak":   ["yıl", "nufus", "hastane", "doktor", "hemsire", "ebe", "diger"],
     "hastane": ["yıl", "nufus", "yatak", "doktor", "hemsire", "ebe", "diger"],
 }
+
+
 print("Feature map: hedefler →", list(feature_map.keys()))
 
 # %% [3] K-FOLD ======================================================

@@ -29,3 +29,30 @@ Metot
 [12] - Hancock, J. T., & Khoshgoftaar, T. M. (2020). CatBoost for big data: an interdisciplinary review: JT Hancock, TM Khoshgoftaar. Journal of big data, 7(1), 94.
 [13] - Sivaramakrishnan, S., Fernandez, T. F., Babukarthik, R. G., & Premalatha, S. (2022). Forecasting time series data using arima and facebook prophet models. In Big data management in Sensing (pp. 47-59). River Publishers.
 [14] - Montiel, A. J. U., Morales, Á. A. Z., Cari, L. W. C., & Vergara, J. R. M. (2025). Evolution of the SMEs loan portfolio in Ecuador: a Holt-Winters approach and the Extreme Learning Machine network. Encuentros: Revista de Ciencias Humanas, Teoría Social y Pensamiento Crítico, (24), 417-436.
+[15] - Bauer, E., & Kohavi, R. (1999). An empirical comparison of voting classification algorithms: Bagging, boosting, and variants. Machine learning, 36(1), 105-139.
+[16] - Shahhosseini, M., Hu, G., & Pham, H. (2022). Optimizing ensemble weights and hyperparameters of machine learning models for regression problems. Machine Learning with Applications, 7, 100251.
+[17] - Zhou, W., Wang, S., Cucuringu, M., Zhang, Z., Li, X., Guo, J., ... & Chu, X. (2025, November). DeltaLag: Learning Dynamic Lead-Lag Patterns in Financial Markets. In Proceedings of the 6th ACM International Conference on AI in Finance (pp. 422-430).
+[18] - Elbatal, I., Sarwar, M., Jamal, F., Daniyal, M., Hussain, Z., & Ghorbal, A. B. (2025). Modelling on gross domestic product annual growth rate data by using time series, machine learning, and probability models. Journal of Radiation Research and Applied Sciences, 18(2), 101481.
+[19] - Chicco, D., Warrens, M. J., & Jurman, G. (2021). The coefficient of determination R-squared is more informative than SMAPE, MAE, MAPE, MSE and RMSE in regression analysis evaluation. Peerj computer science, 7, e623.
+[20] - Sujon, K. M., Hassan, R., Choi, K., & Samad, M. A. (2025). Accuracy, precision, recall, f1-score, or MCC? empirical evidence from advanced statistics, ML, and XAI for evaluating business predictive models. Journal of Big Data, 12(1), 268.
+
+Metot-Yeni
+[1] - Lones, M. A. (2021). How to avoid machine learning pitfalls: a guide for academic researchers. arXiv preprint arXiv:2108.02497.
+[2] - Sakkari, M., & Zaied, M. (2020). A convolutional deep self-organizing map feature extraction for machine learning. Multimedia Tools and Applications, 79(27), 19451-19470.
+[3] - Wong, T. T., & Yeh, P. Y. (2019). Reliable accuracy estimates from k-fold cross validation. IEEE Transactions on Knowledge and Data Engineering, 32(8), 1586-1594.
+[4] - Nti, I. K., Nyarko-Boateng, O., & Aning, J. (2021). Performance of machine learning algorithms with different K values in K-fold cross-validation. International Journal of Information Technology and Computer Science, 13(6), 61-71.
+[5] - Belete, D. M., & Huchaiah, M. D. (2022). Grid search in hyperparameter optimization of machine learning models for prediction of HIV/AIDS test results. International Journal of Computers and Applications, 44(9), 875-886.
+[6] - Feurer, M., & Hutter, F. (2019). Hyperparameter optimization. In Automated machine learning: Methods, systems, challenges (pp. 3-33). Cham: Springer International Publishing.
+[7] - Ahsan, M. M., Mahmud, M. P., Saha, P. K., Gupta, K. D., & Siddique, Z. (2021). Effect of data scaling methods on machine learning algorithms and model performance. Technologies, 9(3), 52.
+[8] - Dietterich, T. G. (2000, June). Ensemble methods in machine learning. In International workshop on multiple classifier systems (pp. 1-15). Berlin, Heidelberg: Springer Berlin Heidelberg.
+[9] - Zhou, Z. H. (2025). Ensemble methods: foundations and algorithms. Chapman and Hall/CRC.
+[10] - Mishra, D., Tripathi, S. M., Chaurasia, A., & Chaurasia, P. K. (2025). A review on ensemble learning methods: machine learning approach. International Journal of Research Publication and Reviews, 6(2), 3795-3803.
+
+Result:
+[1] - Hyndman, R. J., & Athanasopoulos, G. (2018). Forecasting: principles and practice. OTexts.
+[2] - Türkmen, A. C., Januschowski, T., Wang, Y., & Cemgil, A. T. (2021). Forecasting intermittent and sparse time series: A unified probabilistic framework via deep renewal processes. Plos one, 16(11), e0259764.
+[3] - Papathanasiou, J., & Ploskas, N. (2018). Topsis. In Multiple criteria decision aid: Methods, examples and python implementations (pp. 1-30). Cham: Springer International Publishing.
+[4] - Miç, P., & Antmen, Z. F. (2019). A healthcare facility location selection problem with fuzzy TOPSIS method for a regional hospital. Avrupa Bilim ve Teknoloji Dergisi, (16), 750-757.
+[5] - Bromiley, P. A., Thacker, N. A., & Bouhova-Thacker, E. (2004). Shannon entropy, Renyi entropy, and information. Statistics and Inf. Series (2004-004), 9(2004), 2-8.
+[6] - Vajapeyam, S. (2014). Understanding Shannon's entropy metric for information. arXiv preprint arXiv:1405.2061.
+[7] - Sepúlveda-Fontaine, S. A., & Amigó, J. M. (2024). Applications of entropy in data analysis and machine learning: a review. Entropy, 26(12), 1126.

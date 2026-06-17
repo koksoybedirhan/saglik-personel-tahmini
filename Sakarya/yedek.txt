@@ -1,0 +1,1456 @@
+\documentclass[final, 9pt, twocolumn]{saucis}
+\usepackage{cite}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{orcidlink}
+\usepackage{rorlink}
+\usepackage{url}
+\let\CheckCommand\providecommand
+\usepackage{microtype}
+
+\newcommand{\vo}{9} %volume
+\newcommand{\n}{4} %number
+\newcommand{\y}{2025} %year
+\newcommand{\p}{345-432} %pages
+\renewcommand{\saucisJD}{RESEARCH ARTICLE}
+\newcommand{\dergiparkID}{19234532} %dergipark ID
+\renewcommand{\saucisAuthors}{B. Koksoy, A. Pasaoglu, and S. Duman} %author names
+\startsAtpage{102} %page number start point
+
+\begin{document}
+
+%---------------------------------------------------------------------------------
+%	TITLE
+%---------------------------------------------------------------------------------
+
+\title{Forecasting Provincial Healthcare Infrastructure and Budget Allocation in Turkey Using Machine Learning and TOPSIS}
+
+%---------------------------------------------------------------------------------
+%	AUTHORS
+%---------------------------------------------------------------------------------
+\author[1*]{Bedirhan Köksoy,\orcidlink{0009-0003-2358-9209}}
+\author[2]{Ali Paşaoğlu,\orcidlink{0000-0002-6853-1356}}
+\author[3]{Şevval Duman,\orcidlink{0009-0005-1777-4306}}
+\affil[1]{Information Systems and Technologies
+Departmant, Faculty of Computer and Information Sciences, Yeditepe University, Istanbul, Türkiye, \rorlink{https://ror.org/025mx2575}}
+\affil[2]{Department of Computer Engineering, Faculty of Engineering and Natural Sciences, Istanbul Rumeli University, Istanbul, Türkiye,
+\rorlink{https://ror.org/05av6y173}}
+\affil[3]{Department of Electrical and Electronics Engineering, Faculty of Engineering, Istanbul University-Cerrahpasa, Istanbul, Türkiye,
+\rorlink{https://ror.org/01dzn5f42}}
+\affil[*]{Bedirhan Köksoy}
+\newcommand{\corresAuthoremail}{bedirhan.koksoy@yeditepe.edu.tr} %volume
+
+%---------------------------------------------------------------------------------
+%	ABSTRACT
+%---------------------------------------------------------------------------------
+
+\saucisAbstract{
+Equitable allocation of healthcare resources across provinces requires accurate projections of future infrastructure needs, demographic pressures, and available budgets. This study proposes an integrated machine learning framework for province-level healthcare planning in Turkey covering the 2025--2030 period. The framework consists of three interconnected components. In the first component, six healthcare infrastructure indicators the number of "physicians, nurses, midwives, other healthcare personnel, hospital beds, and hospitals" are forecasted for all 81 Turkish provinces using 17 machine learning models trained on 2002--2024 data with a five-fold walk-forward cross-validation scheme. In the second component, four demographic and service capacity criteria "the 0--14 age group ratio, the 65+ age group ratio, the supply of physicians per 1,000 people, and the supply of hospital beds per 100,000 people" are projected to 2030 and used to construct TOPSIS-based provincial need rankings. Criterion weights are derived objectively using the Shannon entropy method. In the third component, Turkey's national health budget is forecasted in USD terms using an ensemble of time-series and regression models, and the results are converted to Turkish lira using projected exchange rates. The three components are integrated through a dynamic budget allocation mechanism with a feedback loop: after each annual allocation, provincial TOPSIS scores are updated to reflect received resources, ensuring that high-priority provinces in early years yield priority to underserved provinces in subsequent years. Results show that small northern provinces with high elderly population ratios and low physician density, such as Sinop and Artvin, rank highest in 2025, while the feedback mechanism redistributes priority to larger coastal provinces from 2026 onwards. The proposed framework provides a data-driven, adaptive, and reproducible approach to provincial health resource planning.
+}
+%---------------------------------------------------------------------------------
+%	KEYWORDS 
+%---------------------------------------------------------------------------------
+\saucisKeywords{Budget Allocation, Healthcare Infrastructure Forecasting, Machine Learning, Shannon Entropy, TOPSIS}
+%---------------------------------------------------------------------------------
+%	ARTICLE INFO
+%---------------------------------------------------------------------------------
+\saucisreceived{23 November 2025}
+\saucisaccepted{23 November 2025}
+\saucisonline{23 November 2025}
+\maketitle 
+
+\section{Introduction}  %% Please avoid complex formulas in (sub)titles
+Health has been among humanity's most fundamental concerns since the dawn of civilization. The field of medicine, which has evolved over centuries, began to transform into an organized sector, particularly with the advent of the Industrial Revolution \cite{intro1}. In the subsequent decades, the healthcare sector has expanded substantially alongside nations' economic growth. This expansion has rendered systematic healthcare planning a strategic imperative for governments.
+
+Healthcare planning represents one of the most critical issues facing the contemporary world. It encompasses a wide range of interconnected dimensions and challenges, including the working conditions of healthcare professionals, the allocation and management of health sector budgets, and the equitable access of every citizen to appropriate healthcare services at the provincial level \cite{intro2}. Consequently, each step in the planning process must be undertaken with meticulous care, and no aspect should be overlooked.
+
+Turkey is also among the countries that have undertaken comprehensive efforts in healthcare planning. The country places considerable importance on healthcare and differs from other countries in the privileges it grants its citizens. While healthcare services in countries such as the United States are largely supported by paid health insurance, Turkey provides broad access to publicly financed healthcare \cite{intro3}. Although publicly supported healthcare services offer significant benefits for citizens, they also create a substantial responsibility for healthcare planning in the background.
+
+Turkey organizes its healthcare planning activities under the authority of the Ministry of Health. Particularly in recent years, the budget allocated to the Ministry of Health has increased, thereby providing greater financial capacity for more systematic healthcare planning. However, despite the increase in healthcare expenditure, several challenges still remain in the planning process. One of the most prominent of these challenges concerns city-based healthcare planning. In smaller cities, shortages of healthcare personnel persist; however, personnel assignments are still largely based on previous vacant position records, the departure of personnel who have completed their service period, or rotations initiated by provincial health directorates \cite{intro4}. Although this approach may address the personnel shortage of a particular hospital, it may also lead to workforce deficits in hospitals that have a greater need for personnel but are less preferred by healthcare workers.
+
+Budget management in healthcare is a fundamental component of health planning. One of the major challenges in Turkey’s healthcare planning process is budget allocation. In general, a larger share of healthcare resources is allocated to metropolitan areas due to their higher population density. However, this situation may lead to financial constraints in smaller cities that also require adequate healthcare funding, thereby weakening residents' access to healthcare services \cite{intro5}.
+
+The issue of healthcare planning in Turkey is addressed not only through the initiatives of the Ministry of Health but also through academic and independent studies. Various studies have been conducted on this topic, offering insights into how specific aspects of healthcare planning can be improved. Among these studies, some evaluate the distribution of healthcare personnel in Turkey, while others examine the economic dimension of healthcare planning \cite{intro6, intro7}.
+
+Healthcare planning has gained a new perspective with the emergence of artificial intelligence. In particular, artificial intelligence-based forecasting and allocation approaches have become increasingly prominent in recent planning studies. Using AI-based methods, cities with greater personnel needs can be identified more effectively, and the criteria guiding budget allocation can be determined in a more systematic, data-driven manner. 
+
+In recent years, artificial intelligence-based personnel allocation forecasting has become a prominent research topic in the literature. In a recent study, the physician supply and demand balance in Turkey for 2030 was modeled, and physician supply and demand per 1,000 population were calculated. In this study, the most robust results were obtained with the help of the XGBoost algorithm \cite{intro8}. In another study, the adequacy of nurse staffing and the suitability of patient care models in hospital wards in Turkey were evaluated using machine learning methods. The highest performance in predicting appropriate staffing planning and the ideal care delivery model was achieved with the Random Forest algorithm \cite{intro9}.
+
+In personnel forecasting, population balance is a key factor; however, demographic structure must also be evaluated independently of population size. The TOPSIS method offers a suitable framework for examining such regional and demographic differences. A TOPSIS-based study evaluating the sustainable development performance of TR33 region provinces across housing, transportation, urbanization, and environmental criteria demonstrated that multidimensional city-level ranking can be effectively applied in healthcare personnel planning as well \cite{intro10}.
+
+In healthcare planning, studies have used Artificial Intelligence (AI) for budget planning. In one study, Turkey’s per capita healthcare expenditures were estimated using AI techniques and genetic algorithm-based feature selection, yielding the best-performing results with the Random Forest model \cite{intro11}. In another study focusing on per capita healthcare expenditure, Turkey’s healthcare expenditures were predicted using machine learning models, with the Support Vector Regression algorithm achieving the highest performance \cite{intro12}.
+
+This study extends our previous research, in which the regional distribution of healthcare workforce demand in Turkey was forecasted using machine learning algorithms based on 2024 personnel distribution patterns \cite{intro13}. However, the previous study did not incorporate demographic population characteristics, TOPSIS-based need prioritization, healthcare budget allocation, or improved machine learning methods. Therefore, the present study aims to provide a more comprehensive healthcare planning framework by integrating personnel distribution forecasts, demographic indicators, TOPSIS scores, and machine learning-based healthcare budget allocation for the 2025–2030 period.
+
+\section{Material and Methods}
+In the relevant section of the study, the data sources used for the dataset, the preprocessing steps applied to the datasets, the pre-modeling preparation stages, the preferred machine learning (ML) approaches, weighted ensemble selection strategies, and the model evaluation metrics are explained in detail. The explanations are presented under separate headings to improve clarity.
+
+\subsection{Data Collection Sources}
+This section describes the datasets used in the study. It explains the sources from which the datasets were collected and the types of data obtained from these sources. The subsequent analysis and processing steps applied to the collected data are described in detail in other sections.
+
+\subsubsection{Dataset Sources}
+The data used in this study were collected from three main source groups (Figure~\ref{fig1}). The primary source was the Turkish Statistical Institute (TURKSTAT), which provided demographic and healthcare-related statistics \cite{method1}. The second source was Investing.com, from which historical USD/TRY exchange rate data were obtained. The third source group was used to obtain actual and forecasted USD/TRY exchange rate data for future periods.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto1.png} 
+	\caption{Three Main Sources from Which the Data Were Collected}
+	\label{fig1}
+\end{figure}
+
+\subsubsection{Data Collected from the Data Sources}
+After reliable data sources were identified in Section~2.1.1, the required datasets were collected in accordance with the study's intent. The collected data are summarized (Table~\ref{tab:sources1} and Table~\ref{tab:sources2}). The first table presents the source, spatial coverage, and year range of each dataset. In addition, the second table provides detailed information on the content and size of the corresponding data. The study number associated with each dataset is also included in the tables. The purpose of each dataset and its role within the overall framework of the study are explained under Section~3 in the Results section.
+
+\begin{table}[htbp]
+\centering
+\caption{Data Sources and Spatial Coverage of Collected Datasets}
+\label{tab:sources1}
+\small
+\begin{tabular}{p{1.2cm} p{2.5cm} p{2.5cm}}
+\hline
+\textbf{Study No} & \textbf{Data Source} & \textbf{Spatial Level} \\
+\hline
+1          & TURKSTAT      & Province \\
+1, 2, 3    & TURKSTAT      & Province \\
+2          & TURKSTAT      & Province \\
+2          & TURKSTAT      & Province \\
+3          & TURKSTAT      & Country  \\
+3          & Investing.com & Country  \\
+3          & Third Group   & Country  \\
+\hline
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:sources1} shows that the datasets are drawn from two 
+primary sources: TURKSTAT and external financial data providers. 
+Province-level data cover the 81 provinces of Turkey and are used 
+in Studies~1 and~2, while country-level data support the macroeconomic 
+analyses conducted in Study~3.
+
+\begin{table}[htbp]
+\centering
+\caption{Year Range, Data Types, and Dataset Sizes}
+\label{tab:sources2}
+\small
+\begin{tabular}{p{1.8cm} p{4.5cm} p{1.2cm}}
+\hline
+\textbf{Year Range} & \textbf{Data Types} & \textbf{Dataset Size} \\
+\hline
+2002--2024 & Population, number of hospitals, number of hospital beds, and healthcare personnel data & 13041 \\
+2025, 2030 & Population data for 2025 and projected population data for 2030 & 162 \\
+2007--2025 & Population data for the 0--14 and 65+ age groups & 3078 \\
+2002--2024 & Supply of physicians per thousand people and supply of hospital beds per one hundred thousand people & 3726 \\
+1999--2024 & General health expenditure data & 25 \\
+1999--2024 & Monthly USD/TRY exchange rate data & 300 \\
+2025--2030 & Actual and forecasted USD/TRY exchange rate data & 72 \\
+\hline
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:sources2} presents the temporal scope and content of each dataset. The largest dataset consists of 13{,}041 province-year observations covering the 2002--2024 period, while the smallest comprises 25 annual country-level health expenditure records. Rows in both tables correspond to each other by order.
+
+It should be noted that some datasets contain multiple sub-variables within a single data type. In particular, the healthcare personnel dataset comprises six distinct personnel categories: assistant physicians, specialist physicians, general practitioners, midwives, nurses, and other healthcare staff.
+
+\subsection{Data Preprocessing}
+Data preprocessing is the process of cleaning, transforming, and integrating raw data before analysis so that it can be processed more effectively and accurately by data mining algorithms. This process includes fundamental steps such as handling missing or noisy data through data cleaning, converting data into appropriate formats through data transformation, and removing unnecessary features from the dataset through data reduction. In this context, data preprocessing aims to maximize data quality and directly improve the accuracy, reliability, and performance of the ML or data mining models to be developed \cite{method2}.
+
+In this study, the data preprocessing stage was carried out to enable machine learning algorithms to operate more effectively on the data. All procedures performed during the data preprocessing stage were organized into subsections according to the sources from which the data were obtained. Since no additional preprocessing was required for the Investing.com dataset group, preprocessing procedures were applied only to the TURKSTAT datasets and the third dataset group.
+
+\subsubsection{TURKSTAT Dataset Preprocessing}
+TURKSTAT data were collected separately in Office Open XML Spreadsheet (XLSX) format from the web platform named Biruni, which provides access to TURKSTAT datasets \cite{method3}. The collected datasets were then converted into Comma-Separated Values (CSV) format, which can be processed more conveniently by machine learning models \cite{method4}. After the conversion process, the datasets were merged into a common file according to the study group in which they were used. For example, since the first study used data on the number of hospitals, hospital beds, healthcare personnel, and population, these four datasets were combined into a single file (Figure~\ref{fig2}).
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto2.png} 
+	\caption{Example of Combining Datasets.}
+	\label{fig2}
+\end{figure}
+
+\subsubsection{Third Group  Dataset Preprocessing}
+The third dataset group consisted of sources that provide USD/TRY exchange rate data as well as future exchange rate forecasts. The data in this group were directly collected in CSV format using a Python-based web scraper \cite{method5}. Subsequently, similar to the preprocessing procedure applied to the TURKSTAT datasets, the collected data were merged into a single CSV file in a suitable format to improve their usability for ML models \cite{method4}. Figure~\ref{fig3} illustrates the data extraction process using the web scraper and the integration of the collected data into a single CSV file.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto3.png} 
+	\caption{Data Extraction Process.}
+	\label{fig3}
+\end{figure}
+
+\subsection{Pre-Modeling Preparation}
+Before proceeding to the prediction stage, several preparatory steps are required for machine learning models. These preparation stages are generally referred to as pre-modeling \cite{methodnew1}. In the pre-modeling stage, six different preparatory steps were performed. These steps are illustrated in Figure~\ref{fig4} and then explained in detail under separate subsections.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto6.png} 
+	\caption{Pre-Modeling Preparation Process.}
+	\label{fig4}
+\end{figure}
+
+\subsubsection{Data Loading and Variable Derivation}
+
+The dataset used in the first study was compiled from province-level health records spanning the years 2002 to 2024, covering all 81 provinces of Turkey. The resulting dataset consists of $81 \times 23 = 1{,}863$ observations, which can be expressed as:
+
+\begin{equation}
+    N = P \times T = 81 \times 23 = 1{,}863
+\end{equation}
+
+where $N$ denotes the total number of observations, $P$ is the number of provinces, and $T$ is the number of years in the study period. In addition, a composite variable representing the total number of physicians was derived by aggregating three sub-categories of healthcare personnel available in the dataset. The derived variable is defined as follows:
+
+\begin{equation}
+    \text{Physician} = \text{Specialist} + \text{General Practitioner} + \text{Resident}
+\end{equation}
+
+This aggregation was preferred over using each sub-category separately, as the distribution of residents across provinces exhibits considerable instability and abrupt fluctuations over time. The composite variable therefore provides a more stable and consistent representation of total physician availability at the province level.
+
+\subsubsection{Feature Map}
+
+Feature extraction is a critical process in the use of ML, 
+as the selection of input variables directly influences model 
+performance \cite{methodnew2}. In this study, a target-specific 
+feature map was constructed, where each target variable is predicted using all remaining health infrastructure variables along with year and population as inputs. In other words, each target variable serves as an output while all other variables act as its predictors, ensuring that no target variable is used to predict itself. To illustrate the corresponding feature map structure applied in the study, the obtained feature assignments are presented in Figure ~\ref{fig5}.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto7.png} 
+	\caption{Feature Map Structure.}
+	\label{fig5}
+\end{figure}
+
+\subsubsection{K-Fold Cross-Validation}
+
+Cross-validation is a resampling technique that estimates model 
+generalization performance by partitioning data into $k$ subsets, 
+using each as a test set once while training on the remainder 
+\cite{methodnew3}. Empirical studies suggest that $k = 5$ or $k = 10$ generally yields reliable estimates \cite{methodnew4}.
+
+However, standard random $k$-fold cross-validation is not suitable for time-series data, as randomly assigning observations to folds can cause future data to leak into the training set. To address this, a walk-forward strategy with an expanding training window was adopted, preserving the temporal order of observations across five folds as shown in Table~\ref{tab:kfold}.
+
+\begin{table}[htbp]
+\centering
+\caption{Walk-Forward Cross-Validation Folds}
+\label{tab:kfold}
+\small
+\begin{tabular}{p{1.5cm} p{3cm} p{3cm}}
+\hline
+\textbf{Fold} & \textbf{Training Period} & \textbf{Test Period} \\
+\hline
+1 & 2002--2016 & 2017--2020 \\
+2 & 2002--2017 & 2018--2021 \\
+3 & 2002--2018 & 2019--2022 \\
+4 & 2002--2019 & 2020--2023 \\
+5 & 2002--2020 & 2021--2024 \\
+\hline
+\end{tabular}
+\end{table}
+
+Fold~5 serves as the primary evaluation fold, as its test period 
+covers the years closest to the forecast horizon of the study.
+
+\subsubsection{Hyperparameter Optimization}
+
+Hyperparameters are configuration settings that govern the learning 
+process of a model and must be specified prior to training, as they cannot be learned directly from the data \cite{methodnew5}. The goal of hyperparameter optimization is to find the configuration $\lambda^{*}$ that minimizes a predefined loss function over a search space $\Lambda$:
+
+\begin{equation}
+    \lambda^{*} = \arg\min_{\lambda \in \Lambda} \; 
+    \mathcal{L}\bigl(f_{\lambda}(X_{\text{train}}),\, X_{\text{val}}\bigr)
+\end{equation}
+
+where $f_{\lambda}$ denotes the model trained with hyperparameter 
+configuration $\lambda$, and $\mathcal{L}$ is the loss function 
+evaluated on the validation set.
+
+In this study, Grid Search Cross-Validation (GridSearchCV) was 
+employed, which exhaustively evaluates all possible combinations 
+within a predefined hyperparameter grid \cite{methodnew6}. For a 
+grid containing $m$ hyperparameters with $n_i$ candidate values 
+for the $i$-th hyperparameter, the total number of configurations 
+evaluated is:
+
+\begin{equation}
+    |\Lambda| = \prod_{i=1}^{m} n_i
+\end{equation}
+
+Each configuration $\lambda \in \Lambda$ is evaluated using 
+$k$-fold cross-validation with $k = 2$ inner folds, and the 
+mean validation loss across folds is computed as:
+
+\begin{equation}
+    \overline{\mathcal{L}}(\lambda) = 
+    \frac{1}{k} \sum_{j=1}^{k} \mathcal{L}\bigl(f_{\lambda}^{(j)}\bigr)
+\end{equation}
+
+where $f_{\lambda}^{(j)}$ denotes the model trained on fold $j$. 
+The scoring criterion used was the negative mean absolute error 
+($-\text{MAE}$), so the optimal configuration satisfies:
+
+\begin{equation}
+    \lambda^{*} = \arg\min_{\lambda \in \Lambda} \; 
+    \overline{\mathcal{L}}(\lambda) = 
+    \arg\min_{\lambda \in \Lambda} \; 
+    \frac{1}{k} \sum_{j=1}^{k} \frac{1}{n_j} 
+    \sum_{i=1}^{n_j} \left| y_i - \hat{y}_i^{(\lambda, j)} \right|
+\end{equation}
+
+where $n_j$ is the number of observations in fold $j$, $y_i$ is 
+the true value, and $\hat{y}_i^{(\lambda, j)}$ is the predicted 
+value under configuration $\lambda$ in fold $j$.
+
+\subsubsection{Feature Scaling}
+
+Feature scaling is a preprocessing step that brings all input 
+variables to a common numerical range, which is particularly 
+critical for regularized linear models such as Ridge, as the penalty terms of these models are sensitive to the magnitude input features \cite{methodnew7}. In this study, StandardScaler was applied exclusively to LR, and Ridge, while tree-based and boosting models were left unscaled as they are invariant to monotonic feature transformations. StandardScaler standardizes each feature by removing the mean and scaling to unit variance:
+
+\begin{equation}
+    z = \frac{x - \mu}{\sigma}
+\end{equation}
+
+where $x$ is the original feature value, $\mu$ is the training 
+set mean, and $\sigma$ is the standard deviation. The transformation was fitted exclusively on the training fold and applied to the test fold to prevent data leakage.
+
+\subsubsection{Non-Negativity Constraint}
+
+Since all target variables in this study represent counts of 
+physical or human health resources, such as the number of 
+hospitals, beds, or personnel, negative predicted values are 
+inherently meaningless. To ensure the physical validity of all 
+forecasts, a non-negativity constraint was applied by clipping 
+all model outputs at zero, such that any predicted value 
+$\hat{y} < 0$ was replaced by zero:
+
+\begin{equation}
+    \hat{y} = \max(0,\ \hat{y})
+\end{equation}
+
+This constraint was applied uniformly across all models and 
+target variables following each prediction step.
+
+\subsection{Machine Learning Approaches}
+ML is the science of algorithms that enable computer systems to improve their task performance by learning from data-driven experience rather than being explicitly programmed. This discipline focuses on constructing statistical models capable of discovering structural patterns hidden within large datasets and making accurate predictions about future uncertainties or unseen cases. The main objective of this process is to enable a system to successfully analyze new examples that it has not previously encountered by applying the rules and generalizations learned from historical data \cite{method6}.
+
+In this study, a total of twenty-one different ML algorithms were used across three study sections. These algorithms were employed to compare the prediction results and thereby identify the approach that produced the highest prediction performance. The ML algorithms used in the study are presented in Table~\ref{tab:models} according to their names and the corresponding study.
+
+\begin{table}[htbp]
+\centering
+\caption{Machine Learning Model Groups and Their Assigned Studies}
+\label{tab:models}
+\small
+\begin{tabular}{p{1cm} p{2cm} p{4.5cm}}
+\hline
+\textbf{Study No} & \textbf{Main Category} & \textbf{Models Included} \\
+\hline
+1, 2       & Classical Regression Models  & LinearRegression (LR), Ridge, ElasticNet, Huber \\
+1, 2, 3    & Tree-Based Models            & RandomForest (RF), ExtraTrees, GradientBoosting (GB), HistGradientBoosting (HGB), XGBoost, CatBoost \\
+1, 2, 3    & Time-Series Models           & ARIMA, Prophet, HoltWinters, Holt, HoltDamped \\
+1, 2       & Ensemble Models              & Voting, Stacking, Bagging, Weighted Ensemble \\
+2, 3       & Baseline/Trend Models        & Baseline\_Lag1, CAGR5, CAGR10 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Classical Regression Models}
+
+Classical regression models are statistical approaches that estimate the linear relationship between a dependent variable and one or more independent variables by fitting a parametric function to the observed data. These models assume that the relationship between variables can be adequately described by a linear combination of predictors and rely on well-established estimation techniques. Despite their relative simplicity, they offer high interpretability and serve as important benchmarks against which more complex methods can be evaluated. Four classical regression models are employed in this study.
+
+\begin{itemize}
+    \item Linear Regression estimates the dependent variable as a 
+    linear combination of independent variables using ordinary least 
+    squares (OLS), which minimizes the sum of squared residuals 
+    \cite{method7}.
+    \item Ridge Regression extends OLS by adding an L2 penalty term to reduce multicollinearity. It shrinks coefficients toward zero without setting them exactly to zero \cite{method8}.
+    \item ElasticNet combines L1 and L2 penalty terms, offering both variable selection and multicollinearity control, merging the advantages of Ridge and LASSO \cite{method8}.
+    \item Huber Regression is a robust method that applies OLS for small residuals and absolute error loss for large ones, limiting the influence of outliers on model parameters \cite{method9}.
+\end{itemize}
+
+The advantages and disadvantages of the classical regression models are presented in Table~\ref{tab:classical_pros_cons} .
+
+\begin{table}[htbp]
+\centering
+\caption{Advantages and Disadvantages of Classical Regression Models}
+\label{tab:classical_pros_cons}
+\small
+\begin{tabular}{p{1.2cm} p{3.15cm} p{3.15cm}}
+\hline
+Model & Advantages & Disadvantages \\
+\hline
+Linear Regression
+& Simple to interpret; low computational cost
+& Sensitive to multicollinearity and outliers \\
+Ridge
+& Controls multicollinearity; retains all variables
+& No variable selection; coefficients never reach zero \\
+ElasticNet
+& Performs variable selection and controls multicollinearity
+& Requires tuning of two hyperparameters \\
+Huber
+& Robust to outliers; performs similarly to OLS under normal conditions
+& Sensitive to threshold parameter ($\epsilon$); assumes linearity \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Tree-Based Models}
+
+Tree-based models are non-parametric ensemble methods that partition the feature space through a series of recursive binary splits. Each split is determined by selecting the feature and threshold that best separates the target variable, allowing the model to approximate complex, non-linear decision boundaries without requiring feature scaling or distributional assumptions. These models have been shown to consistently outperform deep learning approaches on typical tabular datasets, owing to their robustness to irrelevant features, their ability to handle mixed data types, and their capacity to capture interaction effects without extensive preprocessing \cite{method10}.
+
+\begin{itemize}
+    \item RF constructs multiple decision trees using bootstrap sampling and random feature subsets, then combines their predictions to reduce variance and improve generalization ability. \cite{method10}.
+
+    \item ExtraTrees extends the random forest idea by 
+    selecting split thresholds randomly rather than optimally, which 
+    further reduces variance at the cost of a slight increase in bias 
+    \cite{method11}.
+
+    \item GB generates trees sequentially; each tree corrects the remaining errors of the previous tree by following the negative slope of the loss function.
+    \cite{method10}.
+
+    \item HGB is a histogram-based variant 
+    of GB that discretizes continuous features into bins 
+    before splitting, substantially reducing training time on large 
+    datasets \cite{method10}.
+
+    \item XGBoost is a regularized and computationally 
+    optimized GB framework that supports parallel 
+    processing and natively handles missing values \cite{method10}.
+
+    \item CatBoost is a GB algorithm 
+    specifically designed to handle categorical features without manual encoding, using ordered boosting to prevent target leakage 
+    \cite{method12}.
+\end{itemize}
+
+The advantages and disadvantages of the tree-based models are presented in Table~\ref{tab:tree_pros_cons} .
+
+\begin{table}[htbp]
+\centering
+\caption{Advantages and Disadvantages of Tree-Based Models}
+\label{tab:tree_pros_cons}
+\small
+\begin{tabular}{p{1.2cm} p{3.15cm} p{3.15cm}}
+\hline
+Model & Advantages & Disadvantages \\
+\hline
+RF
+& Low variance; robust to noise and outliers
+& High memory usage; slow on large datasets \\
+ExtraTrees
+& Faster training than RF; further variance reduction
+& Slightly higher bias; less interpretable \\
+GB & High predictive accuracy; handles mixed data types
+& Prone to overfitting; slow sequential training \\
+HGB
+& Fast on large datasets; native missing value support
+& Less interpretable; requires bin size tuning \\
+XGBoost
+& Regularization reduces overfitting; parallelizable
+& Many hyperparameters; sensitive to tuning \\
+CatBoost
+& Native categorical support; robust to overfitting
+& Slower training than XGBoost; high memory usage \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Time-Series Models}
+
+Time-series models are designed to capture temporal dependencies and trends in sequential data. Unlike cross-sectional methods, these models explicitly account for the order of observations and the patterns that evolve over time. Five time-series models are employed in this study.
+
+\begin{itemize}
+    \item ARIMA (Autoregressive Integrated Moving Average) 
+    models a time series through autoregressive and moving average 
+    components after differencing to achieve stationarity 
+    \cite{method13}.
+
+    \item Prophet is a decomposable forecasting model 
+    developed by Meta that separately models trend, seasonality, 
+    and holiday effects, making it robust to missing data and 
+    structural breaks \cite{method13}.
+
+    \item Holt-Winters extends simple exponential smoothing 
+    by incorporating both trend and seasonal components through 
+    double or triple smoothing equations \cite{method14}.
+
+    \item Holt applies double exponential smoothing to 
+    capture level and trend in non-seasonal time series, using 
+    two smoothing parameters \cite{method14}.
+
+    \item Holt Damped introduces a damping parameter to 
+    the Holt method, moderating the trend component over the 
+    forecast horizon to avoid over-optimistic long-range predictions 
+    \cite{method14}.
+\end{itemize}
+
+The advantages and disadvantages of the time-series models are presented in Table~\ref{tab:timeseries_pros_cons} .
+
+\begin{table}[htbp]
+\centering
+\caption{Advantages and Disadvantages of Time-Series Models}
+\label{tab:timeseries_pros_cons}
+\small
+\begin{tabular}{p{0.9cm} p{3.3cm} p{3.3cm}}
+\hline
+Model & Advantages & Disadvantages \\
+\hline
+ARIMA
+& Flexible for stationary series; well-established statistical foundation
+& Requires stationarity; struggles with non-linear patterns \\
+Prophet
+& Handles missing data and outliers; easy to configure
+& Less effective on short or irregular series \\
+Holt-Winters
+& Captures both trend and seasonality; interpretable parameters
+& Assumes fixed seasonal pattern; sensitive to outliers \\
+Holt
+& Simple and effective for trended non-seasonal data
+& Cannot capture seasonality; may overfit short series \\
+Holt Damped
+& Reduces over-forecasting in long horizons; more conservative
+& Requires tuning of the damping parameter \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Ensemble Models}
+
+Ensemble models combine the predictions of multiple base learners 
+to achieve better generalization than any single model alone. By 
+aggregating diverse models, ensemble methods reduce variance, bias, or both \cite{method15}. Four ensemble strategies are employed in this study.
+
+\begin{itemize}
+    \item Voting Ensemble aggregates the predictions of 
+    multiple independently trained models by averaging their outputs. In this study, RF, XGBoost, and GB are combined using soft voting \cite{method15}.
+
+    \item Stacking trains a meta-learner on the 
+    out-of-fold predictions of base models. In this study, 
+    RF and XGBoost serve as base learners, and a LR
+    model is used as the meta-learner \cite{method16}.
+
+    \item Bagging (Bootstrap Aggregating) trains multiple 
+    instances of the same base learner on different bootstrap 
+    samples of the training data and averages their predictions 
+    to reduce variance \cite{method15}.
+
+    \item Weighted Ensemble assigns optimized weights 
+    to each base model's prediction rather than treating all 
+    models equally. Weights are determined by minimizing 
+    validation error, allowing better-performing models to 
+    contribute more to the final prediction \cite{method16}.
+\end{itemize}
+
+The advantages and disadvantages of the ensemble models are presented in Table~\ref{tab:ensemble_pros_cons} .
+
+\begin{table}[htbp]
+\centering
+\caption{Advantages and Disadvantages of Ensemble Models}
+\label{tab:ensemble_pros_cons}
+\small
+\begin{tabular}{p{1.2cm} p{3.15cm} p{3.15cm}}
+\hline
+Model & Advantages & Disadvantages \\
+\hline
+Voting
+& Simple to implement; reduces individual model errors
+& Equal weighting may dilute strong models \\
+Stacking
+& Leverages complementary model strengths; flexible meta-learner
+& Risk of overfitting; higher computational cost \\
+Bagging
+& Effectively reduces variance; parallelizable
+& Limited benefit when base learner has high bias \\
+Weighted Ensemble
+& Optimized contribution of each model; adaptive
+& Weight optimization requires careful validation strategy \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Baseline and Trend Models}
+
+Baseline and trend models provide simple yet informative reference points against which the performance of more complex models can be assessed. Rather than learning intricate patterns from data, these models rely on straightforward statistical rules or growth rate calculations. They are particularly useful for evaluating whether sophisticated algorithms offer meaningful improvements over naive forecasting strategies. Three baseline and trend models are employed in this study.
+
+\begin{itemize}
+    \item Baseline Lag1 is a naive forecasting model that 
+    uses the most recent observed value as the prediction for the 
+    next period. Despite its simplicity, it serves as a fundamental benchmark in time-series forecasting tasks \cite{method17}.
+
+    \item \textbf{CAGR5} estimates future values by applying the 
+    compound annual growth rate calculated over the preceding five 
+    years. This approach captures medium-term growth momentum and 
+    provides a trend-based projection without model fitting 
+    \cite{method18}.
+
+    \item \textbf{CAGR10} follows the same logic as CAGR5 but 
+    extends the calculation window to ten years, offering a 
+    longer-term perspective on growth trends and reducing the 
+    influence of short-term fluctuations \cite{method18}.
+\end{itemize}
+
+The advantages and disadvantages of the baseline and trend models are presented in Table~\ref{tab:baseline_pros_cons} .
+
+\begin{table}[htbp]
+\centering
+\caption{Advantages and Disadvantages of Baseline and Trend Models}
+\label{tab:baseline_pros_cons}
+\small
+\begin{tabular}{p{1.0cm} p{3.25cm} p{3.25cm}}
+\hline
+Model & Advantages & Disadvantages \\
+\hline
+Baseline Lag1
+& Simple to implement; requires no training
+& Ignores long-term trends; poor on volatile series \\
+CAGR5
+& Captures medium-term growth; interpretable
+& Sensitive to the chosen base year; assumes constant growth \\
+CAGR10
+& Smooths short-term fluctuations; stable long-term estimate
+& May miss recent structural changes; assumes constant growth \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Weighted Ensemble Selection Strategy}
+
+While Section~2.4.4 introduced the general ensemble modeling 
+approaches employed in this study, the present section describes 
+the specific ensemble selection strategy applied during the 
+model evaluation phase. Rather than using a fixed ensemble 
+configuration, a data-driven weighted ensemble was constructed 
+separately for each target variable based on cross-validation 
+performance.
+
+Ensemble methods combine the predictions of multiple base learners to achieve lower generalization error than any individual model alone \cite{methodnew8}. The underlying principle is that diverse models tend to make different errors, and their aggregation reduces the overall prediction variance \cite{methodnew9}. Ensemble approaches have been shown to consistently outperform single models across a wide range of regression and classification tasks \cite{methodnew10}.
+
+In this study, for each target variable $y_k$, the top-$K$ models 
+were selected based on their Fold-5 accuracy scores, and their 
+predictions were combined through a normalized weighted average. 
+Let $\mathcal{M}_k = \{m_1, m_2, \ldots, m_K\}$ denote the set of 
+top-$K$ models selected for target $y_k$. The weight assigned to 
+model $m_i$ is:
+
+\begin{equation}
+    w_i = \frac{\text{Accuracy}_{i}}{\displaystyle\sum_{j=1}^{K} 
+    \text{Accuracy}_{j}}, \quad \sum_{i=1}^{K} w_i = 1
+\end{equation}
+
+The ensemble prediction for target $y_k$ is then computed as:
+
+\begin{equation}
+    \hat{y}_k^{\text{ens}} = \sum_{i=1}^{K} w_i \cdot \hat{y}_k^{(m_i)}
+\end{equation}
+
+where $\hat{y}_k^{(m_i)}$ is the prediction of model $m_i$ for 
+target $y_k$, and $K = 3$ in this study.
+
+\subsection{Model Evaluation Metrics}
+In this study, various metrics were used to compare the performance of the machine learning models. Through these metrics, the best-performing prediction model was selected, enabling future forecasts to be generated using the most reliable model. The evaluation metrics used in the study can be categorized into two main groups. The first group consists of basic regression metrics, while the second group consists of additional classification-based metrics. The contents of these metric groups are visualized in Figure~\ref{fig6} and explained in detail under the following subsections.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto4.png} 
+	\caption{Model Evaluation Metric Groups.}
+	\label{fig6}
+\end{figure}
+
+In the “Results and Discussion” section of the article, all metric scores, including Accuracy, MAE, RMSE, R², Error Rate, Precision, Recall, and F1-score, are reported. However, during the visualization stage, only the most important metrics were included in the tables to avoid excessive complexity. The complete source code and detailed results are available for overall evaluation.
+
+\subsubsection{Basic Regression Metrics}
+The performance of all regression models was assessed using five 
+widely adopted error metrics. Following \cite{method19}, the 
+coefficient of determination ($R^{2}$) is considered the most 
+informative among standard regression evaluation criteria, as it 
+provides a normalized, scale-independent measure of explanatory power.
+
+\begin{itemize}
+    \item MAE measures the average 
+    magnitude of prediction errors without considering their direction. It is expressed in the same unit as the target variable and is robust to large individual errors \cite{method19}.
+    \begin{equation}
+        \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} \left| y_i - \hat{y}_i \right|
+    \end{equation}
+
+    \item Root Mean Square Error (RMSE) penalizes larger errors more severely than MAE due to the squaring process, making it more sensitive to outliers \cite{method19}.
+    \begin{equation}
+        \text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^{2}}
+    \end{equation}
+
+    \item Mean Absolute Percentage Error (MAPE) expresses 
+    the prediction error as a percentage of the actual values, enabling 
+    scale-independent comparisons across different targets \cite{method19}.
+    \begin{equation}
+        \text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} 
+        \left| \frac{y_i - \hat{y}_i}{\max\left(|y_i|,\, \varepsilon\right)} \right| \times 100
+    \end{equation}
+    where $\varepsilon$ is a small constant introduced to prevent 
+    division by zero.
+
+    \item Coefficient of Determination ($R^{2}$) quantifies 
+    the proportion of variance in the target variable explained by the model. A value of 1 indicates a perfect fit, while values close to 0 or negative indicate poor predictive performance 
+    \cite{method19}.
+    \begin{equation}
+        R^{2} = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^{2}}
+        {\sum_{i=1}^{n}(y_i - \bar{y})^{2}}
+    \end{equation}
+    where $\bar{y}$ denotes the mean of observed values.
+
+    \item Accuracy is derived from MAPE and represents the 
+    percentage of prediction correctness. It is bounded below 
+    by zero to avoid negative accuracy values \cite{method19}.
+    \begin{equation}
+        \text{Accuracy} = \max(0,\ 100 - \text{MAPE})
+    \end{equation}
+\end{itemize}
+
+The properties and interpretation of each evaluation metric are 
+summarized in Table~\ref{tab:metrics_summary}.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of Regression Evaluation Metrics}
+\label{tab:metrics_summary}
+\small
+\begin{tabular}{p{0.9cm} p{1cm} p{1cm} p{4.3cm}}
+\hline
+Metric & Range & Optimal Value & Interpretation \\
+\hline
+MAE      & $[0, +\infty)$ & $\rightarrow 0$   & Average absolute error; same unit as target \\
+RMSE     & $[0, +\infty)$ & $\rightarrow 0$   & Penalizes large errors; sensitive to outliers \\
+MAPE     & $[0, +\infty)$ & $\rightarrow 0$   & Scale-free percentage error \\
+$R^{2}$  & $(-\infty, 1]$ & $\rightarrow 1$   & Proportion of variance explained by the model \\
+Accuracy & $[0, 100]$     & $\rightarrow 100$ & Percentage correctness derived from MAPE \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Classification-Based Additional Metrics}
+
+In addition to regression metrics, classification-based metrics were computed by binarizing the regression outputs to assess the directional accuracy of the forecasts. Specifically, predictions and actual values were converted into binary classes based on whether the value increased or decreased relative to the previous period. Precision, Recall, and F1-score were then applied to evaluate the model's ability to correctly identify the direction of change \cite{method20}.
+
+\begin{itemize}
+    \item Precision measures the proportion of correctly 
+    predicted positive instances among all instances predicted as 
+    positive. A high precision value indicates that the model produces 
+    few false positives \cite{method20}.
+    \begin{equation}
+        \text{Precision} = \frac{TP}{TP + FP}
+    \end{equation}
+
+    \item Recall measures the proportion of actual positive 
+    instances that are correctly identified by the model. It reflects 
+    the model's ability to detect true positives without missing them 
+    \cite{method20}.
+    \begin{equation}
+        \text{Recall} = \frac{TP}{TP + FN}
+    \end{equation}
+
+    \item F1-Score is the harmonic mean of Precision and 
+    Recall, providing a single balanced measure that accounts for 
+    both false positives and false negatives \cite{method20}.
+    \begin{equation}
+        \text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}
+        {\text{Precision} + \text{Recall}}
+    \end{equation}
+\end{itemize}
+
+where $TP$, $FP$, and $FN$ denote true positives, false positives, and false negatives, respectively. The summary of the classification-based evaluation metrics is presented in Table~\ref{tab:cls_metrics_summary}
+
+\begin{table}[htbp]
+\centering
+\caption{Summary of Classification-Based Evaluation Metrics}
+\label{tab:cls_metrics_summary}
+\small
+\begin{tabular}{p{0.9cm} p{1.0cm} p{1cm} p{4.3cm}}
+\hline
+Metric & Range & Optimal Value & Interpretation \\
+\hline
+Precision & $[0, 1]$ & $\rightarrow 1$ & Fraction of correct positive predictions \\
+Recall    & $[0, 1]$ & $\rightarrow 1$ & Fraction of actual positives correctly detected \\
+F1-Score  & $[0, 1]$ & $\rightarrow 1$ & Harmonic mean of Precision and Recall \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Results and Discussions}
+In this section of the article, the procedures carried out throughout the study are described in detail. The presentation is divided into three main parts, which represent the core stages of the study. The main characteristics of these parts are summarized in Figure~\ref{fig7} and then explained in detail under separate subsections. The outputs obtained from the model predictions are discussed in the Discussion section, where the findings are evaluated within the overall framework of the study.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto5.png} 
+	\caption{General workflow of the proposed healthcare planning framework}
+	\label{fig7}
+\end{figure}
+
+\subsection{Health Infrastructure Forecast}
+
+In the first part of the study, healthcare-related data for the period between 2025 and 2030 were forecasted using machine learning algorithms based on health data from 2002 to 2024. The procedures carried out in this part are explained in detail under the following subsections. The flowchart of the first part is presented in Figure~\ref{fig9}.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto9.png} 
+	\caption{Health Infrastructure Forecast Flowchart}
+	\label{fig9}
+\end{figure}
+
+\subsubsection{Data Preparation}
+
+In the first stage of this part, the province-level data on population, number of hospitals, number of hospital beds, and healthcare personnel, as described in the “Data Collection Sources” section, were collected for the period between 2002 and 2024. Since the dataset, consisting of a total of 13,041 records, was stored in separate files, these files were merged into a single CSV file as explained in the “Data Preprocessing” section.
+
+\subsubsection{Model Development}
+
+In the second stage of this part, the data from 2002 to 2024 were used to develop the best-performing prediction model. The purpose of developing these models was to identify the machine learning algorithm that could most accurately predict the available data and, accordingly, generate reliable forecasts for the period between 2025 and 2030.
+
+Before proceeding to the modeling stage, the preparation steps described under the “Pre-Modeling Preparation” section were applied to the data, making the dataset ready for model development. Subsequently, the machine learning methods specified under the “Machine Learning Approaches” section and identified as relevant to the first part of the study were employed. The performance results of the models are presented in Table~\ref{tab:model_comparison}.
+
+\begin{table}[htbp]
+\centering
+\caption{Overall Model Comparison (Averaged Across All Targets and Folds)}
+\label{tab:model_comparison}
+\small
+\begin{tabular}{p{1.8cm} p{1.2cm} p{1.2cm} p{1.3cm} p{1.1cm}}
+\hline
+Model & Accuracy (\%) & MAE & RMSE & $R^{2}$ \\
+\hline
+HoltWinters          & 91.594 & 176.692 &  573.802 & 0.972 \\
+ARIMA                & 90.886 & 221.379 &  768.090 & 0.947 \\
+Prophet              & 90.527 & 202.769 &  684.702 & 0.963 \\
+Voting               & 86.059 & 247.361 &  820.054 & 0.941 \\
+ExtraTrees           & 85.708 & 240.752 &  759.110 & 0.951 \\
+CatBoost             & 85.553 & 247.939 &  823.359 & 0.935 \\
+XGBoost              & 85.447 & 264.961 &  895.543 & 0.922 \\
+HGB & 85.269 & 335.039 & 1426.567 & 0.829 \\
+RF         & 85.185 & 263.475 &  847.860 & 0.938 \\
+Bagging              & 85.138 & 265.499 &  870.723 & 0.937 \\
+GB     & 85.073 & 250.023 &  757.372 & 0.948 \\
+KNN                  & 84.322 & 315.746 & 1095.361 & 0.914 \\
+LR     & 77.584 & 254.076 &  526.481 & 0.940 \\
+Ridge                & 76.197 & 256.111 &  526.497 & 0.940 \\
+Stacking             & 76.139 & 352.220 &  868.405 & 0.892 \\
+ElasticNet           & 75.101 & 277.180 &  601.941 & 0.937 \\
+SVR                  & 60.046 & 829.923 & 3287.621 & 0.244 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Ensemble Model}
+
+The results obtained under Section 3.1.2 represent the best overall results across all predictions. However, this situation introduces a limitation. For example, if a model predicts the physician variable very accurately but performs poorly in predicting the hospital variable, its average performance decreases, and therefore it may not be ranked as the best model overall.
+
+For this reason, for each data group, the three models that produced the best predictions for the corresponding variable were selected. These models were then combined into a general model using the integration approach described under the “Weighted Ensemble Selection Strategy” heading. The best-performing groups of three models are presented in Table~\ref{tab:ensemble_selection}.
+
+\begin{table}[htbp]
+\centering
+\caption{Top-3 Model Selection and Weights for Each Target Variable}
+\label{tab:ensemble_selection}
+\small
+\begin{tabular}{p{0.8cm} p{1.2cm} p{1cm} p{1.2cm} p{1.2cm} p{0.8cm}}
+\hline
+\textbf{Target} & \textbf{Model} & \textbf{Accuracy} & \textbf{MAE} & \textbf{RMSE} & \textbf{Weight} \\
+\hline
+Other    & ARIMA                & 90.598 & 375.373 & 1146.703 & 0.337 \\
+Other    & HoltWinters          & 90.479 & 379.220 & 1206.848 & 0.336 \\
+Other    & HGB & 87.873 & 607.133 & 2742.473 & 0.327 \\
+\hline
+physician   & HoltWinters          & 91.976 & 231.136 &  685.106 & 0.337 \\
+physician   & ARIMA                & 90.619 & 300.441 &  947.616 & 0.332 \\
+physician   & CatBoost             & 90.058 & 283.047 & 1082.126 & 0.330 \\
+\hline
+Midwife  & ARIMA                & 93.777 &  34.045 &   68.273 & 0.346 \\
+Midwife  & HoltWinters          & 92.300 &  39.515 &   64.822 & 0.340 \\
+Midwife  & RF         & 85.265 &  82.051 &  127.816 & 0.314 \\
+\hline
+Hospital & ARIMA                & 95.956 &   0.654 &    1.411 & 0.356 \\
+Hospital & HoltWinters          & 93.197 &   0.975 &    1.572 & 0.346 \\
+Hospital & Voting               & 80.074 &   2.558 &    5.838 & 0.297 \\
+\hline
+Nurse    & ExtraTrees           & 93.937 & 166.521 &  421.617 & 0.335 \\
+Nurse    & Voting               & 93.531 & 198.314 &  551.330 & 0.333 \\
+Nurse    & XGBoost              & 93.184 & 219.763 &  624.091 & 0.332 \\
+\hline
+Bed      & ARIMA                & 92.710 & 264.546 &  837.160 & 0.341 \\
+Bed      & HoltWinters          & 92.033 & 263.947 &  882.778 & 0.339 \\
+Bed      & CatBoost             & 86.801 & 273.435 &  530.161 & 0.320 \\
+\hline
+\end{tabular}
+\end{table}
+
+Following Table~\ref{tab:ensemble_selection}, the performance metrics of the developed community model are given in Table ~\ref{tab:ensemble_metrics}.
+
+\begin{table}[htbp]
+\centering
+\caption{Weighted Ensemble Performance Metrics by Target Variable}
+\label{tab:ensemble_metrics}
+\small
+\begin{tabular}{p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm} p{1.2cm}}
+\hline
+\textbf{Target} & \textbf{Accuracy} & \textbf{MAE} & \textbf{RMSE} & \textbf{$R^{2}$} \\
+\hline
+Other    & 90.814 & 354.194 & 1003.492 & 0.966 \\
+physician   & 92.499 & 258.361 &  875.994 & 0.977 \\
+Midwife  & 91.851 &  42.386 &   66.102 & 0.995 \\
+Hospital & 92.527 &   0.949 &    1.580 & 0.997 \\
+Nurse    & 93.910 & 183.656 &  512.585 & 0.991 \\
+Bed      & 92.722 & 207.703 &  531.969 & 0.992 \\
+\hline
+\end{tabular}
+\end{table}
+
+It was observed that ensemble modeling produced lower results than individual models for some predictions. However, despite this, it was decided to proceed with the ensemble model. The reason for this decision was the risk of the model falling into the ARIMA trap.
+
+\subsubsection{ARIMA Trap}
+When ARIMA encounters a near-constant time series, it collapses 
+to a random walk model and produces flat forecasts equal to the 
+last observed value \cite{result1}. In such cases, the model 
+may achieve an artificially high accuracy on historical test data, while failing to generate meaningful forecasts beyond the training horizon \cite{result2}.
+
+For example, if no new hospital was built in Bolu between 2021 and 2024, and ARIMA correctly predicted the hospital number in 2021, it could continue to predict the same unchanged value until 2024 and therefore achieve an apparently perfect prediction score (Table~\ref{tab:arima_trap}). However, when future forecasts are generated for the 2025–2030 period, ARIMA may continue to produce constant values, which can lead to inaccurate long-term forecasts. For this reason, ensemble modeling was constructed to generate more dynamic and variable predictions.
+
+\begin{table}[htbp]
+\centering
+\caption{ARIMA Flat Forecast Example: Bolu Province, Hospital Count (2021--2024)}
+\label{tab:arima_trap}
+\small
+\begin{tabular}{p{1cm} p{1cm} p{1cm} p{1cm} p{1cm}}
+\hline
+\textbf{Province} & \textbf{Year} & \textbf{Target} & \textbf{Actual} & \textbf{Predicted} \\
+\hline
+Bolu & 2021 & Hospital & 11.0 & 11.0 \\
+Bolu & 2022 & Hospital & 11.0 & 11.0 \\
+Bolu & 2023 & Hospital & 11.0 & 11.0 \\
+Bolu & 2024 & Hospital & 11.0 & 11.0 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{2025–2030 Population Data}
+
+After developing an ensemble model that predicted data for the period 2002-2024 with a mean accuracy of 92\%, the next step was to forecast health infrastructure variables for 2025--2030. However, this required province-level population values for each year in the forecast horizon as input features.
+
+As stated in Table~\ref{tab:sources1} under Section~2.1.2, TURKSTAT provides province-level population projections only for the reference years 2025 and 2030. Since intermediate years were not directly available, population values for 2026--2029 were estimated using linear extrapolation based on the historical trend of the last ten years of observed data. For each province $p$, a linear trend model was fitted using ordinary least squares over the most recent ten observations:
+
+\begin{equation}
+    \hat{P}_{p}(t) = a_p \cdot t + b_p
+\end{equation}
+
+where $t$ denotes the year, and the coefficients $a_p$ and $b_p$ are estimated by minimizing the sum of squared residuals over the training window:
+
+\begin{equation}
+    [a_p,\, b_p] = \arg\min_{a,b} \sum_{i=1}^{10} 
+    \Bigl(P_{p,i} - (a \cdot t_i + b)\Bigr)^{2}
+\end{equation}
+
+The fitted model was then evaluated at each target year $t \in \{2026, 2027, 2028, 2029\}$ to produce the projected population values. A total of 486 province-year pairs were filled using this extrapolation procedure.
+
+\subsubsection{Health Infrastructure Forecast for 2025--2030}
+
+Using the previously established weighted ensemble model and the 
+province-level population projections for 2025--2030, health 
+infrastructure variables were forecast at the province level for 
+each year in the target horizon. The forecast was produced for 
+six target variables: number of hospitals, hospital beds, physicians, nurses, midwives, and other healthcare personnel.
+
+The forecasting procedure was applied sequentially for each year 
+$t \in \{2025, 2026, \ldots, 2030\}$. Since each target variable 
+uses the remaining targets as input features, a circular dependency arises during future-year prediction. To resolve this, an iterative update strategy was adopted: for each forecast year, the prediction loop was executed $r = 3$ times, allowing the estimates to converge as each target's predicted value is progressively refined. Formally, at iteration $r$ and year $t$:
+
+\begin{equation}
+    \hat{y}_k^{(r)}(t) = \sum_{i=1}^{3} w_i \cdot 
+    f_i\!\left(\hat{y}_{-k}^{(r-1)}(t),\, P(t)\right)
+\end{equation}
+
+where $\hat{y}_{-k}^{(r-1)}(t)$ denotes the predicted values of 
+all targets except $y_k$ from the previous iteration, $P(t)$ is 
+the projected population for year $t$, and $f_i$ is the $i$-th 
+model in the ensemble. All predictions were clipped at zero and 
+rounded to the nearest integer. The final output consists of 
+$81 \times 6 = 486$ province-year observations covering the 
+2025--2030 period.
+
+\subsection{TOPSIS-Based Provincial Ranking}
+
+TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) is a multi-criteria decision-making method that ranks alternatives by their geometric distance from a positive ideal solution (PIS) and a negative ideal solution (NIS) \cite{result3}. An alternative is considered optimal when it is simultaneously closest to the PIS and farthest from the NIS. The method has been widely applied in healthcare facility planning and resource allocation problems \cite{result4}.
+
+Provincial rankings were constructed using four criteria that reflect both demographic pressure and service capacity, as shown in Table~\ref{tab:topsis_criteria}.
+
+\begin{table}[h]
+\centering
+\caption{TOPSIS Criteria}
+\label{tab:topsis_criteria}
+\begin{tabular}{p{3cm} p{1cm} p{2.2cm} p{1cm}}
+\hline
+\textbf{Criterion} & \textbf{Unit} & \textbf{Direction} & \textbf{Type} \\
+\hline
+0--14 age group population ratio & \%          & Higher $\rightarrow$ more demand    & Benefit \\
+65+ age group population ratio   & \%          & Higher $\rightarrow$ more demand    & Benefit \\
+physicians per 1,000 people         & per 1,000   & Higher $\rightarrow$ better supply  & Cost \\
+Hospital beds per 100,000 people & per 100,000 & Higher $\rightarrow$ better supply  & Cost \\
+\hline
+\end{tabular}
+\end{table}
+
+Criterion weights were determined objectively using the Shannon entropy method, which identifies the most discriminating criterion based on the distribution of values across provinces \cite{result3}. The TOPSIS procedure was applied as follows:
+
+\begin{enumerate}
+    \item Data collection and preprocessing
+    \item Entropy-based criterion weighting
+    \item Model development using the available data
+    \item Future forecasting using the developed model
+    \item Sequential Resource Allocation with Feedback
+\end{enumerate}
+
+\subsubsection{Data Collection and Preprocessing}
+
+During the data collection stage, the 0--14 and 65+ population data for the period between 2007 and 2025 were obtained from TURKSTAT, as described in Section~2.1. In addition, the number of physicians per 1,000 people and the number of hospital beds per 100,000 people for the period between 2002 and 2024 were collected. Province-level population data for the period between 2002 and 2024 were also included. Following the data collection process, the preprocessing steps described in Section~2.2 were applied, and the files were combined into a single CSV file. The number of data records used for the TOPSIS model is presented in Table~\ref{tab:topsis_data}.
+
+\begin{table}[h]
+\centering
+\caption{Number of Data Records Used for the TOPSIS Model}
+\label{tab:topsis_data}
+\begin{tabular}{p{4.5cm} p{1.5cm} p{1cm}}
+\hline
+\textbf{Variable} & \textbf{Period} & \textbf{Records} \\
+\hline
+0--14 age group population ratio    & 2007--2025 & 1{,}539 \\
+65+ age group population ratio      & 2007--2025 & 1{,}539 \\
+physicians per 1,000 people            & 2002--2024 & 1{,}863 \\
+Hospital beds per 100,000 people    & 2002--2024 & 1{,}863 \\
+Province-level total population     & 2002--2024 & 1{,}863 \\
+\hline
+\textbf{Total}                      &            & \textbf{8{,}667} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Entropy-Based Criterion Weighting}
+
+Shannon entropy, originally introduced in the context of information theory, quantifies the uncertainty or information content within a probability distribution \cite{result5, result6}. A criterion with low entropy exhibits high variability across alternatives, meaning it carries more discriminating power. Conversely, a criterion with high entropy shows little variation and contributes less to the ranking \cite{result7}. This property makes Shannon entropy a widely used objective weighting method in multi-criteria decision-making, as it derives weights directly from the data without requiring subjective judgment.
+
+In this study, criterion weights were calculated from the 2025 provincial data using the following procedure. Let $x_{ij}$ denote the value of criterion $j$ for province $i$, and let $m$ be the number of provinces ($m = 81$).
+
+Step 1 — Normalization:
+\begin{equation}
+p_{ij} = \frac{x_{ij}}{\sum_{i=1}^{m} x_{ij}}
+\end{equation}
+
+Step 2 — Entropy calculation:
+\begin{equation}
+E_j = -k \sum_{i=1}^{m} p_{ij} \ln(p_{ij}), \quad k = \frac{1}{\ln(m)}
+\end{equation}
+
+Step 3 — Divergence:
+\begin{equation}
+d_j = 1 - E_j
+\end{equation}
+
+Step 4 — Weight assignment:
+\begin{equation}
+w_j = \frac{d_j}{\sum_{j=1}^{n} d_j}
+\end{equation}
+
+The resulting weights are presented in Table~\ref{tab:topsis_weights}. The 65+ age ratio received the highest weight (37.0\%), reflecting the greatest inter-provincial variability and thus the strongest discriminating power among the four criteria.
+
+\begin{table}[h]
+\centering
+\caption{Entropy-Based Criterion Weights}
+\label{tab:topsis_weights}
+\begin{tabular}{p{4.5cm} p{1.5cm} p{1cm}}
+\hline
+\textbf{Criterion} & \textbf{Weight} & \textbf{(\%)} \\
+\hline
+65+ age group population ratio   & 0.3698 & 37.0 \\
+0--14 age group population ratio & 0.1976 & 19.8 \\
+physicians per 1,000 people         & 0.2205 & 22.1 \\
+Hospital beds per 100,000 people & 0.2121 & 21.2 \\
+\hline
+\textbf{Total}                   & \textbf{1.0000} & \textbf{100.0} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Model Development Using the Available Data}
+
+The same 17 machine learning models described in Section~2.3 were applied to the four TOPSIS criteria using a 5-fold walk-forward cross-validation scheme. The primary objective was to identify the best-performing model for each criterion and subsequently generate forecasts through 2030. Each target variable was trained on its own available historical range: 2007--2025 for age group ratios and 2002--2024 for the clinical supply indicators.
+
+Initial results showed that the 65+ age ratio and physicians per 1,000 targets produced strong results with Ridge and LR, respectively. However, the 0--14 age ratio and hospital bed ratio targets yielded low R\textsuperscript{2} values across all models, making them unsuitable for direct forecasting. To address this, three underperforming models were replaced with Baseline\_Lag1 a simple predictor that carries forward the previous year's observed value rather than learning from features. After this augmentation, HGB achieved the best results for the 0--14 age ratio, and ElasticNet performed best for the hospital bed ratio. Table~\ref{tab:topsis_model_best}. presents the final best-performing model selected for each target.
+
+\begin{table}[h]
+\centering
+\caption{Best Model per TOPSIS Target (Fold 5)}
+\label{tab:topsis_model_best}
+\begin{tabular}{p{2cm} p{1.1cm} p{0.8cm} p{0.8cm} p{0.8cm} p{0.8cm} p{0.8cm}}
+\hline
+\textbf{Target} & \textbf{Model} & \textbf{Acc. (\%)} & \textbf{MAE} & \textbf{RMSE} & \textbf{R\textsuperscript{2}} \\
+\hline
+65+ age ratio        & Ridge                & 99.28 & 0.072  & 0.085  & 0.864 \\
+physicians per 1,000    & LR     & 98.94 & 0.026  & 0.027  & 0.954 \\
+0--14 age ratio      & HGB & 99.39 & 0.128  & 0.191  & 0.999 \\
+Beds per 100,000     & ElasticNet           & 98.70 & 3.540  & 4.280  & 0.997 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Future Forecasting Using the Developed Models}
+Using the best-performing model identified for each criterion, provincial forecasts were generated for the 2025--2030 period. Ridge was used for the 65+ age ratio, LR for physicians per 1,000, HGB for the 0--14 age ratio, and ElasticNet for hospital beds per 100,000.
+
+\subsubsection{Sequential Resource Allocation with Feedback}
+A critical issue arises when TOPSIS scores are computed statically across the entire 2025--2030 horizon: a province with persistently high need indicators would receive the largest budget share every year, regardless of whether prior allocations have already begun to address its deficiencies. To overcome this, a dynamic feedback mechanism was adopted. After each annual allocation, the TOPSIS criteria values are updated to reflect resources already directed to each province, and the ranking is recalculated for the following year. This ensures that provinces whose needs have been partially met yield priority to others with greater remaining deficiencies, as illustrated in Figure~\ref{fig10}.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto10.png} 
+	\caption{Static vs.\ Dynamic TOPSIS Allocation.}
+	\label{fig10}
+\end{figure}
+
+\subsection{Health Budget Modeling}
+
+The third component of this study focuses on forecasting Turkey's national health budget for the 2025--2030 period. The forecasts were produced in USD to avoid distortions caused by Turkish lira depreciation, and subsequently converted to TRY using projected exchange rates. The subsections below detail the data collection, exchange rate construction, model development, and future budget forecasting steps. The workflow of the Health Budget Forecast section is shown in Figure~\ref{fig11}.
+
+\begin{figure}[htbp]
+		\centering
+			\includegraphics[width=0.5\textwidth]{foto11.png} 
+	\caption{Health Budget Modeling Workflow.}
+	\label{fig11}
+\end{figure}
+
+\subsubsection{Data Collection and Preprocessing}
+
+In this section, the data collection and preprocessing steps for budget forecasting are described. As outlined in Section~2.1, the dataset consists of Turkey's annual general health expenditure figures for the period 1999--2024 and the monthly USD-TRY exchange rate for the same period. Following data collection, the preprocessing steps described in Section~2.2 were applied. The number of records used is presented in Table~\ref{tab:budget_data}.
+
+\begin{table}[h]
+\centering
+\caption{Number of Data Records Used for Budget Modeling}
+\label{tab:budget_data}
+\begin{tabular}{p{4.5cm} p{1.5cm} p{1cm}}
+\hline
+\textbf{Variable} & \textbf{Period} & \textbf{Records} \\
+\hline
+Turkey annual health expenditure & 1999--2024 & 25 \\
+Monthly USD/TRY exchange rate    & 1999--2024 & 300 \\
+\hline
+\textbf{Total} & & \textbf{325} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{USD/TRY Exchange Rate Construction for 2025--2030}
+
+Since forecasting Turkey's health budget directly in Turkish lira would introduce distortions due to currency depreciation, all budget figures were converted to USD. This required constructing a monthly USD/TRY exchange rate series covering the 2025--2030 period. The data collection process for this series is described in Section~2.1. Table~\ref{tab:usdtry_sources} summarises the number of actual versus estimated monthly observations by year, and Table~\ref{tab:usdtry_annual} presents the resulting annual average rates used in budget conversion.
+
+\begin{table}[h]
+\centering
+\caption{Monthly USD/TRY Data Composition by Year}
+\label{tab:usdtry_sources}
+\begin{tabular}{p{1cm} p{1cm} p{1cm} p{4cm}}
+\hline
+\textbf{Year} & \textbf{Actual (months)} & \textbf{Forecast (months)} & \textbf{Source} \\
+\hline
+2025 & 12 & 0  & X-Rates, ExchangeRates.org \\
+2026 & 5  & 7  & Mixed \\
+2027 & 0  & 12 & LongForecast + interpolation \\
+2028 & 0  & 12 & LongForecast + interpolation \\
+2029 & 0  & 12 & LongForecast + interpolation \\
+2030 & 0  & 12 & LongForecast + interpolation \\
+\hline
+\textbf{Total} & \textbf{17} & \textbf{55} & \\
+\hline
+\end{tabular}
+\end{table}
+
+The resulting annual average USD/TRY rates used in budget conversion are presented in Table~\ref{tab:usdtry_annual}.
+
+\begin{table}[h]
+\centering
+\caption{Annual Average USD/TRY Exchange Rates (2025--2030)}
+\label{tab:usdtry_annual}
+\begin{tabular}{lc}
+\hline
+\textbf{Year} & \textbf{USD/TRY} \\
+\hline
+2025 & 39.54 \\
+2026 & 46.32 \\
+2027 & 55.93 \\
+2028 & 66.08 \\
+2029 & 83.17 \\
+2030 & 96.18 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Model Development Using 1999--2024 Data}
+
+The health expenditure figures were extracted from the 1999--2024 dataset, comprising annual total health expenditure, per capita expenditure, and the public and private sector expenditure ratios. Since the Turkish lira has undergone significant depreciation over this period, forecasting directly in TRY would inflate apparent growth rates. Therefore, all budget figures were converted to USD using the corresponding annual average exchange rate. Several time-series features were derived to preserve the temporal structure of the data, including the previous year's budget, the two-year lagged budget, a rolling moving average, year-on-year growth rates, and a linear trend index. Eleven models were trained on this dataset, covering time-series methods (ARIMA, Holt, HoltDamped), compound annual growth rate models (CAGR5, CAGR10, CAGR15), and tree-based regressors (RF, ExtraTrees, GB, Ridge, ElasticNet, Huber). Model performance was evaluated using a within-sample test scheme, with particular emphasis on forecast accuracy in the most recent years to assess forward-looking reliability Table~\ref{tab:budget_model_general}.
+
+\begin{table}[h]
+\centering
+\caption{Overall Model Comparison for Health Budget Forecasting (USD Target)}
+\label{tab:budget_model_general}
+\begin{tabular}{lccc}
+\hline
+\textbf{Model} & \textbf{Accuracy (\%)} & \textbf{MAE} & \textbf{RMSE} \\
+\hline
+ExtraTrees       & 90.210 & 4{,}965  & 6{,}157  \\
+GB & 88.254 & 5{,}662  & 6{,}884  \\
+CAGR10           & 88.370 & 5{,}571  & 6{,}826  \\
+CAGR5            & 88.153 & 5{,}633  & 6{,}962  \\
+ARIMA            & 88.114 & 5{,}559  & 6{,}618  \\
+HoltDamped          & 86.677 & 6{,}011  & 7{,}148  \\
+RF     & 86.786 & 6{,}127  & 7{,}349  \\
+HoltDamped    & 86.119 & 6{,}256  & 7{,}407  \\
+CAGR15           & 82.573 & 7{,}538  & 8{,}698  \\
+\hline
+\end{tabular}
+\end{table}
+
+Rather than relying on a single best-performing model, the top five models were combined into a weighted ensemble to reduce the risk of overfitting to any individual model's strengths and to improve forecast stability. Ensemble weights were assigned proportionally to each model's Fold-5 accuracy, so that higher-performing models contributed more to the final prediction. The resulting ensemble included a diverse mix of tree-based regressors, a time-series model, and growth rate estimators, providing complementary perspectives on the budget trajectory. The selected models and their ensemble weights are shown in Table~\ref{tab:budget_ensemble}.
+
+\begin{table}[h]
+\centering
+\caption{Models Selected for the Budget Forecasting Ensemble}
+\label{tab:budget_ensemble}
+\begin{tabular}{lcc}
+\hline
+\textbf{Model} & \textbf{Accuracy (\%)} & \textbf{Ensemble Weight} \\
+\hline
+ExtraTrees       & 90.210 & 0.2201 \\
+ARIMA            & 88.114 & 0.1966 \\
+CAGR10           & 88.370 & 0.1962 \\
+CAGR5            & 88.153 & 0.1940 \\
+GradientBoosting & 88.254 & 0.1930 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Budget Forecasting for 2025--2030}
+
+The weighted ensemble model constructed in the previous section was applied to generate Turkey's national health budget forecasts for the 2025--2030 period. Since forecasting directly in Turkish lira would introduce distortions due to currency depreciation, all projections were produced in USD. The ensemble combined the outputs of ExtraTrees, ARIMA, CAGR10, CAGR5, and GB models, with weights proportional to each model's Fold-5 accuracy. The resulting USD figures were subsequently converted to TRY using the projected annual average exchange rates presented in Table~\ref{tab:usdtry_annual}.
+
+\subsection{Integration of TOPSIS Rankings and Budget Allocation}
+
+In the final stage, the 2025--2030 TOPSIS provincial priority rankings were combined with the forecasted national health budget. Rather than applying a static allocation based on a fixed ranking, a dynamic feedback mechanism was adopted. After each annual budget distribution, the received funds are treated as a partial improvement in a province's healthcare capacity, thereby reducing its need score in subsequent years. To quantify this effect, a budget factor with a multiplier of 0.25 was introduced, meaning that prior allocations account for 25\% of the updated TOPSIS score in each following year. This ensures that provinces which have already received substantial funding yield priority to others with greater remaining deficiencies. The complete allocation cycle is illustrated in Figure~\ref{fig12}.
+
+\begin{figure}[h]
+    \centering
+		\includegraphics[width=0.5\textwidth]{foto12.png} 
+    \caption{Dynamic budget allocation cycle.}
+    \label{fig12}
+\end{figure}
+
+\subsection{Evaluation of Results}
+
+The dynamic TOPSIS-based allocation produced markedly different provincial rankings across the 2025--2030 period, demonstrating that the feedback mechanism effectively prevents a fixed set of provinces from monopolising budget resources year after year.
+
+In 2025, the highest-priority provinces were predominantly small northern Anatolian cities: Sinop, Artvin, Kastamonu, Çankırı, and Bartın. These provinces share a common profile of elevated 65+ age ratios combined with low physician density, resulting in high TOPSIS scores. Their small populations also translated into very high per-capita allocations (Artvin received approximately 282,800 TRY per person and Sinop approximately 214,000 TRY per person in 2025.).
+
+As a direct consequence of these large per-capita transfers, the 2025 top-ranked provinces absorbed sufficient resources to reduce their relative need scores. From 2026 onwards, the ranking shifted substantially: Balıkesir rose to first place and remained there through 2030, accompanied by Aydın, Muğla, Manisa, and Mersin in the upper tiers. These are larger coastal provinces with ageing populations and moderate clinical supply indicators, which had previously been displaced by smaller, more severely underserved cities. Their lower per-capita allocations reflect their larger population bases.
+
+Tables~\ref{tab:topsis_top5_a} and~\ref{tab:topsis_top5_b} summarise the top five provinces by TOPSIS priority rank for each year of the forecast horizon.
+
+\begin{table}[ht]
+\centering
+\caption{Top 5 Priority Provinces by Year, Dynamic TOPSIS (2025--2027)}
+\label{tab:topsis_top5_a}
+\begin{tabular}{p{0.8cm} p{1.8cm} p{1.5cm} p{2.2cm}}
+\hline
+\textbf{Year} & \textbf{Province} & \textbf{TOPSIS Score} & \textbf{Per Capita (TRY)} \\
+\hline
+\multirow{5}{*}{2025}
+ & Sinop     & 0.712 & 214{,}167 \\
+ & Artvin    & 0.697 & 282{,}800 \\
+ & Kastamonu & 0.689 & 123{,}239 \\
+ & Çankırı   & 0.689 & 233{,}376 \\
+ & Bartın    & 0.661 & 217{,}190 \\
+\hline
+\multirow{5}{*}{2026}
+ & Balıkesir & 0.826 & 40{,}089 \\
+ & Aydın     & 0.810 & 42{,}911 \\
+ & Ordu      & 0.806 & 65{,}728 \\
+ & Muğla     & 0.799 & 44{,}663 \\
+ & Manisa    & 0.797 & 33{,}646 \\
+\hline
+\multirow{5}{*}{2027}
+ & Balıkesir & 0.794 & 51{,}987 \\
+ & Aydın     & 0.774 & 55{,}248 \\
+ & Ordu      & 0.763 & 84{,}487 \\
+ & Muğla     & 0.761 & 56{,}739 \\
+ & Manisa    & 0.760 & 43{,}397 \\
+\hline
+\end{tabular}
+\end{table}
+
+The dynamic feedback mechanism causes a notable structural shift after the first forecast year: while small northern provinces dominate in 2025 due to high elderly population ratios and low supply coverage, accumulated budget support from 2026 onward redistributes relative need, bringing larger western coastal provinces to the top of the priority list.
+
+\begin{table}[ht]
+\centering
+\caption{Top 5 Priority Provinces by Year, Dynamic TOPSIS (2028--2030)}
+\label{tab:topsis_top5_b}
+\begin{tabular}{p{0.8cm} p{1.8cm} p{1.5cm} p{2.2cm}}
+\hline
+\textbf{Year} & \textbf{Province} & \textbf{TOPSIS Score} & \textbf{Per Capita (TRY)} \\
+\hline
+\multirow{5}{*}{2028}
+ & Balıkesir & 0.782 & 64{,}016 \\
+ & Aydın     & 0.762 & 67{,}848 \\
+ & Muğla     & 0.750 & 69{,}017 \\
+ & Manisa    & 0.748 & 53{,}507 \\
+ & Ordu      & 0.747 & 104{,}047 \\
+\hline
+\multirow{5}{*}{2029}
+ & Balıkesir & 0.780 & 83{,}548 \\
+ & Aydın     & 0.759 & 88{,}248 \\
+ & Muğla     & 0.748 & 88{,}925 \\
+ & Manisa    & 0.745 & 69{,}917 \\
+ & Mersin    & 0.742 & 51{,}187 \\
+\hline
+\multirow{5}{*}{2030}
+ & Balıkesir & 0.781 & 100{,}262 \\
+ & Aydın     & 0.758 & 105{,}496 \\
+ & Muğla     & 0.749 & 105{,}401 \\
+ & Manisa    & 0.745 & 84{,}049 \\
+ & Mersin    & 0.744 & 61{,}288 \\
+\hline
+\end{tabular}
+\end{table}
+
+The results indicate that the allocation framework successfully redistributes priority over time. Provinces receiving large early investments progressively yield their top positions to others with greater remaining deficiencies, which aligns with the core objective of equitable and need-responsive resource distribution.
+
+\section{Conclusion}
+
+This study developed an integrated machine learning framework for province-level healthcare resource planning in Turkey for the 2025--2030 period, addressing three interrelated problems: infrastructure forecasting, need-based provincial ranking, and national budget projection. Walk-forward cross-validation across 17 models showed that time-series methods "particularly HoltWinters, ARIMA, and Prophet" consistently achieved the highest accuracy for infrastructure targets, while a weighted ensemble strategy was adopted to mitigate the ARIMA trap on sparse series. TOPSIS-based rankings revealed that small northern provinces such as Sinop, Artvin, and Kastamonu faced the greatest healthcare need in 2025 due to high elderly population ratios and low physician density, while the Shannon entropy weighting assigned the strongest discriminating power to the 65+ age ratio criterion. The dynamic feedback mechanism successfully prevented budget monopolisation: as early-recipient provinces reduced their relative need scores, larger underserved provinces such as Balıkesir, Aydın, and Muğla rose in priority from 2026 onwards. Budget forecasts were produced in USD to avoid Turkish lira depreciation distortions, with an ensemble of ExtraTrees, ARIMA, CAGR, and GB models achieving approximately 88--90\% accuracy. The proposed framework provides a replicable, data-driven, and adaptive approach to provincial health resource planning that can be updated annually as new data become available.
+
+\section*{Article Information}
+\vspace{0.2cm}
+
+\textbf{Author's Contributions:}
+Bedirhan Köksoy: Software development, writing of the Method and Results sections. Ali Paşaoğlu: Supervision, writing of the Introduction and Conclusion sections. Şevval Duman: Software development, writing of the Method and Results sections.\vspace{0.2cm}
+
+\textbf{Conflict of Interest:}
+This article contains no conflicts of interest.\vspace{0.2cm}
+
+\textbf{Ethical Approval:}
+The data used in this study do not contain any personal information and consist of official and approved data published by TURKSTAT. Therefore, the study does not violate ethical principles.
+\vspace{0.2cm}
+
+\textbf{Availability:}
+The source code and related outputs are \href{https://github.com/koksoybedirhan/Forecasting-Provincial-Healthcare-Infrastructure}{available}.\vspace{0.2cm}
+
+\textbf{Artificial Intelligence Statement:}
+No assistance was provided to artificial intelligence during the writing phase of this study.
+\vspace{0.2cm}
+
+\textbf{Plagiarism Statement:}
+This article has been scanned by iThenticate\texttrademark.
+\vspace{0.2cm}
+
+\begin{thebibliography}{99}
+
+%%% Introduction
+
+\bibitem{intro1} P. V. Dutton, \emph{Differential Diagnoses: A Comparative History of Health Care Problems and Solutions in the United States and France}, Cornell University Press, Ithaca, 2007.
+
+\bibitem{intro2} World Health Organization, \emph{Working for Health 2022--2030 Action Plan: Strengthening the Health and Care Workforce to Enable Universal Health Coverage and Security}, World Health Organization, Geneva, 2022. \urlstyle{same}\url{https://cdn.who.int/media/docs/default-source/health-workforce/working4health/w4h2-action-plan.pdf}
+
+\bibitem{intro3} M. Isik, F. Isik, M. Kiyak, \emph{Analyzing financial structure of Turkish healthcare system in comparison with US, German, British, French and Cuban healthcare systems}, J. Econ. Finance Account., \textbf{2}(4) (2015), 501--518.
+
+\bibitem{intro4} B. B. Alkan, C. Atakan, A. Şahin, \emph{Measuring inequalities in the distribution of health workers by bi-plot approach: The case of Turkey}, (2011).
+
+\bibitem{intro5} P. Abay, A. S. Yücel, M. Korkmaz, N. Özdayı, \emph{Health expenditure dynamics in Türkiye for the years 1999--2024 and their implications for the health system}, Balıkesir Journal of Health Sciences, \textbf{15}(1) (2026), 23--36.
+
+\bibitem{intro6} A. B. Şimşek, \emph{Analysis of the change in the distribution of health human resources at the provincial level in Turkey in 2014--2019}, International Journal of Health Management and Strategies Research, \textbf{8}(2) (2022), 171--184.
+
+\bibitem{intro7} S. Söyler, D. Çavmak, \emph{An evaluation of access to healthcare services in Türkiye}, Aurum J. Health Sci., \textbf{5}(2) (2023), 69--76.
+
+\bibitem{intro8} D. T. Koç, E. Eren, \emph{Workforce forecasting with machine learning for healthcare management}, J. Health Manag., \textbf{28}(1) (2026), 121--135.
+
+\bibitem{intro9} M. Aslan, E. Toros, \emph{Machine learning in optimising nursing care delivery models: An empirical analysis of hospital wards}, J. Eval. Clin. Pract., \textbf{31}(1) (2025), e70001.
+
+\bibitem{intro10} B. Meydan, \emph{Sürdürülebilir kalkınma hedefleri kapsamında TR33 bölgesi illerinin performanslarının TOPSIS yöntemi ile değerlendirilmesi}, Journal of Economics and Administrative Sciences of Afyon Kocatepe University, \textbf{27}(Special Issue) (2025), 227--249.
+
+\bibitem{intro11} Z. Ceylan, A. Atalan, \emph{Estimation of healthcare expenditure per capita of Turkey using artificial intelligence techniques with genetic algorithm-based feature selection}, J. Forecast., 40(2) (2021), 279--290.
+
+\bibitem{intro12} D. Güleryüz, \emph{Predicting health spending in Turkey using the GPR, SVR, and DT models}, Acta Infologica, \textbf{5}(1) (2021), 155--166.
+
+\bibitem{intro13} B. Köksoy, A. Paşaoğlu, A. Akbel, \emph{Forecasting regional healthcare workforce demand in Turkey using machine learning algorithms}, 2025 International Conference on Information Science and Communications Technologies (ICISCT), (2025), 104--109.
+
+%%% Method
+
+\bibitem{method1} D. Terzi Coban, O. Uslu, \emph{Institutional performance evaluation at TUIK: A model proposal based on the balanced scorecard}, Adm. Soc., \textbf{57}(5) (2025), 567--608.
+
+\bibitem{method2} S. García, J. Luengo, F. Herrera, \emph{Data Preprocessing in Data Mining}, Vol. 72, Springer International Publishing, Cham, 2015, pp. 59--139.
+
+\bibitem{method3} Turkish Statistical Institute, \emph{Central Dissemination System (MEDAS)}, Retrieved May 23, 2026. \urlstyle{same}\url{https://biruni.tuik.gov.tr/medas}
+
+\bibitem{method4} T. Mustafy, M. T. U. Rahman, \emph{Excel}, in: \emph{Statistics and Data Analysis for Engineers and Scientists}, Springer Nature Singapore, Singapore, 2024, pp. 81--134.
+
+\bibitem{methodnew1} M. A. Lones, \emph{How to avoid machine learning pitfalls: a guide for academic researchers}, arXiv preprint arXiv:2108.02497, (2021).
+
+\bibitem{methodnew2} M. Sakkari, M. Zaied, \emph{A convolutional deep self-organizing map feature extraction for machine learning}, Multimed. Tools Appl., \textbf{79}(27) (2020), 19451--19470.
+
+\bibitem{methodnew3} T. T. Wong, P. Y. Yeh, \emph{Reliable accuracy estimates from k-fold cross validation}, IEEE Trans. Knowl. Data Eng., \textbf{32}(8) (2019), 1586--1594.
+
+\bibitem{methodnew4} I. K. Nti, O. Nyarko-Boateng, J. Aning, \emph{Performance of machine learning algorithms with different K values in K-fold cross-validation}, Int. J. Inf. Technol. Comput. Sci., \textbf{13}(6) (2021), 61--71.
+
+\bibitem{methodnew5} D. M. Belete, M. D. Huchaiah, \emph{Grid search in hyperparameter optimization of machine learning models for prediction of HIV/AIDS test results}, Int. J. Comput. Appl., \textbf{44}(9) (2022), 875--886.
+
+\bibitem{methodnew6} M. Feurer, F. Hutter, \emph{Hyperparameter optimization}, in: \emph{Automated Machine Learning: Methods, Systems, Challenges}, Springer International Publishing, Cham, 2019, pp. 3--33.
+
+\bibitem{methodnew7} M. M. Ahsan, M. P. Mahmud, P. K. Saha, K. D. Gupta, Z. Siddique, \emph{Effect of data scaling methods on machine learning algorithms and model performance}, Technologies, \textbf{9}(3) (2021), 52.
+
+\bibitem{method5} R. Mitchell, \emph{Web Scraping with Python: Collecting More Data from the Modern Web}, O'Reilly Media, Sebastopol, 2018.
+
+\bibitem{method6} Z. H. Zhou, \emph{Machine Learning}, Springer Nature, 2021.
+
+\bibitem{method7} G. James, D. Witten, T. Hastie, R. Tibshirani, J. Taylor, \emph{Linear Regression}, in: \emph{An Introduction to Statistical Learning: With Applications in Python}, Springer International Publishing, Cham, 2023, pp. 69--134.
+
+\bibitem{method8} N. Herawati, A. Sutrisno, N. Nusyirwan, M. Misgiyati, \emph{The performance of ridge regression, LASSO, and elastic-net in controlling multicollinearity: A simulation and application}, J. Mod. Appl. Stat. Methods, \textbf{23}(2) (2024), 1--13.
+
+\bibitem{method9} O. Zadorozhnyi, G. Benecke, S. Mandt, T. Scheffer, M. Kloft, \emph{Huber-norm regularization for linear prediction models}, Joint European Conference on Machine Learning and Knowledge Discovery in Databases, (2016), 714--730.
+
+\bibitem{method10} L. Grinsztajn, E. Oyallon, G. Varoquaux, \emph{Why do tree-based models still outperform deep learning on typical tabular data?}, Adv. Neural Inf. Process. Syst., \textbf{35} (2022), 507--520.
+
+\bibitem{method11} U. J. Nzenwata, E. Edwin, E. A. Chukwu, D. Osilaja, J. O. Hinmikaiye, C. Enyinnah, \emph{Extra trees model for heart disease prediction}, J. Data Anal. Inf. Process., \textbf{13}(02) (2025), 125--139.
+
+\bibitem{method12} J. T. Hancock, T. M. Khoshgoftaar, \emph{CatBoost for big data: an interdisciplinary review}, J. Big Data, \textbf{7}(1) (2020), 94.
+
+\bibitem{method13} S. Sivaramakrishnan, T. F. Fernandez, R. G. Babukarthik, S. Premalatha, \emph{Forecasting time series data using ARIMA and Facebook Prophet models}, in: \emph{Big Data Management in Sensing}, River Publishers, 2022, pp. 47--59.
+
+\bibitem{method14} A. J. U. Montiel, Á. A. Z. Morales, L. W. C. Cari, J. R. M. Vergara, \emph{Evolution of the SMEs loan portfolio in Ecuador: a Holt-Winters approach and the Extreme Learning Machine network}, Encuentros: Revista de Ciencias Humanas, Teoría Social y Pensamiento Crítico, (24) (2025), 417--436.
+
+\bibitem{method15} E. Bauer, R. Kohavi, \emph{An empirical comparison of voting classification algorithms: Bagging, boosting, and variants}, Mach. Learn., \textbf{36}(1) (1999), 105--139.
+
+\bibitem{method16} M. Shahhosseini, G. Hu, H. Pham, \emph{Optimizing ensemble weights and hyperparameters of machine learning models for regression problems}, Mach. Learn. Appl., \textbf{7} (2022), 100251.
+
+\bibitem{method17} W. Zhou, S. Wang, M. Cucuringu, Z. Zhang, X. Li, J. Guo, et al., \emph{DeltaLag: Learning dynamic lead-lag patterns in financial markets}, Proceedings of the 6th ACM International Conference on AI in Finance, (2025), 422--430.
+
+\bibitem{method18} I. Elbatal, M. Sarwar, F. Jamal, M. Daniyal, Z. Hussain, A. B. Ghorbal, \emph{Modelling on gross domestic product annual growth rate data by using time series, machine learning, and probability models}, J. Radiat. Res. Appl. Sci., \textbf{18}(2) (2025), 101481.
+
+\bibitem{methodnew8} T. G. Dietterich, \emph{Ensemble methods in machine learning}, International Workshop on Multiple Classifier Systems, Springer Berlin Heidelberg, Berlin, Heidelberg, (2000), 1--15.
+
+\bibitem{methodnew9} Z. H. Zhou, \emph{Ensemble Methods: Foundations and Algorithms}, Chapman and Hall/CRC, 2025.
+
+\bibitem{methodnew10} D. Mishra, S. M. Tripathi, A. Chaurasia, P. K. Chaurasia, \emph{A review on ensemble learning methods: machine learning approach}, Int. J. Res. Publ. Rev., \textbf{6}(2) (2025), 3795--3803.
+
+\bibitem{method19} D. Chicco, M. J. Warrens, G. Jurman, \emph{The coefficient of determination R-squared is more informative than SMAPE, MAE, MAPE, MSE and RMSE in regression analysis evaluation}, PeerJ Comput. Sci., \textbf{7} (2021), e623.
+
+\bibitem{method20} K. M. Sujon, R. Hassan, K. Choi, M. A. Samad, \emph{Accuracy, precision, recall, F1-score, or MCC? Empirical evidence from advanced statistics, ML, and XAI for evaluating business predictive models}, J. Big Data, \textbf{12}(1) (2025), 268.
+
+\bibitem{result1} R. J. Hyndman, G. Athanasopoulos, \emph{Forecasting: Principles and Practice}, OTexts, 2018. \urlstyle{same}\url{https://otexts.com/fpp2/}
+
+\bibitem{result2} A. C. Türkmen, T. Januschowski, Y. Wang, A. T. Cemgil, \emph{Forecasting intermittent and sparse time series: A unified probabilistic framework via deep renewal processes}, PLOS ONE, \textbf{16}(11) (2021), e0259764.
+
+\bibitem{result3}
+J. Papathanasiou and N. Ploskas, TOPSIS, in: \textit{Multiple Criteria Decision Aid: Methods, Examples and Python Implementations}, Springer International Publishing, Cham, 2018, pp. 1--30.
+
+\bibitem{result4}
+P. Mi\c{c} and Z. F. Antmen, A healthcare facility location selection problem with fuzzy TOPSIS method for a regional hospital, \textit{Avrupa Bilim ve Teknoloji Dergisi}, (16) (2019), 750--757.
+
+\bibitem{result5}
+P. A. Bromiley, N. A. Thacker and E. Bouhova-Thacker, Shannon entropy, Renyi entropy, and information, \textit{Stat. Inf. Ser.}, 9 (2004), 2--8.
+
+\bibitem{result6}
+S. Vajapeyam, Understanding Shannon's entropy metric for information, arXiv preprint arXiv:1405.2061, (2014).
+
+\bibitem{result7}
+S. A. Sep\'{u}lveda-Fontaine and J. M. Amig\'{o}, Applications of entropy in data analysis and machine learning: a review, \textit{Entropy}, 26(12) (2024), 1126.
+
+\end{thebibliography}
+\end{document}
