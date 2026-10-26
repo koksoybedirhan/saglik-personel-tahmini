@@ -1,8 +1,0 @@
-1 -> [1] Yaşar, G. Y. (2011). ‘Health transformation programme’ in Turkey: an assessment. The International Journal of Health Planning and Management, 26(2), 110–133.
-2 -> Alkan, B. B., Atakan, C., & Şahin, A. (2011). Measuring inequalities in the distribution of health workers by bi-plot approach: The case of Turkey.
-3 -> Agartan, T. I. (2015). Health workforce policy and Turkey's health care reform. Health Policy, 119(12), 1621–1626. https://doi.org/10.1016/j.healthpol.2015.09.009
-4 -> Ugur, Z., & Tirgil, A. (2021). Regional health disparities in the aftermath of health system reforms in Turkey. Journal of Health Systems and Policies, 3(3), 137–169.
-5 -> Ak, M. (2023). Artificial intelligence practices in healthcare management in Turkey. International Journal of Health Systems and Rehabilitation Research, 3(3), 162–170. https://doi.org/10.5281/zenodo.10013237
-6 -> Devaraju, S. (2024). AI-Powered HRM and Finance Information Systems for Workforce Optimization and Employee Engagement. Turkish Journal of Computer and Mathematics Education (TURCOMAT), 15(1), 269–281. https://doi.org/10.61841/turcomat.v15i1.14940
-7 -> Babaoglu, A. B., & Tekindal, M. A. (2021). Modelling the Number of People per Physician, Nurse, and Midwives in Turkey in Terms of Reproductive Health Indicators. Inquiry : a journal of medical care organization, provision and financing, 58, 469580211020873. https://doi.org/10.1177/00469580211020873
-8 -> Atalan, A., & Şahin, H. (2024). Forecasting of the dental workforce with machine learning models. Mühendislik Bilimleri ve Araştırmaları Dergisi (MBAD), 6(1), 125–132.

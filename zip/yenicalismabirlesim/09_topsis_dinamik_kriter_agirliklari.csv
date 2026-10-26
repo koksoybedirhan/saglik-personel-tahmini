@@ -1,0 +1,6 @@
+﻿kriter,agirlik,tip,aciklama
+oran_65_plus,0.27738722054981024,benefit,65+ nüfus oranı yüksekse sağlık ihtiyacı artar
+oran_0_14,0.14816457088628293,benefit,0-14 nüfus oranı yüksekse sağlık ihtiyacı artar
+hekim_1000,0.16536065505981562,cost,1000 kişiye düşen hekim yüksekse ihtiyaç azalır
+yatak_100000,0.15908755350409123,cost,100 bin kişiye düşen yatak yüksekse ihtiyaç azalır
+onceki_kumulatif_butce_destegi,0.25,cost,Önceki yıllarda alınan kümülatif bütçe desteği yüksekse yeni ihtiyaç azalır
